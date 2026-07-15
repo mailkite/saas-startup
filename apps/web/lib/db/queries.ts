@@ -2,7 +2,7 @@ import { desc, and, eq, isNull } from 'drizzle-orm';
 import { db } from './drizzle';
 import { activityLogs, teamMembers, teams, users } from './schema';
 import { cookies } from 'next/headers';
-import { verifyToken } from '@/lib/auth/session';
+import { verifySession } from '@mailkite/auth/session';
 
 export async function getUser() {
   const sessionCookie = (await cookies()).get('session');
@@ -10,24 +10,23 @@ export async function getUser() {
     return null;
   }
 
-  const sessionData = await verifyToken(sessionCookie.value);
-  if (
-    !sessionData ||
-    !sessionData.user ||
-    typeof sessionData.user.id !== 'number'
-  ) {
-    return null;
-  }
+    const sessionData = await verifySession(sessionCookie.value);
+    if (
+      !sessionData ||
+      !sessionData.userId
+    ) {
+      return null;
+    }
 
-  if (new Date(sessionData.expires) < new Date()) {
-    return null;
-  }
+    if (new Date(sessionData.expires) < new Date()) {
+      return null;
+    }
 
-  const user = await db
-    .select()
-    .from(users)
-    .where(and(eq(users.id, sessionData.user.id), isNull(users.deletedAt)))
-    .limit(1);
+    const user = await db
+      .select()
+      .from(users)
+      .where(and(eq(users.id, Number(sessionData.userId)), isNull(users.deletedAt)))
+      .limit(1);
 
   if (user.length === 0) {
     return null;

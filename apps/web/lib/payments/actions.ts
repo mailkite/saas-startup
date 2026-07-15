@@ -2,14 +2,16 @@
 
 import { redirect } from 'next/navigation';
 import { createCheckoutSession, createCustomerPortalSession } from './stripe';
-import { withTeam } from '@/lib/auth/middleware';
+import { getTeamForSession } from '@/lib/auth/middleware';
 
-export const checkoutAction = withTeam(async (formData, team) => {
+export async function checkoutAction(formData: FormData) {
+  const team = await getTeamForSession();
   const priceId = formData.get('priceId') as string;
   await createCheckoutSession({ team: team, priceId });
-});
+}
 
-export const customerPortalAction = withTeam(async (_, team) => {
+export async function customerPortalAction() {
+  const team = await getTeamForSession();
   const portalSession = await createCustomerPortalSession(team);
   redirect(portalSession.url);
-});
+}

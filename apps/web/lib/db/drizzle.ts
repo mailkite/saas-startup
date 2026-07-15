@@ -2,17 +2,9 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-function createDb() {
-  // SQLite / D1 (Cloudflare or local)
-  if (process.env.SQLITE_DATABASE_URL) {
-    const Database = require('better-sqlite3');
-    const { drizzle } = require('drizzle-orm/better-sqlite3');
-    const schema = require('./schema.sqlite');
-    const sqlite = new Database(process.env.SQLITE_DATABASE_URL);
-    return drizzle(sqlite, { schema });
-  }
+let _db: any;
 
-  // PostgreSQL (default)
+function createDb() {
   if (process.env.POSTGRES_URL) {
     const postgres = require('postgres');
     const { drizzle } = require('drizzle-orm/postgres-js');
@@ -22,8 +14,17 @@ function createDb() {
   }
 
   throw new Error(
-    'No database configured. Set POSTGRES_URL or SQLITE_DATABASE_URL.'
+    'No database configured. Set POSTGRES_URL.'
   );
 }
 
-export const db = createDb();
+export function getDb() {
+  if (!_db) _db = createDb();
+  return _db;
+}
+
+export const db = new Proxy({} as any, {
+  get(_, prop) {
+    return (getDb() as any)[prop];
+  }
+});

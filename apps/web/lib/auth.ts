@@ -1,13 +1,12 @@
 export {
   signInWithEmail,
   signUpWithEmail,
-  signInWithGoogle,
-  signInWithGitHub,
+  getGoogleAuthUrl,
+  getGitHubAuthUrl,
   sendMagicLink,
   verifyEmail,
   requestPasswordReset,
   resetPasswordConfirm,
-  handleOAuthCallback,
 } from '@mailkite/auth/client';
 
 export {

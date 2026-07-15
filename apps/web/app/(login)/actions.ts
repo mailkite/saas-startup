@@ -69,3 +69,23 @@ export async function signOut() {
   await clearSession();
   redirect('/sign-in');
 }
+
+export async function updateAccount() {
+  return { error: 'Not implemented yet' };
+}
+
+export async function updatePassword() {
+  return { error: 'Not implemented yet' };
+}
+
+export async function deleteAccount() {
+  return { error: 'Not implemented yet' };
+}
+
+export async function inviteTeamMember() {
+  return { error: 'Not implemented yet' };
+}
+
+export async function removeTeamMember() {
+  return { error: 'Not implemented yet' };
+}

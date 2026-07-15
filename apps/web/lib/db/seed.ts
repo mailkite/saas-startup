@@ -1,7 +1,15 @@
 import { stripe } from '../payments/stripe';
 import { db } from './drizzle';
 import { users, teams, teamMembers } from './schema';
-import { hashPassword } from '@/lib/auth/session';
+
+async function hashPassword(password: string): Promise<string> {
+  const encoder = new TextEncoder();
+  const data = encoder.encode(password);
+  const hash = await crypto.subtle.digest('SHA-256', data);
+  return Array.from(new Uint8Array(hash))
+    .map((b) => b.toString(16).padStart(2, '0'))
+    .join('');
+}
 
 async function createStripeProducts() {
   console.log('Creating Stripe products and prices...');

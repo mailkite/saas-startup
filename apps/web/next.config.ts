@@ -1,14 +1,18 @@
 import type { NextConfig } from 'next';
+import path from 'path';
+
+// Monorepo root — Turbopack needs this to resolve packages
+const monorepoRoot = path.resolve(__dirname, '../..');
 
 const nextConfig: NextConfig = {
+  output: 'standalone',
   experimental: {
     ppr: true,
-    clientSegmentCache: true
+    clientSegmentCache: true,
   },
-  // Cloudflare Workers Assets
-  output: 'standalone',
+  turbopack: {
+    root: monorepoRoot,
+  },
 };
 
 export default nextConfig;
-
-import('@opennextjs/cloudflare').then(m => m.initOpenNextCloudflareForDev());
