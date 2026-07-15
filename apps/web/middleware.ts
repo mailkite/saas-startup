@@ -1,4 +1,4 @@
-import { createAuthMiddleware } from '@mailkite/auth';
+import { createAuthMiddleware } from '@/lib/mailkite-auth';
 
 export default createAuthMiddleware({
   protectedRoutes: ['/dashboard'],

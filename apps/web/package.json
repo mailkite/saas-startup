@@ -16,7 +16,6 @@
     "db:migrate:sqlite": "drizzle-kit migrate --config=drizzle.config.sqlite.ts"
   },
   "dependencies": {
-    "@mailkite/auth": "workspace:*",
     "@tailwindcss/postcss": "4.1.7",
     "autoprefixer": "^10.4.21",
     "class-variance-authority": "^0.7.1",

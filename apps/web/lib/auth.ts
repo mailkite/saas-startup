@@ -7,11 +7,11 @@ export {
   verifyEmail,
   requestPasswordReset,
   resetPasswordConfirm,
-} from '@mailkite/auth/client';
+} from '@/lib/mailkite-auth/client';
 
 export {
   getSession,
   setSessionCookie,
   clearSession,
   refreshSession,
-} from '@mailkite/auth/session';
+} from '@/lib/mailkite-auth/session';

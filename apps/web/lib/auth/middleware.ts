@@ -1,4 +1,4 @@
-import { getSession } from '@mailkite/auth/session';
+import { getSession } from '@/lib/mailkite-auth/session';
 import { db } from '@/lib/db/drizzle';
 import { teams, teamMembers } from '@/lib/db/schema';
 import { eq } from 'drizzle-orm';
