@@ -20,7 +20,7 @@ export default function HomePage() {
               </p>
               <div className="mt-8 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0">
                 <a
-                  href="https://vercel.com/templates/next.js/next-js-saas-starter"
+                  href="https://github.com/mailkite/saas-startup"
                   target="_blank"
                 >
                   <Button
@@ -111,7 +111,7 @@ export default function HomePage() {
               </p>
             </div>
             <div className="mt-8 lg:mt-0 flex justify-center lg:justify-end">
-              <a href="https://github.com/nextjs/saas-starter" target="_blank">
+              <a href="https://github.com/mailkite/saas-startup" target="_blank">
                 <Button
                   size="lg"
                   variant="outline"

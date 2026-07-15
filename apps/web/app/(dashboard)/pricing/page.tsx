@@ -7,10 +7,17 @@ import { SubmitButton } from './submit-button';
 export const dynamic = 'force-dynamic';
 
 export default async function PricingPage() {
-  const [prices, products] = await Promise.all([
-    getStripePrices(),
-    getStripeProducts(),
-  ]);
+  let prices: any[] = [];
+  let products: any[] = [];
+
+  try {
+    [prices, products] = await Promise.all([
+      getStripePrices(),
+      getStripeProducts(),
+    ]);
+  } catch {
+    // Stripe not configured — show default pricing
+  }
 
   const basePlan = products.find((product) => product.name === 'Base');
   const plusPlan = products.find((product) => product.name === 'Plus');
