@@ -6,7 +6,6 @@ const monorepoRoot = path.resolve(__dirname, '../..');
 
 const nextConfig: NextConfig = {
   experimental: {
-    ppr: true,
     clientSegmentCache: true,
   },
   turbopack: {
