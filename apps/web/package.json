@@ -5,10 +5,6 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
-    "build:cf": "opennextjs-cloudflare build",
-    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
-    "build:cf": "opennextjs-cloudflare build",
-    "deploy": "node scripts/deploy.mjs",
     "start": "next start",
     "lint": "next lint",
     "db:setup": "npx tsx lib/db/setup.ts",
@@ -17,8 +13,7 @@
     "db:migrate": "drizzle-kit migrate",
     "db:studio": "drizzle-kit studio",
     "db:generate:sqlite": "drizzle-kit generate --config=drizzle.config.sqlite.ts",
-    "db:migrate:sqlite": "drizzle-kit migrate --config=drizzle.config.sqlite.ts",
-    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
+    "db:migrate:sqlite": "drizzle-kit migrate --config=drizzle.config.sqlite.ts"
   },
   "dependencies": {
     "@mailkite/auth": "workspace:*",
@@ -44,12 +39,10 @@
     "zod": "^3.24.4"
   },
   "devDependencies": {
-    "@opennextjs/cloudflare": "^1.20.1",
     "drizzle-kit": "^0.31.1",
     "@types/node": "^22.15.18",
     "@types/react": "19.1.4",
     "@types/react-dom": "19.1.5",
-    "typescript": "^5.8.3",
-    "wrangler": "^4.111.0"
+    "typescript": "^5.8.3"
   }
 }

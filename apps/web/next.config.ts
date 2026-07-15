@@ -5,7 +5,6 @@ import path from 'path';
 const monorepoRoot = path.resolve(__dirname, '../..');
 
 const nextConfig: NextConfig = {
-  output: 'standalone',
   experimental: {
     ppr: true,
     clientSegmentCache: true,
