@@ -98,8 +98,6 @@ function Header() {
         </Link>
 
         <div className="flex items-center gap-3">
-          <ThemeToggle />
-          <ThemeConfig />
           <Suspense fallback={<div className="h-9" />}>
             <UserMenu />
           </Suspense>
@@ -114,6 +112,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <section className="flex flex-col min-h-screen">
       <Header />
       {children}
+      <div className="fixed bottom-4 left-4 z-50 flex gap-2">
+        <ThemeToggle />
+        <ThemeConfig />
+      </div>
     </section>
   );
 }
