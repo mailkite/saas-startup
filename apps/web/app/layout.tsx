@@ -1,43 +1,38 @@
 import './globals.css';
-import type { Metadata, Viewport } from 'next';
-import { Manrope } from 'next/font/google';
-import { getUser, getTeamForUser } from '@/lib/db/queries';
+import type { Metadata } from 'next';
+import { ThemeScript } from '@/components/ThemeScript';
+import { ThemeProvider } from '@/components/ThemeProvider';
 import { SWRConfig } from 'swr';
+import { getUser, getTeamForUser } from '@/lib/db/queries';
 
 export const metadata: Metadata = {
-  title: 'Next.js SaaS Starter',
-  description: 'Get started quickly with Next.js, Postgres, and Stripe.'
+  title: 'SaaS Starter — Ship Your SaaS Faster',
+  description: 'Launch your SaaS product in record time with our powerful template. Authentication, payments, team management, and more — all built in.',
 };
-
-export const viewport: Viewport = {
-  maximumScale: 1
-};
-
-const manrope = Manrope({ subsets: ['latin'] });
 
 export default function RootLayout({
-  children
+  children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <html
-      lang="en"
-      className={`bg-white dark:bg-gray-950 text-black dark:text-white ${manrope.className}`}
-    >
-      <body className="min-h-[100dvh] bg-gray-50">
-        <SWRConfig
-          value={{
-            fallback: {
-              // We do NOT await here
-              // Only components that read this data will suspend
-              '/api/user': getUser(),
-              '/api/team': getTeamForUser()
-            }
-          }}
-        >
-          {children}
-        </SWRConfig>
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <ThemeScript />
+      </head>
+      <body className="min-h-screen bg-bg text-text antialiased font-sans">
+        <ThemeProvider>
+          <SWRConfig
+            value={{
+              fallback: {
+                '/api/user': getUser(),
+                '/api/team': getTeamForUser(),
+              },
+            }}
+          >
+            {children}
+          </SWRConfig>
+        </ThemeProvider>
       </body>
     </html>
   );
