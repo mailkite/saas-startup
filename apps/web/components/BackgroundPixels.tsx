@@ -17,18 +17,19 @@ export function BackgroundPixels() {
     const accentHex = styles.getPropertyValue('--color-accent').trim();
     const accent2Hex = styles.getPropertyValue('--color-accent-2').trim();
 
+    const cell = 6;
     let w = 0;
     let h = 0;
-    const cell = 6;
     let cols = 0;
     let rows = 0;
     let buffer: ImageData | null = null;
-    let animId: number;
-    let start = 0;
+    let animId = 0;
+    let started = false;
 
     function resize() {
       if (!canvas) return;
       const rect = canvas.parentElement!.getBoundingClientRect();
+      if (rect.width < 1 || rect.height < 1) return;
       w = rect.width;
       h = rect.height;
       const dpr = 1;
@@ -49,7 +50,7 @@ export function BackgroundPixels() {
 
     function draw(t: number) {
       if (!buffer || !ctx) return;
-      const elapsed = t - start;
+      const elapsed = t - 0;
       const data = buffer.data;
       const [r1, g1, b1] = hexToRgb(accentHex || '#6ea8fe');
       const [r2, g2, b2] = hexToRgb(accent2Hex || '#7c6cff');
@@ -59,15 +60,10 @@ export function BackgroundPixels() {
           const cx = (col / cols) * w;
           const cy = (row / rows) * h;
           const i = (row * cols + col) * 4;
-
-          const centerDist = Math.sqrt(
-            ((cx - w * 0.5) / (w * 0.5)) ** 2 + ((cy - h * -0.12) / (h * 0.4)) ** 2
-          );
-
+          const centerDist = Math.sqrt(((cx - w * 0.5) / (w * 0.5)) ** 2 + ((cy - h * -0.12) / (h * 0.4)) ** 2);
           const ripple = Math.sin(centerDist * 18 - elapsed * 0.0005) * 0.5 + 0.5;
           const fade = Math.exp(-centerDist * 3.5);
           const alpha = Math.min(1, ripple * fade * 0.22);
-
           const t2 = (Math.sin(col * 0.3 + elapsed * 0.0008) + 1) / 2;
           data[i] = r1 + (r2 - r1) * t2;
           data[i + 1] = g1 + (g2 - g1) * t2;
@@ -75,21 +71,25 @@ export function BackgroundPixels() {
           data[i + 3] = Math.round(alpha * 255);
         }
       }
-
       ctx.clearRect(0, 0, w, h);
       ctx.putImageData(buffer, 0, 0);
       animId = requestAnimationFrame(draw);
     }
 
-    function init() {
+    function start() {
+      if (started) return;
       resize();
-      start = performance.now();
+      if (w < 1 || h < 1) return;
+      started = true;
       animId = requestAnimationFrame(draw);
     }
 
-    const observer = new ResizeObserver(() => resize());
+    start();
+    const observer = new ResizeObserver(() => {
+      if (!started) start();
+      else resize();
+    });
     observer.observe(canvas.parentElement!);
-    init();
 
     return () => {
       cancelAnimationFrame(animId);

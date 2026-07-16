@@ -5,11 +5,11 @@ import { cookies } from 'next/headers';
 import { verifySession } from '@/lib/mailkite-auth/session';
 import { getAuthConfig } from '@/lib/mailkite-auth/config';
 
-function safeDb<T>(fn: () => Promise<T>, fallback: T): Promise<T> {
+async function safeDb<T>(fn: () => Promise<T>, fallback: T): Promise<T> {
   try {
-    return fn();
+    return await fn();
   } catch {
-    return Promise.resolve(fallback);
+    return fallback;
   }
 }
 
