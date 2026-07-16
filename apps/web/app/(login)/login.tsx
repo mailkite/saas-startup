@@ -110,11 +110,6 @@ export function Login({ mode = 'signin' }: { mode?: 'signin' | 'signup' }) {
             </div>
           </div>
         )}
-            <div className="relative flex justify-center text-sm">
-              <span className="px-2 bg-bg text-[var(--color-muted)]">or with email</span>
-            </div>
-          </div>
-        </div>
 
         {/* Email form */}
         <form className="space-y-4" action={formAction}>
