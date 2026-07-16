@@ -16,6 +16,8 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { signOut } from '@/app/(login)/actions';
 import { useRouter } from 'next/navigation';
 import { Footer } from '@/components/Footer';
+import { ThemeToggle } from '@/components/ThemeToggle';
+import { ThemeConfig } from '@/components/ThemeConfig';
 import type { User } from '@/lib/db/schema';
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
@@ -103,6 +105,8 @@ function Header() {
         </Link>
 
         <div className="flex items-center gap-3">
+          <ThemeToggle />
+          <ThemeConfig />
           <Suspense fallback={<div className="h-9" />}>
             <UserMenu />
           </Suspense>
