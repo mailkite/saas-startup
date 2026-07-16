@@ -15,8 +15,7 @@ import {
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { signOut } from '@/app/(login)/actions';
 import { useRouter } from 'next/navigation';
-import { ThemeToggle } from '@/components/ThemeToggle';
-import { ThemeConfig } from '@/components/ThemeConfig';
+import { Footer } from '@/components/Footer';
 import type { User } from '@/lib/db/schema';
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
@@ -46,7 +45,7 @@ function UserMenu() {
         >
           Sign in
         </Link>
-        <Button asChild className="rounded-full bg-gradient-to-r from-accent to-accent-2 text-white border-0 hover:opacity-90">
+        <Button asChild className="rounded-full bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-accent-2)] text-white border-0 hover:opacity-90">
           <Link href="/sign-up">Get started</Link>
         </Button>
       </>
@@ -91,7 +90,7 @@ function Header() {
     <header className="border-b border-border-brand bg-bg/80 backdrop-blur-sm sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex justify-between items-center">
         <Link href="/" className="flex items-center gap-2 group">
-          <div className="flex h-7 w-7 items-center justify-center rounded-md bg-gradient-to-br from-accent to-accent-2">
+          <div className="flex h-7 w-7 items-center justify-center rounded-md bg-gradient-to-br from-[var(--color-accent)] to-[var(--color-accent-2)]">
             <Globe className="h-4 w-4 text-white" />
           </div>
           <span className="text-lg font-semibold text-text tracking-tight">SaaS</span>
@@ -112,10 +111,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <section className="flex flex-col min-h-screen">
       <Header />
       {children}
-      <div className="fixed bottom-4 left-4 z-50 flex gap-2">
-        <ThemeToggle />
-        <ThemeConfig />
-      </div>
+      <Footer />
     </section>
   );
 }
