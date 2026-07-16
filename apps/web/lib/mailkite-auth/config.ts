@@ -12,13 +12,13 @@ export function getAuthConfig(): AuthConfig {
     sessionCookie: process.env.MAILKITE_SESSION_COOKIE || 'mk_session',
     providers: {
       google: {
-        enabled: !!process.env.GOOGLE_CLIENT_ID,
-        clientId: process.env.GOOGLE_CLIENT_ID || '',
+        enabled: !!(process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID || process.env.GOOGLE_CLIENT_ID),
+        clientId: (process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID || process.env.GOOGLE_CLIENT_ID || ''),
         clientSecret: process.env.GOOGLE_CLIENT_SECRET || '',
       },
       github: {
-        enabled: !!process.env.GITHUB_CLIENT_ID,
-        clientId: process.env.GITHUB_CLIENT_ID || '',
+        enabled: !!(process.env.NEXT_PUBLIC_GITHUB_CLIENT_ID || process.env.GITHUB_CLIENT_ID),
+        clientId: (process.env.NEXT_PUBLIC_GITHUB_CLIENT_ID || process.env.GITHUB_CLIENT_ID || ''),
         clientSecret: process.env.GITHUB_CLIENT_SECRET || '',
       },
       email: { enabled: true },
