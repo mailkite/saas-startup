@@ -142,7 +142,14 @@ function SearchModal({ open, onClose }: { open: boolean; onClose: () => void }) 
   );
 }
 
-function DocsHeader() {
+function DocsHeader({ pathname }: { pathname: string }) {
+  const linkClass = (href: string) =>
+    `text-sm font-medium transition-colors ${
+      pathname === href || (href !== '/' && pathname.startsWith(href))
+        ? 'text-text underline underline-offset-4 decoration-[var(--color-accent)] decoration-2'
+        : 'text-[var(--color-muted)] hover:text-text'
+    }`;
+
   return (
     <header className="sticky top-0 z-50 border-b border-border-brand bg-bg/80 backdrop-blur-md">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 h-14">
@@ -159,22 +166,13 @@ function DocsHeader() {
         </div>
 
         <div className="flex items-center gap-2">
-          <Link
-            href="/"
-            className="text-sm font-medium text-[var(--color-muted)] hover:text-text transition-colors no-underline"
-          >
+          <Link href="/" className={linkClass('/')}>
             Home
           </Link>
-          <Link
-            href="/pricing"
-            className="text-sm font-medium text-[var(--color-muted)] hover:text-text transition-colors no-underline"
-          >
+          <Link href="/pricing" className={linkClass('/pricing')}>
             Pricing
           </Link>
-          <Link
-            href="/docs"
-            className="text-sm font-medium text-text transition-colors"
-          >
+          <Link href="/docs" className={linkClass('/docs')}>
             Docs
           </Link>
           <Button asChild className="rounded-full bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-accent-2)] text-white border-0 hover:opacity-90">
@@ -209,7 +207,7 @@ export default function DocsLayout({ children }: { children: React.ReactNode }) 
 
   return (
     <>
-      <DocsHeader />
+      <DocsHeader pathname={pathname} />
       <SearchModal open={searchOpen} onClose={() => setSearchOpen(false)} />
 
       <div className="flex">

@@ -85,9 +85,15 @@ export default function HomePage() {
               { num: 2, title: 'Make it yours', body: 'Replace the placeholder copy, customize the design tokens, and add your product core features on top of solid foundations.' },
               { num: 3, title: 'Ship and scale', body: 'Deploy to Vercel with one command. Add your domain, connect your database, and start onboarding users — your SaaS is live.' },
             ].map((step, i, arr) => (
-              <div key={step.num}>
+              <div key={step.num} className="relative">
+                {i < arr.length - 1 && (
+                  <div
+                    aria-hidden="true"
+                    className="absolute left-5 top-12 -bottom-6 w-px -translate-x-1/2 bg-gradient-to-b from-[var(--color-accent)]/40 to-[var(--color-accent-2)]/40"
+                  />
+                )}
                 <div className="flex gap-6 items-start">
-                  <div className="flex-shrink-0 flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-[var(--color-accent)] to-[var(--color-accent-2)] text-white text-sm font-bold">
+                  <div className="relative flex-shrink-0 flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-[var(--color-accent)] to-[var(--color-accent-2)] text-white text-sm font-bold">
                     {step.num}
                   </div>
                   <div>
@@ -95,9 +101,6 @@ export default function HomePage() {
                     <p className="mt-2 text-[var(--color-muted)] leading-relaxed">{step.body}</p>
                   </div>
                 </div>
-                {i < arr.length - 1 && (
-                  <div className="w-px h-8 ml-5 bg-gradient-to-b from-[var(--color-accent)]/40 to-[var(--color-accent-2)]/40" />
-                )}
               </div>
             ))}
           </div>
