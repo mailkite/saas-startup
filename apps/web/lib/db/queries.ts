@@ -20,7 +20,14 @@ export async function getUser() {
     return null;
   }
 
-    const sessionData = await verifySession(sessionCookie.value);
+    // jwtVerify throws on an invalid/stale token (e.g. after AUTH_SECRET rotation) —
+    // treat that as "not signed in" rather than letting it bubble up as a 500.
+    let sessionData;
+    try {
+      sessionData = await verifySession(sessionCookie.value);
+    } catch {
+      return null;
+    }
     if (
       !sessionData ||
       !sessionData.userId
@@ -118,26 +125,31 @@ export async function getTeamForUser() {
     return null;
   }
 
-  const result = await db.query.teamMembers.findFirst({
-    where: eq(teamMembers.userId, user.id),
-    with: {
-      team: {
-        with: {
-          teamMembers: {
-            with: {
-              user: {
-                columns: {
-                  id: true,
-                  name: true,
-                  email: true
+  try {
+    const result = await db.query.teamMembers.findFirst({
+      where: eq(teamMembers.userId, user.id),
+      with: {
+        team: {
+          with: {
+            teamMembers: {
+              with: {
+                user: {
+                  columns: {
+                    id: true,
+                    name: true,
+                    email: true
+                  }
                 }
               }
             }
           }
         }
       }
-    }
-  });
+    });
 
-  return result?.team || null;
+    return result?.team || null;
+  } catch {
+    // A DB failure here must not take down the whole page render.
+    return null;
+  }
 }
