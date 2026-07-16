@@ -40,6 +40,12 @@ function UserMenu() {
           Pricing
         </Link>
         <Link
+          href="/docs"
+          className="text-sm font-medium text-muted hover:text-text transition-colors"
+        >
+          Docs
+        </Link>
+        <Link
           href="/sign-in"
           className="text-sm font-medium text-muted hover:text-text transition-colors"
         >
