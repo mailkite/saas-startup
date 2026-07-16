@@ -2,11 +2,9 @@
 
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
-import { Menu, X, Globe, Search } from 'lucide-react';
+import { Menu, X, Search } from 'lucide-react';
 import { useState, useEffect, useCallback } from 'react';
-import { ThemeToggle } from '@/components/ThemeToggle';
-import { ThemeConfig } from '@/components/ThemeConfig';
-import { Button } from '@/components/ui/button';
+import { SiteHeader } from '@/components/SiteHeader';
 
 interface NavSection {
   title: string;
@@ -142,52 +140,6 @@ function SearchModal({ open, onClose }: { open: boolean; onClose: () => void }) 
   );
 }
 
-function DocsHeader({ pathname }: { pathname: string }) {
-  const linkClass = (href: string) =>
-    `text-sm font-medium transition-colors ${
-      pathname === href || (href !== '/' && pathname.startsWith(href))
-        ? 'text-text underline underline-offset-4 decoration-[var(--color-accent)] decoration-2'
-        : 'text-[var(--color-muted)] hover:text-text'
-    }`;
-
-  return (
-    <header className="sticky top-0 z-50 border-b border-border-brand bg-bg/80 backdrop-blur-md">
-      <div className="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 h-14">
-        <div className="flex items-center gap-3">
-          <Link href="/" className="flex items-center gap-2 group shrink-0">
-            <div className="flex h-7 w-7 items-center justify-center rounded-md bg-gradient-to-br from-[var(--color-accent)] to-[var(--color-accent-2)]">
-              <Globe className="h-4 w-4 text-white" />
-            </div>
-            <span className="text-lg font-semibold text-text tracking-tight">SaaS</span>
-          </Link>
-          <span className="hidden sm:inline-block rounded-full border border-border-brand bg-panel px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-[var(--color-muted)]">
-            Docs
-          </span>
-        </div>
-
-        <div className="flex items-center gap-2">
-          <Link href="/" className={linkClass('/')}>
-            Home
-          </Link>
-          <Link href="/pricing" className={linkClass('/pricing')}>
-            Pricing
-          </Link>
-          <Link href="/docs" className={linkClass('/docs')}>
-            Docs
-          </Link>
-          <Button asChild className="rounded-full bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-accent-2)] text-white border-0 hover:opacity-90">
-            <Link href="/sign-up">Get started</Link>
-          </Button>
-          <div className="flex items-center gap-1 ml-2 border-l border-border-brand pl-2">
-            <ThemeToggle />
-            <ThemeConfig />
-          </div>
-        </div>
-      </div>
-    </header>
-  );
-}
-
 export default function DocsLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -207,7 +159,7 @@ export default function DocsLayout({ children }: { children: React.ReactNode }) 
 
   return (
     <>
-      <DocsHeader pathname={pathname} />
+      <SiteHeader badge="Docs" />
       <SearchModal open={searchOpen} onClose={() => setSearchOpen(false)} />
 
       <div className="flex">
@@ -230,7 +182,7 @@ export default function DocsLayout({ children }: { children: React.ReactNode }) 
 
         {/* Sidebar */}
         <aside
-          className={`fixed lg:sticky top-14 z-40 h-[calc(100vh-3.5rem)] w-64 shrink-0 overflow-y-auto border-r border-border-brand bg-bg transition-transform lg:translate-x-0 ${
+          className={`fixed lg:sticky top-[65px] z-40 h-[calc(100vh-65px)] w-64 shrink-0 overflow-y-auto border-r border-border-brand bg-bg transition-transform lg:translate-x-0 ${
             mobileOpen ? 'translate-x-0' : '-translate-x-full'
           }`}
         >
