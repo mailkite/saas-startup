@@ -7,7 +7,7 @@
 
 import 'server-only';
 import { eq } from 'drizzle-orm';
-import { db } from '@/lib/db/drizzle';
+import { db, isDbConfigured } from '@/lib/db/drizzle';
 import { users, teams, teamMembers, activityLogs, ActivityType } from '@/lib/db/schema';
 import type { User } from '@/lib/db/schema';
 import { hashPassword, verifyPassword } from '@/lib/auth/password';
@@ -15,6 +15,12 @@ import { signSession } from '@/lib/mailkite-auth/session';
 import { sendWelcomeEmail } from '@/lib/mailkite-auth/email';
 
 const SESSION_DURATION = 7 * 24 * 60 * 60 * 1000; // 7 days
+
+// Letting a DB failure bubble out of a server action renders the opaque
+// "server-side exception … Digest" page. Say something actionable instead.
+const DB_UNAVAILABLE = {
+  error: 'Sign-in is unavailable — the database is not configured. Set POSTGRES_URL.',
+};
 
 export interface AuthResult {
   jwt?: string;
@@ -31,52 +37,66 @@ export async function issueSession(user: User): Promise<string> {
 }
 
 export async function signInWithEmail(email: string, password: string): Promise<AuthResult> {
-  const found = await db.select().from(users).where(eq(users.email, email)).limit(1);
+  if (!isDbConfigured()) return DB_UNAVAILABLE;
 
-  // Deliberately identical error for "no such account" and "wrong password" — telling
-  // them apart lets an attacker enumerate registered addresses.
-  const invalid = { error: 'Invalid email or password' };
-  if (found.length === 0) return invalid;
+  try {
+    const found = await db.select().from(users).where(eq(users.email, email)).limit(1);
 
-  const user = found[0];
-  if (user.deletedAt) return invalid;
-  if (!(await verifyPassword(password, user.passwordHash))) return invalid;
+    // Deliberately identical error for "no such account" and "wrong password" — telling
+    // them apart lets an attacker enumerate registered addresses.
+    const invalid = { error: 'Invalid email or password' };
+    if (found.length === 0) return invalid;
 
-  await logActivity(user.id, ActivityType.SIGN_IN);
-  return { jwt: await issueSession(user), user };
+    const user = found[0];
+    if (user.deletedAt) return invalid;
+    if (!(await verifyPassword(password, user.passwordHash))) return invalid;
+
+    await logActivity(user.id, ActivityType.SIGN_IN);
+    return { jwt: await issueSession(user), user };
+  } catch (e) {
+    console.error('signin: failed', (e as Error).message);
+    return DB_UNAVAILABLE;
+  }
 }
 
 export async function signUpWithEmail(email: string, password: string): Promise<AuthResult> {
-  const existing = await db.select().from(users).where(eq(users.email, email)).limit(1);
-  if (existing.length > 0) {
-    return { error: 'An account with that email already exists' };
-  }
+  if (!isDbConfigured()) return DB_UNAVAILABLE;
 
-  const [user] = await db
-    .insert(users)
-    .values({
-      email,
-      passwordHash: await hashPassword(password),
-      role: 'owner',
-    })
-    .returning();
-
-  const [team] = await db
-    .insert(teams)
-    .values({ name: `${email.split('@')[0]}'s Team` })
-    .returning();
-
-  await db.insert(teamMembers).values({ userId: user.id, teamId: team.id, role: 'owner' });
-  await logActivity(user.id, ActivityType.SIGN_UP, team.id);
-
-  // Best-effort: a failed welcome email must not fail the sign-up.
   try {
-    await sendWelcomeEmail(user.email);
-  } catch (e) {
-    console.error('signup: welcome email failed', (e as Error).message);
-  }
+    const existing = await db.select().from(users).where(eq(users.email, email)).limit(1);
+    if (existing.length > 0) {
+      return { error: 'An account with that email already exists' };
+    }
 
-  return { jwt: await issueSession(user), user };
+    const [user] = await db
+      .insert(users)
+      .values({
+        email,
+        passwordHash: await hashPassword(password),
+        role: 'owner',
+      })
+      .returning();
+
+    const [team] = await db
+      .insert(teams)
+      .values({ name: `${email.split('@')[0]}'s Team` })
+      .returning();
+
+    await db.insert(teamMembers).values({ userId: user.id, teamId: team.id, role: 'owner' });
+    await logActivity(user.id, ActivityType.SIGN_UP, team.id);
+
+    // Best-effort: a failed welcome email must not fail the sign-up.
+    try {
+      await sendWelcomeEmail(user.email);
+    } catch (e) {
+      console.error('signup: welcome email failed', (e as Error).message);
+    }
+
+    return { jwt: await issueSession(user), user };
+  } catch (e) {
+    console.error('signup: failed', (e as Error).message);
+    return DB_UNAVAILABLE;
+  }
 }
 
 async function logActivity(userId: number, action: ActivityType, teamId?: number) {

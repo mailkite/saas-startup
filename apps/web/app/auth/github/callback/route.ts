@@ -36,11 +36,18 @@ export async function GET(request: Request) {
     return fail(request, 'GitHub sign-in failed');
   }
 
-  const user = await upsertOAuthUser({
-    email: identity.email,
-    name: identity.name,
-    avatarUrl: identity.avatarUrl,
-  });
+  let user;
+  try {
+    user = await upsertOAuthUser({
+      email: identity.email,
+      name: identity.name,
+      avatarUrl: identity.avatarUrl,
+    });
+  } catch (e) {
+    // A DB failure here would otherwise surface as an opaque 500 digest page.
+    console.error('github auth: account upsert failed', (e as Error).message);
+    return fail(request, 'Could not complete sign-in. Please try again.');
+  }
 
   await setSessionCookie(
     await signSession({

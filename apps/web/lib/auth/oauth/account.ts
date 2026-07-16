@@ -6,7 +6,7 @@
 
 import 'server-only';
 import { eq } from 'drizzle-orm';
-import { db } from '@/lib/db/drizzle';
+import { db, isDbConfigured } from '@/lib/db/drizzle';
 import { users, teams, teamMembers, activityLogs, ActivityType } from '@/lib/db/schema';
 import type { User } from '@/lib/db/schema';
 import { sendWelcomeEmail } from '@/lib/mailkite-auth/email';
@@ -22,6 +22,11 @@ export interface OAuthIdentity {
  * The provider has already verified the address, so no verification email is sent.
  */
 export async function upsertOAuthUser(identity: OAuthIdentity): Promise<User> {
+  if (!isDbConfigured()) {
+    // Callers turn this into a readable sign-in error rather than a 500 digest page.
+    throw new Error('No database configured. Set POSTGRES_URL.');
+  }
+
   const existing = await db
     .select()
     .from(users)

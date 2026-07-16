@@ -14,6 +14,15 @@ function createDb() {
   );
 }
 
+/**
+ * Whether a database is configured at all. Callers on a user-facing path should check
+ * this and surface a readable message — reaching `db` without it throws, which surfaces
+ * as an opaque "server-side exception" digest page.
+ */
+export function isDbConfigured(): boolean {
+  return !!process.env.POSTGRES_URL;
+}
+
 export function getDb() {
   if (!_db) _db = createDb();
   return _db;

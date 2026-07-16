@@ -43,11 +43,18 @@ export async function GET(request: Request) {
     return fail(request, 'Google sign-in failed');
   }
 
-  const user = await upsertOAuthUser({
-    email: identity.email,
-    name: identity.name,
-    avatarUrl: identity.picture,
-  });
+  let user;
+  try {
+    user = await upsertOAuthUser({
+      email: identity.email,
+      name: identity.name,
+      avatarUrl: identity.picture,
+    });
+  } catch (e) {
+    // A DB failure here would otherwise surface as an opaque 500 digest page.
+    console.error('google auth: account upsert failed', (e as Error).message);
+    return fail(request, 'Could not complete sign-in. Please try again.');
+  }
 
   await setSessionCookie(
     await signSession({
