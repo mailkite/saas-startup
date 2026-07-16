@@ -5,7 +5,7 @@ import { Suspense } from 'react';
 import useSWR from 'swr';
 import { mutate } from 'swr';
 import { Button } from '@/components/ui/button';
-import { Home, LogOut, Globe } from 'lucide-react';
+import { Home, LogOut } from 'lucide-react';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -16,6 +16,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { signOut } from '@/app/(login)/actions';
 import { useRouter } from 'next/navigation';
 import { Footer } from '@/components/Footer';
+import { LogoLockup } from '@/components/Logo';
 import { ThemeToggle } from '@/components/ThemeToggle';
 import { ThemeConfig } from '@/components/ThemeConfig';
 import type { User } from '@/lib/db/schema';
@@ -97,11 +98,8 @@ function Header() {
   return (
     <header className="border-b border-border-brand bg-bg/80 backdrop-blur-sm sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex justify-between items-center">
-        <Link href="/" className="flex items-center gap-2 group">
-          <div className="flex h-7 w-7 items-center justify-center rounded-md bg-gradient-to-br from-[var(--color-accent)] to-[var(--color-accent-2)]">
-            <Globe className="h-4 w-4 text-white" />
-          </div>
-          <span className="text-lg font-semibold text-text tracking-tight">SaaS</span>
+        <Link href="/" className="group">
+          <LogoLockup />
         </Link>
 
         <div className="flex items-center gap-3">

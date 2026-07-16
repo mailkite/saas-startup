@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { NewsletterCard } from '@/components/NewsletterCard';
+import { LogoLockup } from '@/components/Logo';
 import { ThemeToggle } from '@/components/ThemeToggle';
 import { ThemeConfig } from '@/components/ThemeConfig';
 
@@ -52,15 +53,7 @@ export function Footer() {
         </div>
 
         <div className="mt-16 pt-8 border-t border-border-brand flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div className="flex items-center gap-2">
-            <div className="flex h-5 w-5 items-center justify-center rounded bg-gradient-to-br from-[var(--color-accent)] to-[var(--color-accent-2)]">
-              <svg viewBox="0 0 24 24" className="h-3 w-3 text-white" fill="none" stroke="currentColor" strokeWidth="3">
-                <circle cx="12" cy="12" r="10" />
-                <path d="M12 6v6l4 2" />
-              </svg>
-            </div>
-            <span className="text-sm text-text font-semibold tracking-tight">SaaS</span>
-          </div>
+          <LogoLockup className="gap-1.5" markClassName="h-5 w-5" labelClassName="text-sm" />
 
           <p className="text-xs text-[var(--color-muted)]">
             &copy; {new Date().getFullYear()} SaaS Starter. Released under the{' '}
