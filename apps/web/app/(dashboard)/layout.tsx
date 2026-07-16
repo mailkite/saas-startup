@@ -37,18 +37,6 @@ function UserMenu() {
     return (
       <>
         <Link
-          href="/pricing"
-          className="text-sm font-medium text-muted hover:text-text transition-colors"
-        >
-          Pricing
-        </Link>
-        <Link
-          href="/docs"
-          className="text-sm font-medium text-muted hover:text-text transition-colors"
-        >
-          Docs
-        </Link>
-        <Link
           href="/sign-in"
           className="text-sm font-medium text-muted hover:text-text transition-colors"
         >
@@ -103,11 +91,25 @@ function Header() {
         </Link>
 
         <div className="flex items-center gap-3">
-          <ThemeToggle />
-          <ThemeConfig />
+          <Link
+            href="/pricing"
+            className="text-sm font-medium text-muted hover:text-text transition-colors"
+          >
+            Pricing
+          </Link>
+          <Link
+            href="/docs"
+            className="text-sm font-medium text-muted hover:text-text transition-colors"
+          >
+            Docs
+          </Link>
           <Suspense fallback={<div className="h-9" />}>
             <UserMenu />
           </Suspense>
+          <div className="flex items-center gap-1 ml-2 border-l border-border-brand pl-2">
+            <ThemeToggle />
+            <ThemeConfig />
+          </div>
         </div>
       </div>
     </header>
