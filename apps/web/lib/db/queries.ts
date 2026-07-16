@@ -3,9 +3,11 @@ import { db } from './drizzle';
 import { activityLogs, teamMembers, teams, users } from './schema';
 import { cookies } from 'next/headers';
 import { verifySession } from '@/lib/mailkite-auth/session';
+import { getAuthConfig } from '@/lib/mailkite-auth/config';
 
 export async function getUser() {
-  const sessionCookie = (await cookies()).get('session');
+  const config = getAuthConfig();
+  const sessionCookie = (await cookies()).get(config.sessionCookie);
   if (!sessionCookie || !sessionCookie.value) {
     return null;
   }
