@@ -89,7 +89,7 @@ export default function HomePage() {
                 {i < arr.length - 1 && (
                   <div
                     aria-hidden="true"
-                    className="absolute left-5 top-12 -bottom-6 w-px -translate-x-1/2 bg-gradient-to-b from-[var(--color-accent)]/40 to-[var(--color-accent-2)]/40"
+                    className="absolute left-5 top-10 -bottom-8 w-px -translate-x-1/2 bg-gradient-to-b from-[var(--color-accent)]/40 to-[var(--color-accent-2)]/40"
                   />
                 )}
                 <div className="flex gap-6 items-start">
