@@ -6,8 +6,8 @@ import { SWRConfig } from 'swr';
 import { getUser, getTeamForUser } from '@/lib/db/queries';
 
 export const metadata: Metadata = {
-  title: 'SaaS Starter — Ship Your SaaS Faster',
-  description: 'Launch your SaaS product in record time with our powerful template. Authentication, payments, team management, and more — all built in.',
+  title: 'Next.js SaaS Starter — Launch your SaaS',
+  description: 'Production-ready template with MailKite authentication, Stripe payments, team management, and a polished dark-first dashboard. Clone and ship in minutes.',
 };
 
 export default function RootLayout({

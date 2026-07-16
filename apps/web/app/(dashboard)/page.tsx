@@ -15,14 +15,15 @@ export default function HomePage() {
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-28 sm:py-36 lg:py-44">
           <div className="text-center max-w-3xl mx-auto">
             <span className="eyebrow mb-6">
-              Ship your SaaS in days, not months
+              Auth · Payments · Team · Dashboard
             </span>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-text animate-slide-up stagger-1">
-              Everything you need to
+              Next.js SaaS Starter —
               <span className="text-gradient"> launch your SaaS</span>
             </h1>
             <p className="mt-6 text-lg sm:text-xl text-[var(--color-muted)] max-w-2xl mx-auto animate-slide-up stagger-2">
-              Authentication, payments, team management, and a beautiful dashboard — all wired together so you can focus on what makes your product unique.
+              Everything wired together. MailKite for authentication, Stripe for payments, Drizzle ORM for your database,
+              and a polished dashboard your users will love.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center animate-slide-up stagger-3">
               <Link

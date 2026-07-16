@@ -1,3 +1,5 @@
 {
-  "framework": "nextjs"
+  "framework": "nextjs",
+  "installCommand": "pnpm install --dir=../..",
+  "buildCommand": "pnpm run build"
 }
