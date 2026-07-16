@@ -1,6 +1,6 @@
 import { Suspense } from 'react';
 import { Login } from '../login';
-import { getGoogleAuthUrl, getGitHubAuthUrl } from '@/lib/mailkite-auth/client';
+import { getGoogleAuthUrl, getGitHubAuthUrl } from '@/lib/auth/oauth/urls';
 
 export default function SignUpPage() {
   let googleUrl = '';

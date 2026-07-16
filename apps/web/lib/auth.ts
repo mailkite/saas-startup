@@ -1,13 +1,6 @@
-export {
-  signInWithEmail,
-  signUpWithEmail,
-  getGoogleAuthUrl,
-  getGitHubAuthUrl,
-  sendMagicLink,
-  verifyEmail,
-  requestPasswordReset,
-  resetPasswordConfirm,
-} from '@/lib/mailkite-auth/client';
+export { signInWithEmail, signUpWithEmail, issueSession } from '@/lib/auth/local';
+
+export { getGoogleAuthUrl, getGitHubAuthUrl } from '@/lib/auth/oauth/urls';
 
 export {
   getSession,

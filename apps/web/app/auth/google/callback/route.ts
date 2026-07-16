@@ -1,7 +1,21 @@
-import { handleGoogleCallback } from '@/lib/mailkite-auth/client';
-import { setSessionCookie } from '@/lib/mailkite-auth/session';
+import {
+  exchangeGoogleCode,
+  decodeGoogleIdToken,
+  googleFlowConfigured,
+  googleClientId,
+} from '@/lib/auth/oauth/google';
+import { upsertOAuthUser } from '@/lib/auth/oauth/account';
+import { signSession, setSessionCookie } from '@/lib/mailkite-auth/session';
 import { getBaseUrl } from '@/lib/mailkite-auth/config';
 import { NextResponse } from 'next/server';
+
+const SESSION_DURATION = 7 * 24 * 60 * 60 * 1000; // 7 days
+
+function fail(request: Request, message: string) {
+  return NextResponse.redirect(
+    new URL(`/sign-in?error=${encodeURIComponent(message)}`, request.url)
+  );
+}
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
@@ -9,23 +23,40 @@ export async function GET(request: Request) {
   const error = searchParams.get('error');
   const state = searchParams.get('state');
 
-  if (error) {
-    return NextResponse.redirect(new URL(`/sign-in?error=${encodeURIComponent(error)}`, request.url));
+  if (error) return fail(request, error);
+  if (!code) return fail(request, 'No authorization code');
+  if (!googleFlowConfigured()) return fail(request, 'Google sign-in is not configured');
+
+  // redirect_uri must match the one sent to the authorize endpoint exactly.
+  const idToken = await exchangeGoogleCode(code, `${getBaseUrl()}/auth/google/callback`);
+  const identity = idToken ? decodeGoogleIdToken(idToken) : null;
+
+  // The ID token is only trustworthy if it was minted for *us* — reject any other `aud`.
+  // Also require a verified address: an unverified one would let someone claim an email
+  // they don't control and get merged into an existing account.
+  if (
+    !identity ||
+    identity.aud !== googleClientId() ||
+    !identity.email ||
+    !identity.emailVerified
+  ) {
+    return fail(request, 'Google sign-in failed');
   }
 
-  if (!code) {
-    return NextResponse.redirect(new URL('/sign-in?error=No+authorization+code', request.url));
-  }
+  const user = await upsertOAuthUser({
+    email: identity.email,
+    name: identity.name,
+    avatarUrl: identity.picture,
+  });
 
-  const result = await handleGoogleCallback(code, `${getBaseUrl()}/auth/google/callback`);
+  await setSessionCookie(
+    await signSession({
+      userId: String(user.id),
+      expires: new Date(Date.now() + SESSION_DURATION).toISOString(),
+    })
+  );
 
-  if (result.error || !result.jwt) {
-    const msg = encodeURIComponent(result.error || 'Google sign-in failed');
-    return NextResponse.redirect(new URL(`/sign-in?error=${msg}`, request.url));
-  }
-
-  const redirectUrl = state || '/dashboard';
-  await setSessionCookie(result.jwt);
-  const response = NextResponse.redirect(new URL(redirectUrl, request.url));
-  return response;
+  // Only honour a relative `state` — anything else would be an open redirect.
+  const dest = state && state.startsWith('/') && !state.startsWith('//') ? state : '/dashboard';
+  return NextResponse.redirect(new URL(dest, request.url));
 }

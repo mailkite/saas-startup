@@ -1,4 +1,4 @@
-import { getAuthConfig } from './config';
+import { getAuthConfig, getBaseUrl } from './config';
 
 interface SendEmailParams {
   to: string;
@@ -16,7 +16,7 @@ function getApiUrl(): string {
 
 export async function sendEmail(params: SendEmailParams): Promise<{ ok: boolean; error?: string }> {
   try {
-    const res = await fetch(`${getApiUrl()}/api/send`, {
+    const res = await fetch(`${getApiUrl()}/v1/send`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -40,6 +40,21 @@ export async function sendEmail(params: SendEmailParams): Promise<{ ok: boolean;
   } catch (err) {
     return { ok: false, error: err instanceof Error ? err.message : 'Send failed' };
   }
+}
+
+/**
+ * Greet a newly created account. Sending is skipped (not an error) when MailKite isn't
+ * configured, so the template still works end-to-end without an API key.
+ */
+export async function sendWelcomeEmail(to: string): Promise<{ ok: boolean; error?: string }> {
+  if (!isMailkiteEmailConfigured()) return { ok: true };
+
+  return sendEmail({
+    to,
+    subject: 'Welcome to SaaS Starter',
+    html: `<p>Welcome aboard.</p><p>Your account is ready — <a href="${getBaseUrl()}/dashboard">open your dashboard</a> to get started.</p>`,
+    text: `Welcome aboard.\n\nYour account is ready. Open your dashboard: ${getBaseUrl()}/dashboard`,
+  });
 }
 
 export function getMailkiteApiKey(): string {
