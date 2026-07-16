@@ -1,4 +1,4 @@
-import { getAuthConfig } from './config';
+import { getAuthConfig, getBaseUrl } from './config';
 import type {
   AuthResponse,
   AuthError,
@@ -183,8 +183,11 @@ export function getGoogleAuthUrl(returnUrl?: string): string {
     throw new Error('Google sign-in is not configured');
   }
 
+  // These pages are server-rendered, so window is undefined here — fall back to
+  // BASE_URL. The provider requires an absolute redirect_uri, and it must match
+  // the one the callback route sends during the code exchange (also getBaseUrl).
   const baseUrl =
-    typeof window !== 'undefined' ? window.location.origin : '';
+    typeof window !== 'undefined' ? window.location.origin : getBaseUrl();
   const redirectUri = `${baseUrl}/auth/google/callback`;
 
   const params = new URLSearchParams({
@@ -226,7 +229,7 @@ export function getGitHubAuthUrl(returnUrl?: string): string {
   }
 
   const baseUrl =
-    typeof window !== 'undefined' ? window.location.origin : '';
+    typeof window !== 'undefined' ? window.location.origin : getBaseUrl();
   const redirectUri = `${baseUrl}/auth/github/callback`;
 
   const params = new URLSearchParams({

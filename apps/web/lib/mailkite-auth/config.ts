@@ -41,5 +41,14 @@ export function getJwtSecret(): Uint8Array {
 }
 
 export function getBaseUrl(): string {
-  return process.env.BASE_URL || 'http://localhost:3000';
+  if (process.env.BASE_URL) return process.env.BASE_URL;
+
+  // Falling back to localhost in production yields an OAuth redirect_uri the
+  // provider rejects, so prefer Vercel's deployment URL and only default to
+  // localhost outside production.
+  if (process.env.VERCEL_PROJECT_PRODUCTION_URL) {
+    return `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`;
+  }
+
+  return 'http://localhost:3000';
 }
