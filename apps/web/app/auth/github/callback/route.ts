@@ -25,7 +25,7 @@ export async function GET(request: Request) {
   }
 
   const redirectUrl = state || '/dashboard';
+  await setSessionCookie(result.jwt);
   const response = NextResponse.redirect(new URL(redirectUrl, request.url));
-  setSessionCookie(response, result.jwt);
   return response;
 }
