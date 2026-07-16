@@ -122,15 +122,6 @@ html[data-theme="dark"] {
     @apply bg-background text-foreground;
     font-family: var(--font-sans);
   }
-  a {
-    color: var(--color-accent);
-    text-decoration: underline;
-    text-underline-offset: 3px;
-    text-decoration-thickness: 1px;
-  }
-  a:hover {
-    color: var(--color-text);
-  }
 }
 
 /* ---- Brand scrollbars ---------------------------------------------------- */
@@ -230,11 +221,10 @@ html[data-theme="light"] .brand-glow { opacity: 0.5; }
   color: var(--color-accent);
 }
 .eyebrow::before {
-  content: "";
+  content: "\2014";
   display: inline-block;
-  width: 1.5rem;
-  height: 1px;
-  background: linear-gradient(90deg, var(--color-accent), var(--color-accent-2));
+  font-size: 1em;
+  color: var(--color-accent);
 }
 
 /* ---- Animations ----------------------------------------------------------- */

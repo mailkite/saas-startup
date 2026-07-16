@@ -14,7 +14,7 @@ import {
 } from '@/components/ui/dropdown-menu';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { signOut } from '@/app/(login)/actions';
-import { useRouter } from 'next/navigation';
+import { useRouter, usePathname } from 'next/navigation';
 import { Footer } from '@/components/Footer';
 import { LogoLockup } from '@/components/Logo';
 import { ThemeToggle } from '@/components/ThemeToggle';
@@ -38,7 +38,7 @@ function UserMenu() {
       <>
         <Link
           href="/sign-in"
-          className="text-sm font-medium text-muted hover:text-text transition-colors no-underline"
+          className="text-sm font-medium text-muted hover:text-text transition-colors"
         >
           Sign in
         </Link>
@@ -83,6 +83,14 @@ function UserMenu() {
 }
 
 function Header() {
+  const pathname = usePathname();
+  const linkClass = (href: string) =>
+    `text-sm font-medium transition-colors ${
+      pathname === href
+        ? 'text-text underline underline-offset-4 decoration-[var(--color-accent)] decoration-2'
+        : 'text-muted hover:text-text no-underline'
+    }`;
+
   return (
     <header className="border-b border-border-brand bg-bg/80 backdrop-blur-sm sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex justify-between items-center">
@@ -91,16 +99,10 @@ function Header() {
         </Link>
 
         <div className="flex items-center gap-3">
-          <Link
-            href="/pricing"
-            className="text-sm font-medium text-muted hover:text-text transition-colors no-underline"
-          >
+          <Link href="/pricing" className={linkClass('/pricing')}>
             Pricing
           </Link>
-          <Link
-            href="/docs"
-            className="text-sm font-medium text-muted hover:text-text transition-colors no-underline"
-          >
+          <Link href="/docs" className={linkClass('/docs')}>
             Docs
           </Link>
           <Suspense fallback={<div className="h-9" />}>
