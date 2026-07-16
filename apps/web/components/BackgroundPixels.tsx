@@ -37,8 +37,8 @@ export function BackgroundPixels() {
       canvas.style.width = w + 'px';
       canvas.style.height = h + 'px';
       ctx!.setTransform(dpr, 0, 0, dpr, 0, 0);
-      cols = Math.floor(w / cell);
-      rows = Math.floor(h / cell);
+      cols = Math.max(1, Math.floor(w / cell));
+      rows = Math.max(1, Math.floor(h / cell));
       buffer = ctx!.createImageData(cols, rows);
     }
 

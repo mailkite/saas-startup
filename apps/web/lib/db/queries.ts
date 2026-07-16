@@ -5,6 +5,14 @@ import { cookies } from 'next/headers';
 import { verifySession } from '@/lib/mailkite-auth/session';
 import { getAuthConfig } from '@/lib/mailkite-auth/config';
 
+function safeDb<T>(fn: () => Promise<T>, fallback: T): Promise<T> {
+  try {
+    return fn();
+  } catch {
+    return Promise.resolve(fallback);
+  }
+}
+
 export async function getUser() {
   const config = getAuthConfig();
   const sessionCookie = (await cookies()).get(config.sessionCookie);
@@ -24,11 +32,15 @@ export async function getUser() {
       return null;
     }
 
-    const user = await db
-      .select()
-      .from(users)
-      .where(and(eq(users.id, Number(sessionData.userId)), isNull(users.deletedAt)))
-      .limit(1);
+    const user = await safeDb(
+      () =>
+        db
+          .select()
+          .from(users)
+          .where(and(eq(users.id, Number(sessionData.userId)), isNull(users.deletedAt)))
+          .limit(1),
+      [] as typeof users.$inferSelect[]
+    );
 
   if (user.length === 0) {
     return null;

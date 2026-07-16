@@ -30,7 +30,14 @@ export function getAuthConfig(): AuthConfig {
 }
 
 export function getJwtSecret(): Uint8Array {
-  return new TextEncoder().encode(requireEnv('AUTH_SECRET'));
+  const key = process.env.AUTH_SECRET;
+  if (!key) {
+    if (process.env.NODE_ENV === 'production') {
+      throw new Error('Missing required env var: AUTH_SECRET');
+    }
+    return new TextEncoder().encode('dev-fallback-key-do-not-use-in-production');
+  }
+  return new TextEncoder().encode(key);
 }
 
 export function getBaseUrl(): string {
