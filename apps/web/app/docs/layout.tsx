@@ -161,13 +161,13 @@ function DocsHeader() {
         <div className="flex items-center gap-2">
           <Link
             href="/"
-            className="text-sm font-medium text-[var(--color-muted)] hover:text-text transition-colors"
+            className="text-sm font-medium text-[var(--color-muted)] hover:text-text transition-colors no-underline"
           >
             Home
           </Link>
           <Link
             href="/pricing"
-            className="text-sm font-medium text-[var(--color-muted)] hover:text-text transition-colors"
+            className="text-sm font-medium text-[var(--color-muted)] hover:text-text transition-colors no-underline"
           >
             Pricing
           </Link>

@@ -38,7 +38,7 @@ function UserMenu() {
       <>
         <Link
           href="/sign-in"
-          className="text-sm font-medium text-muted hover:text-text transition-colors"
+          className="text-sm font-medium text-muted hover:text-text transition-colors no-underline"
         >
           Sign in
         </Link>
@@ -93,13 +93,13 @@ function Header() {
         <div className="flex items-center gap-3">
           <Link
             href="/pricing"
-            className="text-sm font-medium text-muted hover:text-text transition-colors"
+            className="text-sm font-medium text-muted hover:text-text transition-colors no-underline"
           >
             Pricing
           </Link>
           <Link
             href="/docs"
-            className="text-sm font-medium text-muted hover:text-text transition-colors"
+            className="text-sm font-medium text-muted hover:text-text transition-colors no-underline"
           >
             Docs
           </Link>
