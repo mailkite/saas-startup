@@ -11,7 +11,7 @@ export function GradientCard({
 }) {
   return (
     <div
-      className={`gradient-ring rounded-xl border border-border-brand bg-panel p-6 ${
+      className={`gradient-ring rounded-xl border border-border-brand bg-[color-mix(in_oklab,var(--color-panel)_60%,var(--color-bg))] p-6 ${
         hover ? 'transition-transform hover:-translate-y-1' : ''
       } ${className}`}
     >

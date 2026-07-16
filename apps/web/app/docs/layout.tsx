@@ -171,11 +171,19 @@ function DocsHeader() {
           >
             Pricing
           </Link>
-          <ThemeToggle />
-          <ThemeConfig />
+          <Link
+            href="/docs"
+            className="text-sm font-medium text-text transition-colors"
+          >
+            Docs
+          </Link>
           <Button asChild className="rounded-full bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-accent-2)] text-white border-0 hover:opacity-90">
             <Link href="/sign-up">Get started</Link>
           </Button>
+          <div className="flex items-center gap-1 ml-2 border-l border-border-brand pl-2">
+            <ThemeToggle />
+            <ThemeConfig />
+          </div>
         </div>
       </div>
     </header>
