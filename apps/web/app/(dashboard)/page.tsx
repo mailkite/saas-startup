@@ -15,15 +15,15 @@ export default function HomePage() {
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-28 sm:py-36 lg:py-44">
           <div className="text-center max-w-3xl mx-auto">
             <span className="eyebrow mb-6">
-              Auth · Payments · Team · Dashboard
+              Auth · Payments · PostgreSQL · Dashboard
             </span>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-text animate-slide-up stagger-1">
               Next.js SaaS Starter —
               <span className="text-gradient"> launch your SaaS</span>
             </h1>
             <p className="mt-6 text-lg sm:text-xl text-[var(--color-muted)] max-w-2xl mx-auto animate-slide-up stagger-2">
-              Everything wired together. MailKite for authentication, Stripe for payments, Drizzle ORM for your database,
-              and a polished dashboard your users will love.
+              Everything wired together. MailKite for authentication, Stripe for payments,
+              PostgreSQL with Drizzle ORM for your database, and a polished dashboard your users will love.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center animate-slide-up stagger-3">
               <Link
@@ -59,10 +59,10 @@ export default function HomePage() {
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <FeatureCard icon={<Zap className="h-5 w-5" />} title="Authentication" body="Sign up, sign in, magic links, OAuth — complete auth flow with JWT sessions out of the box." />
+            <FeatureCard icon={<Zap className="h-5 w-5" />} title="Authentication" body="Sign up, sign in, magic links, OAuth — powered by MailKite with JWT sessions out of the box." />
             <FeatureCard icon={<CreditCard className="h-5 w-5" />} title="Payments" body="Stripe integration with checkout sessions, customer portal, and subscription management." />
             <FeatureCard icon={<Globe className="h-5 w-5" />} title="Team Management" body="Invite team members, manage roles, and collaborate from a shared dashboard." />
-            <FeatureCard icon={<Database className="h-5 w-5" />} title="Database" body="Postgres with Drizzle ORM — type-safe queries, migrations, and a clean schema out of the box." />
+            <FeatureCard icon={<Database className="h-5 w-5" />} title="PostgreSQL + Drizzle ORM" body="Type-safe queries and migrations on PostgreSQL — works with Neon, Supabase, or Vercel Postgres." />
             <FeatureCard icon={<Lock className="h-5 w-5" />} title="Security" body="CSRF protection, rate limiting, secure cookies, and password hashing — all configured." />
             <FeatureCard icon={<MessageSquare className="h-5 w-5" />} title="Beautiful UI" body="Dark-first design system with shadcn components, responsive layouts, and a polished dashboard." />
           </div>
