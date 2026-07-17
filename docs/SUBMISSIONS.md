@@ -17,7 +17,7 @@ Merge a PR, get listed. No account, no forms, no fees.
 | ✓ | Place | How | Notes |
 |---|-------|-----|-------|
 | [ ] | [vercel/examples](https://github.com/vercel/examples) | PR — `pnpm i && pnpm new-example` | **The only live route into Vercel Templates.** Requires MIT in `package.json`. Verified active: merged a `[template]` PR 2026-07-16 |
-| [ ] | [unicodeveloper/awesome-nextjs](https://github.com/unicodeveloper/awesome-nextjs) | PR to README | 11.1k★. Merged a free-template PR Mar 2026 |
+| [~] | [unicodeveloper/awesome-nextjs](https://github.com/unicodeveloper/awesome-nextjs) | PR to README | 11.1k★. **Submitted 2026-07-17** → [PR #536](https://github.com/unicodeveloper/awesome-nextjs/pull/536), awaiting review. Added to `## Boilerplates` |
 | [ ] | [aniftyco/awesome-tailwindcss](https://github.com/aniftyco/awesome-tailwindcss) | PR to README | 15.1k★, pushed 2026-06-25 |
 | [ ] | [enaqx/awesome-react](https://github.com/enaqx/awesome-react) | PR to README | 74k★, pushed 2026-06-02. Strict scope — check it fits |
 | [ ] | [birobirobiro/awesome-shadcn-ui](https://github.com/birobirobiro/awesome-shadcn-ui) | PR to README | 20.1k★, pushed 2026-07-16 (very active) |
