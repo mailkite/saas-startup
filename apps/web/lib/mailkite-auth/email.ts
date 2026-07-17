@@ -35,12 +35,18 @@ export async function sendEmail(params: SendEmailParams): Promise<{ ok: boolean;
 
     if (!res.ok) {
       const body = await res.text();
-      return { ok: false, error: body };
+      // Surface the real cause server-side (status + body) — callers keep a generic
+      // user-facing message. A 401/403 here usually means MAILKITE_API_KEY is missing
+      // or expired (MailKite tokens are account JWTs that expire).
+      console.error(`[mailkite] send failed: HTTP ${res.status} ${res.statusText} — ${body}`);
+      return { ok: false, error: `HTTP ${res.status}: ${body}` };
     }
 
     return { ok: true };
   } catch (err) {
-    return { ok: false, error: err instanceof Error ? err.message : 'Send failed' };
+    const message = err instanceof Error ? err.message : 'Send failed';
+    console.error(`[mailkite] send threw: ${message}`);
+    return { ok: false, error: message };
   }
 }
 

@@ -68,6 +68,7 @@ export const submitContact = validatedAction(contactSchema, async (data) => {
   });
 
   if (!result.ok) {
+    console.error(`[contact] delivery failed: ${result.error}`);
     return { error: 'Something went wrong sending your message. Please try again.', ...data };
   }
 
