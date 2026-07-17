@@ -6,6 +6,7 @@ interface SendEmailParams {
   html: string;
   text?: string;
   from?: string;
+  replyTo?: string;
 }
 
 const API_KEY = process.env.MAILKITE_API_KEY || '';
@@ -28,6 +29,7 @@ export async function sendEmail(params: SendEmailParams): Promise<{ ok: boolean;
         subject: params.subject,
         html: params.html,
         ...(params.text ? { text: params.text } : {}),
+        ...(params.replyTo ? { replyTo: params.replyTo } : {}),
       }),
     });
 

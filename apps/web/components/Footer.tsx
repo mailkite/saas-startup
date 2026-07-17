@@ -13,6 +13,7 @@ const links = {
   Resources: [
     { label: 'Documentation', href: 'https://github.com/mailkite/saas-startup#readme' },
     { label: 'GitHub', href: 'https://github.com/mailkite/saas-startup' },
+    { label: 'Contact', href: '/contact' },
     { label: 'Support', href: 'mailto:support@mailkite.dev' },
   ],
   Company: [

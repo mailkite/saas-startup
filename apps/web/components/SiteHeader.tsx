@@ -27,6 +27,7 @@ const NAV_LINKS = [
   { href: '/', label: 'Home' },
   { href: '/pricing', label: 'Pricing' },
   { href: '/docs', label: 'Docs' },
+  { href: '/contact', label: 'Contact' },
 ];
 
 function initials(user: User) {
