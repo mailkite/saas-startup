@@ -1,6 +1,7 @@
 import Link from 'next/link';
 
 const cards = [
+  { title: 'GitHub Repository', body: 'github.com/mailkite/saas-startup — star it, fork it, and browse the source.', href: 'https://github.com/mailkite/saas-startup', external: true },
   { title: 'Installation', body: 'Clone the repo, install dependencies, and configure your environment.', href: '/docs/installation' },
   { title: 'Configuration', body: 'Set environment variables, connect your database, and configure Stripe.', href: '/docs/configuration' },
   { title: 'Deployment', body: 'Deploy to Vercel, set up your domain, and go live.', href: '/docs/deployment' },
@@ -35,7 +36,12 @@ pnpm run dev`}</pre>
       <h2>Guides</h2>
       <div className="docs-grid">
         {cards.map((c) => (
-          <Link key={c.href} href={c.href} className="docs-card">
+          <Link
+            key={c.href}
+            href={c.href}
+            className="docs-card"
+            {...(c.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+          >
             <span className="docs-card-title">{c.title}</span>
             <span className="docs-card-body">{c.body}</span>
           </Link>
