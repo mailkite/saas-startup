@@ -2,6 +2,7 @@
   "name": "@mailkite/web",
   "version": "0.1.0",
   "private": true,
+  "license": "MIT",
   "description": "Next.js SaaS Starter — production-ready template to launch your SaaS with authentication, payments, and team management.",
   "keywords": ["saas", "starter", "template", "nextjs", "vercel", "stripe", "tailwindcss"],
   "repository": {
