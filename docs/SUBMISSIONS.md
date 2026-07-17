@@ -10,6 +10,18 @@ The template must stay: MIT licensed, public, with a working live demo
 
 ---
 
+## Submission log
+
+Every submission actually made, with its links. Fill in **Listing URL** once the PR merges
+or the post goes live. Newest first.
+
+| Date | Venue (website) | Submission URL (PR/post) | Listing URL (when live) | Status |
+|------|-----------------|--------------------------|-------------------------|--------|
+| 2026-07-17 | [awesome-shadcn-ui](https://github.com/birobirobiro/awesome-shadcn-ui) | [PR #554](https://github.com/birobirobiro/awesome-shadcn-ui/pull/554) | _pending merge_ | `[~]` submitted |
+| 2026-07-17 | [awesome-nextjs](https://github.com/unicodeveloper/awesome-nextjs) | [PR #536](https://github.com/unicodeveloper/awesome-nextjs/pull/536) | _pending merge_ | `[~]` submitted |
+
+---
+
 ## Tier 1 — Git PR (easiest, highest signal)
 
 Merge a PR, get listed. No account, no forms, no fees.
