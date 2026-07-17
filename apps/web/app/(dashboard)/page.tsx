@@ -2,6 +2,7 @@ import { ArrowRight, CreditCard, Database, Globe, Lock, MessageSquare, Zap } fro
 import Link from 'next/link';
 import { BackgroundPixels } from '@/components/BackgroundPixels';
 import { GradientCard, FeatureCard } from '@/components/GradientCard';
+import { StackDiagram } from '@/components/StackDiagram';
 
 export default function HomePage() {
   return (
@@ -12,34 +13,43 @@ export default function HomePage() {
         <div className="absolute inset-0 grid-bg" aria-hidden="true" />
         <BackgroundPixels />
 
-        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-28 sm:py-36 lg:py-44">
-          <div className="text-center max-w-3xl mx-auto">
-            <span className="eyebrow mb-6">
-              Auth · Payments · PostgreSQL · Dashboard
-            </span>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-text animate-slide-up stagger-1">
-              Next.js SaaS Starter —
-              <span className="text-gradient"> launch your SaaS</span>
-            </h1>
-            <p className="mt-6 text-lg sm:text-xl text-[var(--color-muted)] max-w-2xl mx-auto animate-slide-up stagger-2">
-              Everything wired together. MailKite for authentication, Stripe for payments,
-              PostgreSQL with Drizzle ORM for your database, and a polished dashboard your users will love.
-            </p>
-            <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center animate-slide-up stagger-3">
-              <Link
-                href="/sign-up"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-accent-2)] px-8 py-3 text-sm font-semibold text-white shadow-lg shadow-[var(--color-accent)]/30 transition-all hover:shadow-xl hover:shadow-[var(--color-accent)]/40 hover:scale-[1.02]"
-              >
-                Get started free
-                <ArrowRight className="h-4 w-4" />
-              </Link>
-              <Link
-                href="https://github.com/mailkite/saas-startup"
-                target="_blank"
-                className="inline-flex items-center justify-center gap-2 rounded-full border border-border-brand bg-panel px-8 py-3 text-sm font-semibold text-text transition-all hover:border-[var(--color-accent)]/40"
-              >
-                View the code
-              </Link>
+        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-28 lg:py-32">
+          <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-10">
+            {/* Copy */}
+            <div className="text-center lg:text-left max-w-2xl mx-auto lg:mx-0">
+              <span className="eyebrow mb-6">
+                Auth · Payments · Supabase Postgres · Dashboard
+              </span>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-text animate-slide-up stagger-1">
+                Next.js SaaS Starter —
+                <span className="text-gradient"> launch your SaaS</span>
+              </h1>
+              <p className="mt-6 text-lg sm:text-xl text-[var(--color-muted)] max-w-2xl mx-auto lg:mx-0 animate-slide-up stagger-2">
+                Everything wired together. MailKite for authentication, Stripe for payments,
+                Postgres on Supabase with Drizzle ORM for your database, and a polished
+                dashboard your users will love.
+              </p>
+              <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-slide-up stagger-3">
+                <Link
+                  href="/sign-up"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-accent-2)] px-8 py-3 text-sm font-semibold text-white shadow-lg shadow-[var(--color-accent)]/30 transition-all hover:shadow-xl hover:shadow-[var(--color-accent)]/40 hover:scale-[1.02]"
+                >
+                  Get started free
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+                <Link
+                  href="https://github.com/mailkite/saas-startup"
+                  target="_blank"
+                  className="inline-flex items-center justify-center gap-2 rounded-full border border-border-brand bg-panel px-8 py-3 text-sm font-semibold text-text transition-all hover:border-[var(--color-accent)]/40"
+                >
+                  View the code
+                </Link>
+              </div>
+            </div>
+
+            {/* Animated architecture diagram */}
+            <div className="animate-slide-up stagger-2 w-full">
+              <StackDiagram />
             </div>
           </div>
         </div>
@@ -62,7 +72,7 @@ export default function HomePage() {
             <FeatureCard icon={<Zap className="h-5 w-5" />} title="Authentication" body="Sign up, sign in, magic links, OAuth — powered by MailKite with JWT sessions out of the box." />
             <FeatureCard icon={<CreditCard className="h-5 w-5" />} title="Payments" body="Stripe integration with checkout sessions, customer portal, and subscription management." />
             <FeatureCard icon={<Globe className="h-5 w-5" />} title="Team Management" body="Invite team members, manage roles, and collaborate from a shared dashboard." />
-            <FeatureCard icon={<Database className="h-5 w-5" />} title="PostgreSQL + Drizzle ORM" body="Type-safe queries and migrations on PostgreSQL — works with Neon, Supabase, or Vercel Postgres." />
+            <FeatureCard icon={<Database className="h-5 w-5" />} title="Supabase Postgres + Drizzle ORM" body="Type-safe queries and migrations on Postgres, hosted on Supabase — with Neon or any Postgres a drop-in swap." />
             <FeatureCard icon={<Lock className="h-5 w-5" />} title="Security" body="CSRF protection, rate limiting, secure cookies, and password hashing — all configured." />
             <FeatureCard icon={<MessageSquare className="h-5 w-5" />} title="Beautiful UI" body="Dark-first design system with shadcn components, responsive layouts, and a polished dashboard." />
           </div>
