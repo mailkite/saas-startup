@@ -51,8 +51,9 @@ export const submitContact = validatedAction(contactSchema, async (data) => {
 
   const result = await sendEmail({
     to,
-    // Must be an address on a verified MailKite domain. Overridable via CONTACT_FROM.
-    from: process.env.CONTACT_FROM || 'noreply@mailkite.dev',
+    // Must be an address on a verified MailKite domain — and, if your API key is
+    // domain-scoped, on that scoped domain. Defaults to MAILKITE_FROM.
+    from: process.env.CONTACT_FROM || process.env.MAILKITE_FROM || undefined,
     // Replies go straight to the person who filled out the form.
     replyTo: email,
     subject: `[${label}] New contact from ${name}`,

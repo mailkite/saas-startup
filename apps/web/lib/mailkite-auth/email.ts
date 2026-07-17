@@ -15,6 +15,15 @@ function getApiUrl(): string {
   return getAuthConfig().apiUrl;
 }
 
+/**
+ * Default sender for all app email. If MAILKITE_API_KEY is scoped to a single
+ * domain, this MUST be an address on that domain or MailKite rejects the send
+ * with 403 key_scope. Override per-message via the `from` param.
+ */
+export function getDefaultFrom(): string {
+  return process.env.MAILKITE_FROM || 'noreply@mailkite.dev';
+}
+
 export async function sendEmail(params: SendEmailParams): Promise<{ ok: boolean; error?: string }> {
   try {
     const res = await fetch(`${getApiUrl()}/v1/send`, {
@@ -25,7 +34,7 @@ export async function sendEmail(params: SendEmailParams): Promise<{ ok: boolean;
       },
       body: JSON.stringify({
         to: [params.to],
-        from: params.from || 'noreply@mailkite.dev',
+        from: params.from || getDefaultFrom(),
         subject: params.subject,
         html: params.html,
         ...(params.text ? { text: params.text } : {}),
