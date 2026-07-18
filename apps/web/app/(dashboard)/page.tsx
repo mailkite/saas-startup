@@ -1,4 +1,4 @@
-import { ArrowRight, CreditCard, Database, Globe, Lock, MessageSquare, Zap } from 'lucide-react';
+import { ArrowRight, CreditCard, Database, Globe, LayoutDashboard, Lock, Mail, MessageSquare, Palette, Shield, Zap } from 'lucide-react';
 import Link from 'next/link';
 import { BackgroundPixels } from '@/components/BackgroundPixels';
 import { GradientCard, FeatureCard } from '@/components/GradientCard';
@@ -73,12 +73,12 @@ export default function HomePage() {
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <FeatureCard icon={<Zap className="h-5 w-5" />} title="Authentication" body="Sign up, sign in, magic links, OAuth — powered by MailKite with JWT sessions out of the box." />
-            <FeatureCard icon={<CreditCard className="h-5 w-5" />} title="Payments" body="Stripe integration with checkout sessions, customer portal, and subscription management." />
-            <FeatureCard icon={<Globe className="h-5 w-5" />} title="Team Management" body="Invite team members, manage roles, and collaborate from a shared dashboard." />
-            <FeatureCard icon={<Database className="h-5 w-5" />} title="Supabase Postgres + Drizzle ORM" body="Type-safe queries and migrations on Postgres, hosted on Supabase — with Neon or any Postgres a drop-in swap." />
-            <FeatureCard icon={<Lock className="h-5 w-5" />} title="Security" body="CSRF protection, rate limiting, secure cookies, and password hashing — all configured." />
-            <FeatureCard icon={<MessageSquare className="h-5 w-5" />} title="Beautiful UI" body="Dark-first design system with shadcn components, responsive layouts, and a polished dashboard." />
+            <FeatureCard icon={<Zap className="h-5 w-5" />} provider={<Mail className="h-4 w-4" />} title="Authentication" body="Sign up, sign in, magic links, OAuth — powered by MailKite with JWT sessions out of the box." />
+            <FeatureCard icon={<CreditCard className="h-5 w-5" />} provider={<CreditCard className="h-4 w-4" />} title="Payments" body="Stripe integration with checkout sessions, customer portal, and subscription management." />
+            <FeatureCard icon={<Globe className="h-5 w-5" />} provider={<LayoutDashboard className="h-4 w-4" />} title="Team Management" body="Invite team members, manage roles, and collaborate from a shared dashboard." />
+            <FeatureCard icon={<Database className="h-5 w-5" />} provider={<Database className="h-4 w-4" />} title="Supabase Postgres + Drizzle ORM" body="Type-safe queries and migrations on Postgres, hosted on Supabase — with Neon or any Postgres a drop-in swap." />
+            <FeatureCard icon={<Lock className="h-5 w-5" />} provider={<Shield className="h-4 w-4" />} title="Security" body="CSRF protection, rate limiting, secure cookies, and password hashing — all configured." />
+            <FeatureCard icon={<MessageSquare className="h-5 w-5" />} provider={<Palette className="h-4 w-4" />} title="Beautiful UI" body="Dark-first design system with shadcn components, responsive layouts, and a polished dashboard." />
           </div>
         </div>
       </section>
