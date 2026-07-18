@@ -299,7 +299,7 @@ export function StackDiagram() {
 
           {/* The hub — your Next.js app, on Vercel */}
           <g className="sd-hub">
-            <rect className="sd-hub-box" x="150" y="150" width="150" height="136" rx="18" />
+            <rect className="sd-hub-box" x="150" y="150" width="150" height="141" rx="18" />
             <rect className="sd-hub-tile" x="201" y="166" width="48" height="48" rx="12" />
             <BrandMark name="next" x={209} y={174} size={32} />
             <text className="sd-hub-title" x="225" y="236" textAnchor="middle">
