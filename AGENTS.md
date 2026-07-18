@@ -210,7 +210,7 @@ Local dev secrets go in `apps/web/.env.local` (see `.env.example`). Production s
 
 ### Web app (`apps/web`) → Vercel
 
-The repo is linked to the Vercel project **`web`** (root `vercel.json` sets the monorepo build:
+The repo is linked to the Vercel project **`saas-nextjs-starter`** (root `vercel.json` sets the monorepo build:
 `cd apps/web && pnpm run build`). Two ways to ship:
 
 ```bash

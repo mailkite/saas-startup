@@ -2,21 +2,33 @@
 
 ## Vercel project
 
-This repo deploys to a **single** Vercel project: **`web`**, which owns the
-production domain **https://saas-startup.mailkite.dev** and all production env
-vars (database, Stripe, OAuth, MailKite).
+This repo deploys to a **single** Vercel project: **`saas-nextjs-starter`**,
+which owns the production domain **https://saas-startup.mailkite.dev** and all
+production env vars (database, Stripe, OAuth, MailKite).
 
-The repo is linked to it via `.vercel/project.json` (`projectName: "web"`).
-Deploy with:
+The repo is linked to it via `.vercel/project.json`. Deploy with:
 
 ```bash
-vercel --prod        # production (saas-startup.mailkite.dev)
-vercel               # preview
+# Production (saas-startup.mailkite.dev) — preferred: push to main
+git push origin main            # auto-deploys via Vercel Git integration
+
+# Manual production deploy
+vercel --prod
+
+# Preview deploy (branch/PR)
+vercel
 ```
 
+### Project structure
+
+| Vercel project      | URL                              | Purpose                 |
+| ------------------- | -------------------------------- | ----------------------- |
+| `saas-nextjs-starter` | https://saas-startup.mailkite.dev | SaaS product site + dashboard |
+| `webmail`           | https://webmail-bucabays-projects.vercel.app | (separate — not this repo) |
+
 > **One project only.** A second, orphaned project named `saas-startup` used to
-> exist (no custom domain, `*.vercel.app` URLs only). If it's still present,
-> remove it so there's a single source of truth:
+> exist (no custom domain, `*.vercel.app` URLs only). It was removed on
+> 2026-07-18. If a stale project reappears, remove it:
 >
 > ```bash
 > vercel project rm saas-startup
