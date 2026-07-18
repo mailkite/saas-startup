@@ -369,7 +369,7 @@ export function StackDiagram() {
 
         /* Service cards — resting state is fully lit */
         :global(.sd-card-box) {
-          fill: color-mix(in oklab, var(--color-accent) 6%, var(--color-panel));
+          fill: color-mix(in oklab, var(--color-accent) 6%, color-mix(in oklab, var(--color-panel) 90%, white));
           stroke: color-mix(in oklab, var(--color-accent) 40%, transparent);
           stroke-width: 1.5;
         }
