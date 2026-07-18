@@ -1,28 +1,62 @@
 # AGENTS.md — how we work on saas-startup
 
-Tool-agnostic guidance for every agent (and human) working in this repo — the
-development process, coding standards, and deploy runbook. **This file is the single
-source of truth (SSOT) for how we work and deploy.** Read it before writing code,
+Tool-agnostic guidance for every agent (and human) working in this repo — the development
+process, the skills toolkit, the docs system, and the deploy runbook. **This file is the single
+source of truth (SSOT) for how we work and ship.** Read it before writing code, building UI,
 deploying, or making a non-trivial decision.
 
-This is a **Turborepo monorepo** containing:
-- **apps/web** — SaaS product website (Next.js 15 + OpenNext → Cloudflare Workers)
-- **packages/mailkite-auth** — Shared auth package (JWT, OAuth, session, middleware)
+This is a **Next.js SaaS starter** — "launch your SaaS" — with everything wired together:
+**MailKite** for auth & transactional email, **Stripe** for payments, **Postgres on Supabase +
+Drizzle ORM** for data, a polished dashboard, and deployment to **Vercel**.
 
-Auth is fully separated into its own package so both apps import it cleanly.
+It is a **Turborepo monorepo**:
+- **apps/web** — the SaaS product website + dashboard (Next.js 15, App Router)
+- **packages/mailkite-auth** — shared auth package (JWT, OAuth, session, middleware)
 
 ---
 
-## 1. Research first — always
+## 0. This repo is an AI-extensible starter
 
-No build decision is made before live research is done and documented.
+Beyond the running app, this starter ships an **AI development platform** so that whoever clones
+it can extend it — new features, new sections, new integrations — with an agent that already
+knows the codebase:
 
-1. **Research live.** Investigate usability, market, audience, and current best practice for
-   the specific thing — using web research and the leaders in the vertical, not memory or reflex.
-2. **Write the options doc.** Produce a **pros/cons list** and a **weighted list of options**
-   in a doc under `docs/`. State trade-offs concretely.
+- **Skills** in `apps/web/.claude/skills/` — one per surface/provider (see §3). They are plain
+  markdown; any agent tool can read them.
+- **This `AGENTS.md`** — the process below.
+- **`docs/`** — the project's memory: research, feature docs, and work logs.
+
+The whole thing runs as one loop:
+
+```
+question ─▶ docs/research/<topic>.md ─▶ human decision ─▶ docs/features/<feature>.md ─▶ build (skills) ─▶ docs/worklog/<date>.md
+            (options + trade-offs)        (recorded)        (what we're building)         (code)          (what shipped)
+```
+
+## 1. Scope every change to the vertical & audience
+
+Before touching anything, frame the work inside what this product is and who it serves. Name
+**the audience** and **the one job** the change serves — and write it down (in the research or
+feature doc). Then:
+
+- Study **how the strongest products in the space solve the same thing** — Vercel, Stripe,
+  Linear, Clerk, Supabase, Resend, Cal.com, Dub, Neon — and adopt the pattern that already
+  tested well with this audience, then improve it.
+- Prefer **the stack, UX, and patterns that win in this vertical** over generic defaults.
+- **Reuse what this codebase already does** before inventing something new.
+
+## 2. Research first — always (non-negotiable)
+
+No build decision is made before live research is done and documented. Use the **`saas-research`
+skill**, which drives this loop.
+
+1. **Research live.** Investigate usability, market, audience, and current best practice for the
+   specific thing — via web research and the leaders above, not memory or reflex.
+2. **Write the options doc** in `docs/research/<topic>.md` (marketing/GTM under
+   `docs/research/marketing/`): a **pros/cons list** and a **weighted list of options** with
+   concrete trade-offs.
 3. **Human review + decision.** A human reviews the doc and makes the choice(s).
-4. **Record the decision.** Update the doc with what was chosen and why. *Then* build.
+4. **Record the decision** in the same doc — what was chosen and why. *Then* build.
 
 Skip steps only for the genuinely trivial (a typo, a one-line copy tweak) — and even then,
 prefer leaving a note in the relevant doc.
@@ -31,256 +65,217 @@ prefer leaving a note in the relevant doc.
 
 Before implementing any feature that introduces new functions, modules, or public interfaces:
 
-1. **Grep for existing code** that does something similar. Search the codebase
-   (`grep`, `rg`, file search) and report what exists before writing anything new.
-2. **Write a brief interface contract** (3–5 lines) stating:
-   - What the function/module **promises to callers** (outputs, return types)
-   - What it **requires from dependencies** (inputs, preconditions)
-   - What **invariants** it maintains
-   - Which **existing code** it might overlap with (mandatory grep result)
-3. **Then implement.** The contract survives the context window and binds future edits to
-   declared scope.
+1. **Grep for existing code** that does something similar (`grep`, `rg`, file search) and report
+   what exists before writing anything new.
+2. **Write a brief interface contract** (3–5 lines): what it **promises callers** (outputs,
+   types), what it **requires** (inputs, preconditions), what **invariants** it holds, and which
+   **existing code** it overlaps with (mandatory grep result).
+3. **Then implement.** The contract survives the context window and binds future edits to scope.
 
-## 2. Plan: phases for large work, a checklist for small
+This prevents the two primary agent failure modes: hallucinated interfaces and mid-task
+architectural drift.
 
-- **Large task** → a **phased plan**, each phase with its own **checklist**. Each phase is
-  a shippable unit.
-- **Small task** (a fix, a UI tweak, a copy change) → **just a checklist** in the relevant
-  doc or the commit body. No ceremony.
+## 3. Skills — your toolkit
 
-## 3. Docs mirror the code — and the code links back
+Skills live in **`apps/web/.claude/skills/<name>/SKILL.md`** and are auto-discovered by agents
+working under `apps/web/`. Load the relevant skill *before* building on that surface — each one
+carries the real file map, the copy-pasteable patterns, and the settled conventions for its area.
 
-**Every feature, screen, component, library, and model has a doc, and every code file links
-its doc at the top.** Docs live under `docs/` and **mirror the codebase / route structure**.
+| Skill | Use it when you… |
+|---|---|
+| `saas-ui` | Build or restyle UI — shadcn (new-york) components, Tailwind v4 tokens, the brand system, motion |
+| `nextjs-app` | Add a page/route, server action, route handler, or layout (App Router, RSC-first) |
+| `mailkite-provider` | Touch auth, sessions, OAuth, or send transactional email (MailKite) |
+| `stripe-provider` | Touch payments — checkout, subscriptions, the customer portal, webhooks |
+| `supabase-provider` | Touch the database — schema, migrations, queries (Postgres on Supabase + Drizzle) |
+| `saas-research` | Decide *whether/what/how* to build or position — market, competitors, pricing, GTM |
+| `neon` / `neon-postgres` | Use Neon instead of Supabase as the Postgres host (drop-in alternative) |
+
+Host-level skills are also available where relevant: `deep-research` (multi-source reports),
+the `blog` suite, `domain-check`, and the `stripe:*` / `mailkite:*` operational skills + MCP
+servers referenced inside the provider skills.
+
+**Adding a skill.** New capability worth codifying → add `apps/web/.claude/skills/<name>/SKILL.md`
+following the format of the existing skills (frontmatter `name`/`description`/`version`; sections
+*When to use → Where it lives → How to → Conventions → Before you call it done → Related*), then
+list it in the table above.
+
+## 4. Docs mirror the code — and the code links back
+
+**Every feature, screen, component, library, and model has a doc, and every code file links its
+doc at the top.** Docs live under `docs/` (see [`docs/README.md`](docs/README.md)).
 
 | What | Doc location | Example |
 |---|---|---|
-| Feature / architecture | `docs/architecture/<feature>.md` | `docs/architecture/auth.md` |
-| Screen / route | `docs/<surface>/<route>.md` | `docs/web/pricing.md` |
-| Component | `docs/<surface>/components/<name>.md` | `docs/web/components/pricing-card.md` |
-| Library / util | `docs/<surface>/lib/<name>.md` | `docs/web/lib/db.md` |
+| Feature | `docs/features/<feature>.md` | `docs/features/team-invites.md` |
+| Research / decision | `docs/research/<topic>.md` | `docs/research/auth-provider-choice.md` |
+| Marketing / GTM | `docs/research/marketing/<topic>.md` | `docs/research/marketing/pricing.md` |
+| Session log | `docs/worklog/YYYY-MM-DD-<slug>.md` | `docs/worklog/2026-07-17-stack-diagram.md` |
+| Architecture (cross-cutting) | `docs/<name>.md` | `docs/AUTH.md`, `docs/DEPLOYMENT.md` |
 
 Link the doc as a comment at the top of every code file it covers:
 
 ```tsx
-// Docs: docs/web/pricing.md
+// Docs: docs/features/team-invites.md
 ```
 
-## 4. Execution loop
+Keep links accurate — if you move or rename code, move/rename its doc and fix the link. Each
+folder has a `README.md` and a `_TEMPLATE.md`; copy the template to start.
+
+## 5. Plan: phases for large work, a checklist for small
+
+- **Large task** → a **phased plan**, each phase with its own **checklist**; each phase is a
+  shippable unit. Capture it in the feature doc.
+- **Small task** (a fix, a UI tweak, a copy change) → **just a checklist** in the relevant doc or
+  the commit body. No ceremony.
+
+## 6. Execution loop
 
 For each phase, in order:
 
-1. **Implement** the next checklist item.
+1. **Implement** the next checklist item (load the relevant skill from §3 first).
 2. **Check it off** in the phase checklist.
-3. **Update the doc** (the screen/component/feature doc and the decision record).
-4. **Build & lint clean** — `npm run build` + `npm run lint` in the affected app. Don't
-   leave coding for done until it's green.
+3. **Update the docs** — the feature doc and the decision record.
+4. **Verify it works** — drive the actual flow, not just types. Then `npm run build` +
+   `npm run lint` in the affected app must be green before moving on.
 5. **Continue** to the next item.
-6. **Push at the end of each phase.**
+6. **At the end of each phase:** write a `docs/worklog/` entry, commit, and (if it changed
+   something deployable) push.
 
-### Session discipline
+### Session discipline (anti-erosion)
 
-- **One feature per session.** Start a fresh session between logically distinct changes.
-- **Interleave refactoring sessions.** After every 2–3 feature sessions, review and
-  refactor the accumulated code.
-- **Commit before extending.** A git commit between features gives the next session a clean
-  baseline and enables `git diff`-based quality comparison.
-- **Compact early, not late.** If compacting, do it at ~60% context capacity, not at the limit.
+Code quality degrades within long agent sessions. The cheapest fix is breaking trajectories:
 
-## 5. Branching & parallel agents
+- **One feature per session.** Start fresh between logically distinct changes.
+- **Interleave refactoring sessions.** After every 2–3 feature sessions, run one whose sole job
+  is reviewing and refactoring the accumulated code.
+- **Commit before extending.** A commit between features gives the next session a clean baseline.
+- **Compact early, not late** — around ~60% context, not at the limit.
 
-- **Always work on `main`. Do not create a branch.** Multiple agents work at the same time.
-- It's fine to share `main` — **work is scoped per agent** so parallel work has minimal
-  overlap. Keep your changes tight to your scope to avoid stepping on others.
+## 7. Branching & parallel agents
 
----
-
-## 6. Coding standards
-
-Keep it minimal and maintainable. No heavy style config (no repo-wide Prettier/Biome).
-The bar: *the codebase stays small, legible, and free of dead weight.*
-
-- **TypeScript strict.** No `any` without a one-line `//`-comment justifying it. Prefer
-  precise types over casts; keep `tsc` green.
-- **No dead code.** No unused exports, files, or deps. Delete rather than comment-out.
-  Dead code is the opposite of maintainable.
-- **No tangled deps.** No circular imports or cross-component reach-arounds. Each package
-  and app owns its code.
-- **Small, single-purpose files.** A file does one thing; if it sprawls, split it. Favor
-  the smallest change that solves the problem over a clever abstraction.
-- **Every code file links its doc** (`// Docs: …`, see §3) and **docs mirror the code.**
-- **Lint clean.** Run `npm run lint` (ESLint) before calling it done. Don't silence a rule
-  to pass — fix it, or note why in the disable comment.
-- **Reuse before adding.** Check for an existing helper/lib before writing a new one;
-  a new dependency needs a reason.
-- **Search before writing any utility.** Before writing a formatting function, date helper,
-  string util, or validation logic — `grep` or `rg` the codebase first. If an existing
-  implementation exists, use it. This prevents the #1 AI agent failure mode: silently
-  duplicating existing code under a new name.
+- **Always work on `main`. Do not create a branch.** Multiple agents may work at once.
+- It's fine to share `main` — **work is scoped per agent**, so keep changes tight to your scope
+  to avoid stepping on others.
 
 ---
 
-## 7. Secrets — never read back, prefer the vault
+## 8. Coding standards — keep it minimal & maintainable
 
-- **Never echo a secret into chat.** Don't `cat` a key file, don't `echo $SECRET`, don't
-  paste a token or password into a code block. Use secrets directly in commands where they
-  serve their purpose (e.g. `curl -H "Authorization: Bearer $(cat /Volumes/secrets/...)"`),
-  not to satisfy a confirmation reflex.
-- **Prefer `/Volumes/secrets/` as the single source of truth.** When the user tells you a
-  key is at a path under `/Volumes/secrets/`, read it from there and use it directly — don't
-  copy it into `.env`, `.dev.vars`, or any config file unless the user explicitly asks you to.
+No heavy style config (no repo-wide Prettier/Biome). The bar: *the codebase stays small,
+legible, and free of dead weight.*
 
----
-
-## 8. Cloudflare DNS editing (from the agent)
-
-When you need to create, list, or delete DNS records on Cloudflare (for subdomains,
-Worker routes, email records, etc.), use the Cloudflare REST API directly. The token
-lives in the vault.
-
-### Prerequisites
-
-```bash
-CF_TOKEN=$(cat /Volumes/secrets/mailkite/cloudflare-api)
-```
-
-Token scope: `Zone · Zone · Read` (all zones) + `Zone · DNS · Edit`.
-
-### Resolve the zone ID
-
-```bash
-ZONE_ID=$(curl -s -H "Authorization: Bearer $CF_TOKEN" \
-  "https://api.cloudflare.com/client/v4/zones?name=mailkite.dev" | \
-  python3 -c "import sys,json; print(json.load(sys.stdin)['result'][0]['id'])")
-```
-
-### List existing records
-
-```bash
-# All records for a subdomain
-curl -s -H "Authorization: Bearer $CF_TOKEN" \
-  "https://api.cloudflare.com/client/v4/zones/$ZONE_ID/dns_records?name=saas-startup.mailkite.dev" | \
-  python3 -m json.tool
-
-# All records in the zone (large output)
-curl -s -H "Authorization: Bearer $CF_TOKEN" \
-  "https://api.cloudflare.com/client/v4/zones/$ZONE_ID/dns_records" | \
-  python3 -m json.tool
-```
-
-### Create a record
-
-```bash
-# CNAME (e.g. for a subdomain pointing to the zone)
-curl -s -X POST -H "Authorization: Bearer $CF_TOKEN" -H "Content-Type: application/json" \
-  "https://api.cloudflare.com/client/v4/zones/$ZONE_ID/dns_records" \
-  -d '{"type":"CNAME","name":"saas-startup","content":"mailkite.dev","ttl":1,"proxied":true}'
-
-# MX (e.g. for email receiving)
-curl -s -X POST -H "Authorization: Bearer $CF_TOKEN" -H "Content-Type: application/json" \
-  "https://api.cloudflare.com/client/v4/zones/$ZONE_ID/dns_records" \
-  -d '{"type":"MX","name":"example.com","content":"mx.mailkite.dev","priority":10,"ttl":300}'
-
-# TXT (e.g. SPF, DKIM, DMARC — TXT content must be double-quoted)
-curl -s -X POST -H "Authorization: Bearer $CF_TOKEN" -H "Content-Type: application/json" \
-  "https://api.cloudflare.com/client/v4/zones/$ZONE_ID/dns_records" \
-  -d '{"type":"TXT","name":"example.com","content":"\"v=spf1 include:mailkite.dev ~all\"","ttl":300}'
-```
-
-### Delete a record
-
-```bash
-# First find the record ID from the list output, then:
-curl -s -X DELETE -H "Authorization: Bearer $CF_TOKEN" \
-  "https://api.cloudflare.com/client/v4/zones/$ZONE_ID/dns_records/<record_id>"
-```
-
-### Idempotency
-
-Creating a record that already exists returns error codes 81053/81057/81058 — treat these
-as success (idempotent). The Cloudflare dashboard shows warnings for unquoted TXT content;
-always wrap TXT values in double quotes.
-
-### Troubleshooting
-
-If DNS doesn't resolve after creating a record:
-1. Check the record exists: `curl ... /dns_records?name=<hostname>`
-2. Check the Worker route exists: `wrangler deployments` (or check the dashboard)
-3. Propagation can take 1–60 seconds for proxied records, longer for non-proxied
+- **TypeScript strict.** No `any` without a one-line `//` justification. Prefer precise types
+  over casts; keep `tsc` green.
+- **No dead code.** No unused exports, files, or deps — delete rather than comment out.
+- **No tangled deps.** No circular imports or cross-component reach-arounds. Each package/app
+  owns its code.
+- **Small, single-purpose files.** A file does one thing; if it sprawls, split it. Favor the
+  smallest change that solves the problem over a clever abstraction — match the surrounding code.
+- **Every code file links its doc** (`// Docs: …`, §4) and **docs mirror the code.**
+- **Lint clean.** Run `npm run lint` before "done"; don't silence a rule to pass — fix it, or
+  note why in the disable comment.
+- **Reuse before adding.** Check for an existing helper/lib/component before writing a new one; a
+  new dependency needs a reason (§2 research applies to tooling too).
+- **Search before writing any utility.** Before a formatting fn, date helper, string util,
+  validation, or API client method — `grep`/`rg` first. Duplicating existing code under a new
+  name is the #1 agent failure mode.
 
 ---
 
-## 9. Deploying
+## 9. Secrets — never read back, prefer the vault
 
-### Web app (`apps/web`) → Cloudflare Workers
+- **Never echo a secret into chat.** Don't `cat` a key file, `echo $SECRET`, or paste a token
+  into a code block. Use secrets directly in commands where they serve their purpose (e.g.
+  `curl -H "Authorization: Bearer $(cat /Volumes/secrets/...)"`), not to satisfy a confirmation
+  reflex. The conversation may be logged; a bare secret in chat is a leak.
+- **Prefer `/Volumes/secrets/` as the single source of truth.** When told a key lives under
+  `/Volumes/secrets/`, read it from there and use it directly — don't copy it into `.env`,
+  `.dev.vars`, or config unless explicitly asked.
 
-```bash
-cd apps/web
-npm run deploy          # opennextjs-cloudflare build && deploy
-```
+Local dev secrets go in `apps/web/.env.local` (see `.env.example`). Production secrets live in
+**Vercel** — set them with `vercel env` or the dashboard, never in a committed file.
 
-This builds the Next.js app with OpenNext, bundles it for Cloudflare Workers, and deploys.
-The Worker name and route are configured in `apps/web/wrangler.jsonc`.
+## 10. Never mutate account state without explicit approval
 
-**Prerequisites:**
-- `wrangler login` (OAuth — stored at `~/.Library/Preferences/.wrangler/config/default.toml`)
-- R2 bucket `saas-startup-opennext-cache` exists (for incremental cache)
-- DNS record created for the hostname (see §8)
-- CF Worker secrets set (see §10)
+- **Never change a user's plan, provider, or billing tier** without the user explicitly asking.
+  Upgrading Free → Pro or toggling any account-level setting changes the billing relationship —
+  ask first.
+- **Never switch infrastructure configuration** (DNS, provider, deploy target) without approval —
+  it can break the live site.
 
-### Setting CF Worker secrets
+---
 
-```bash
-cd apps/web
-echo "value" | wrangler secret put AUTH_SECRET
-echo "value" | wrangler secret put STRIPE_SECRET_KEY
-echo "value" | wrangler secret put STRIPE_WEBHOOK_SECRET
-```
+## 11. Deploying
 
-Or use the vault:
+### Web app (`apps/web`) → Vercel
 
-```bash
-echo "$(cat /Volumes/secrets/mailkite/cloudflare-api)" | wrangler secret put CF_API_TOKEN
-```
-
-List configured secrets:
+The repo is linked to the Vercel project **`web`** (root `vercel.json` sets the monorepo build:
+`cd apps/web && pnpm run build`). Two ways to ship:
 
 ```bash
-wrangler secret list
+# Preferred: push to main — Vercel's Git integration builds & deploys automatically
+git push origin main
+
+# Manual production deploy from the repo root
+vercel --prod
 ```
 
-### Building without deploying
-
-```bash
-cd apps/web
-npm run build:cf        # opennextjs-cloudflare build only (no deploy)
-```
+Preview deploys come free on every branch/PR. Manage env with `vercel env pull` /
+`vercel env add`. (See [`docs/DEPLOYMENT.md`](docs/DEPLOYMENT.md) for the full runbook.)
 
 ### Local development
 
 ```bash
 cd apps/web
-npm run dev             # next dev --turbopack (port 3000)
+npm run dev            # next dev --turbopack (port 3000)
 ```
 
+### Database migrations (Drizzle)
+
+```bash
+cd apps/web
+npm run db:generate    # generate a migration from schema changes
+npm run db:migrate     # apply migrations to POSTGRES_URL
+npm run db:seed        # seed local/dev data
+```
+
+See the `supabase-provider` skill for the full DB workflow (pooler vs direct URL, etc.).
+
+## 12. Cloudflare DNS editing (from the agent)
+
+When you need to create, list, or delete DNS records on Cloudflare (subdomains, email records,
+etc.), use the Cloudflare REST API directly. The token lives in the vault.
+
+```bash
+CF_TOKEN=$(cat /Volumes/secrets/mailkite/cloudflare-api)      # scope: Zone·Read + DNS·Edit
+ZONE_ID=$(curl -s -H "Authorization: Bearer $CF_TOKEN" \
+  "https://api.cloudflare.com/client/v4/zones?name=mailkite.dev" | \
+  python3 -c "import sys,json; print(json.load(sys.stdin)['result'][0]['id'])")
+
+# List for a hostname
+curl -s -H "Authorization: Bearer $CF_TOKEN" \
+  "https://api.cloudflare.com/client/v4/zones/$ZONE_ID/dns_records?name=app.example.com" | python3 -m json.tool
+
+# Create (CNAME / MX / TXT — TXT content must be double-quoted)
+curl -s -X POST -H "Authorization: Bearer $CF_TOKEN" -H "Content-Type: application/json" \
+  "https://api.cloudflare.com/client/v4/zones/$ZONE_ID/dns_records" \
+  -d '{"type":"CNAME","name":"app","content":"cname.vercel-dns.com","ttl":1,"proxied":false}'
+```
+
+Creating a record that already exists returns 81053/81057/81058 — treat as success (idempotent).
+For MailKite email DNS (MX + SPF/DKIM), the **`mailkite` skill** and MCP set records for you.
+
 ---
 
-## 10. Never mutate account state without approval
-
-- **Never change a user's plan, provider, or billing tier** without the user explicitly asking.
-- **Never switch infrastructure configuration** without approval. Changing a domain's DNS,
-  provider, or deployment target can break the live site. Ask first.
-
----
-
-## 11. Deployable components
+## 13. Deployable components
 
 > Each component deploys independently. Deploy only what changed.
 
 | Dir | What | Where it runs |
 |---|---|---|
-| `apps/web` | SaaS product website (Next.js 15 + OpenNext) | Cloudflare Workers → `saas-startup.mailkite.dev` |
+| `apps/web` | SaaS product website + dashboard (Next.js 15) | Vercel |
 | `packages/mailkite-auth` | Shared auth package (JWT, OAuth, session, middleware) | Imported by apps — not deployed directly |
 
-**Dependencies:** `apps/web` depends on `@mailkite/auth` (workspace). Auth package changes
+**Dependencies:** `apps/web` depends on `@mailkite/auth` (workspace). Auth-package changes
 require a rebuild of the consuming app.

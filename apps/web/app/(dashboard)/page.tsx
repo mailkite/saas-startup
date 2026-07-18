@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { BackgroundPixels } from '@/components/BackgroundPixels';
 import { GradientCard, FeatureCard } from '@/components/GradientCard';
 import { StackDiagram } from '@/components/StackDiagram';
+import { BuildWithAI } from '@/components/BuildWithAI';
 
 export default function HomePage() {
   return (
@@ -18,7 +19,7 @@ export default function HomePage() {
             {/* Copy */}
             <div className="text-center lg:text-left max-w-2xl mx-auto lg:mx-0">
               <span className="eyebrow mb-6">
-                Auth · Payments · Supabase Postgres · Dashboard
+                Auth · Payments · Supabase Postgres · AI-extensible
               </span>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-text animate-slide-up stagger-1">
                 Next.js SaaS Starter —
@@ -54,6 +55,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* ---- Build with AI (the platform) --------------------------------- */}
+      <BuildWithAI />
 
       {/* ---- Features ------------------------------------------------------ */}
       <section className="py-24 bg-panel">
