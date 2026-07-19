@@ -41,7 +41,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" data-theme="dark" suppressHydrationWarning>
       <head>
         {/* Safari <15 pinned tabs; declared here because Metadata.icons has no `color`. */}
         <link rel="mask-icon" href="/brand/mask-icon.svg" color="#6ea8fe" />
