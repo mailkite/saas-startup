@@ -8,6 +8,17 @@ submitted) — put the submission date and PR/post URL in Notes so we can chase 
 The template must stay: MIT licensed, public, with a working live demo
 (<https://saas-startup.mailkite.dev>) and a Deploy button.
 
+**This file is authoritative for *this* template.** The org-wide index of every MailKite
+template and open-source freebie — and which venue belongs to which template, so the three
+starters don't compete for the same galleries — lives in the MailKite monorepo at
+`docs/OPEN-SOURCE.md` (this template's page: `docs/templates/saas-startup.md`). Update the
+summary there when a listing here goes live.
+
+**Lane discipline:** this repo owns the **SaaS-boilerplate / awesome-list** venues.
+`mailkite-nextjs-inbox` owns **Vercel + v0**; `mailkite-inbound-inbox` owns the **cloud
+deploy marketplaces** (Railway, Render, DO, Fly, Cloudflare). Don't submit this template to
+those.
+
 ---
 
 ## Submission log
@@ -17,8 +28,9 @@ or the post goes live. Newest first.
 
 | Date | Venue (website) | Submission URL (PR/post) | Listing URL (when live) | Status |
 |------|-----------------|--------------------------|-------------------------|--------|
-| 2026-07-19 | [shadcn.io](https://github.com/shadcnblocks/shadcntemplates) | _DRY RUN — would open PR (add `content/mailkite-saas-startup.md`)_ | — | `[ ]` planned |
-| 2026-07-19 | [awesome-saas (awesomelistsio)](https://github.com/brandonhimpfen/awesome-saas) | _DRY RUN — would open PR (add to "SaaS Boilerplates & Starter Kits")_ | — | `[ ]` planned |
+| 2026-07-26 | [shadcn.io](https://github.com/shadcnblocks/shadcntemplates) | [PR #14](https://github.com/shadcnblocks/shadcntemplates/pull/14) | _pending merge_ | `[~]` submitted |
+| 2026-07-19 | [shadcn.io](https://github.com/shadcnblocks/shadcntemplates) | _DRY RUN — superseded by PR #14 above_ | — | `[x]` done |
+| 2026-07-19 | [awesome-saas (awesomelistsio)](https://github.com/brandonhimpfen/awesome-saas) | _DRY RUN — **held**, see Tier 1 note: their PR template has a self-promotion attestation this repo can't honestly satisfy at 0 stars_ | — | `[ ]` blocked |
 | 2026-07-17 | [awesome-shadcn-ui](https://github.com/birobirobiro/awesome-shadcn-ui) | [PR #554](https://github.com/birobirobiro/awesome-shadcn-ui/pull/554) | _pending merge_ | `[~]` submitted |
 | 2026-07-17 | [awesome-nextjs](https://github.com/unicodeveloper/awesome-nextjs) | [PR #536](https://github.com/unicodeveloper/awesome-nextjs/pull/536) | _pending merge_ | `[~]` submitted |
 
@@ -36,8 +48,8 @@ Merge a PR, get listed. No account, no forms, no fees.
 | [-] | [enaqx/awesome-react](https://github.com/enaqx/awesome-react) | — | 74k★, but **no section fits** a full SaaS boilerplate. Skipped to avoid a rejected PR |
 | [~] | [birobirobiro/awesome-shadcn-ui](https://github.com/birobirobiro/awesome-shadcn-ui) | PR to README | 20.1k★. **Submitted 2026-07-17** → [PR #554](https://github.com/birobirobiro/awesome-shadcn-ui/pull/554), awaiting review. Added to `## Boilerplates / Templates` |
 | [ ] | [bytefer/awesome-nextjs](https://github.com/bytefer/awesome-nextjs) | PR to README | 68★ — low reach, but trivial |
-| [ ] | [shadcnblocks/shadcntemplates](https://github.com/shadcnblocks/shadcntemplates) (backs [shadcn.io](https://www.shadcn.io/template)) | PR — add `content/mailkite-saas-startup.md` | 40★, pushed 2026-05-27, actively merges outside PRs (#8–#10). **Free open-source listings** (premium tier has fees — ours is MIT so free). No AI-PR ban. Add one markdown file with front-matter: `title`, `author: mailkite`, `demoUrl: https://saas-startup.mailkite.dev`, `githubUrl: https://github.com/mailkite/saas-startup`, `description`, `distribution: open-source`, `category: [nextjs, react, tailwind]`, then a `## Overview` / `## Features` body. **DRY RUN 2026-07-19 — would open PR** |
-| [ ] | [brandonhimpfen/awesome-saas](https://github.com/brandonhimpfen/awesome-saas) | PR to README | 7★, pushed 2026-06-22. Fits `## SaaS Boilerplates & Starter Kits`; entry format `- [Name](url) — desc`, kept alphabetical. CONTRIBUTING **permits** AI PRs. Low reach but trivial + valid. **DRY RUN 2026-07-19 — would open PR** |
+| [~] | [shadcnblocks/shadcntemplates](https://github.com/shadcnblocks/shadcntemplates) (backs [shadcn.io](https://www.shadcn.io/template)) | PR — `content/mailkite-saas-startup.md` | 40★, pushed 2026-05-27, actively merges outside PRs (#8–#10). **Free open-source listings** (premium tier has fees — ours is MIT so free). No AI-PR rule; README says "anyone can submit a template by doing a pull request" and every merged PR is an author listing their own work, so self-submission is the documented norm. **Submitted 2026-07-26** → [PR #14](https://github.com/shadcnblocks/shadcntemplates/pull/14), awaiting review |
+| [ ] | [brandonhimpfen/awesome-saas](https://github.com/brandonhimpfen/awesome-saas) | PR to README | 7★, pushed 2026-06-22. Fits `## SaaS Boilerplates & Starter Kits` (append at bottom — that section is **not** alphabetical). No AI-PR ban. ⚠️ **Held 2026-07-26 — needs traction first.** Their `pull_request_template.md` requires checking *"I have not added a link to my own project if it's not notable or widely used"*, and CONTRIBUTING declines "resources added primarily for promotion". At **0★ and ~2 weeks old** that box can't be checked honestly. Revisit once the repo has real stars/usage, or submit with the box left unchecked and self-promotion disclosed and let the maintainer decide |
 | [ ] | GitHub topics | repo settings | ✅ **done** — `nextjs`, `nextjs15`, `saas-starter`, `saas-boilerplate`, `template`, … |
 
 ## Tier 2 — Launch platforms (one-shot traffic spikes)
