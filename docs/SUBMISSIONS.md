@@ -111,7 +111,31 @@ Do **not** re-research these — already evaluated and rejected for the reason g
 | [dhamaniasad/awesome-postgres](https://github.com/dhamaniasad/awesome-postgres) | 12k | Lists Postgres *tools/libraries* (drivers, admin UIs), not app starters. No fitting section |
 | [2-fly-4-ai/awesome-shadcnui](https://github.com/2-fly-4-ai/awesome-shadcnui) | 555 | Last pushed 2025-06 (>6 mo stale). Re-check only if it revives |
 | awesome-stripe (various forks) | ≤4 | Only low-reach lists (brandonhimpfen / codebruinc). Not worth a slot |
-| `awesome-drizzle` | — | Searched — no such list exists yet |
+| `awesome-drizzle` | — | Searched — no such list exists yet (a `matthiasfeist/awesome-drizzle` now exists but is 3★ — see run #2 below) |
+
+### Researched & skipped (2026-07-31 run #2, 21:25 UTC)
+
+The well of **high-quality git-PR venues is largely tapped** — the 9 lists already submitted cover
+the fresh, fitting awesome-lists. Everything below was re-verified live (★, last push, merge
+cadence) and rejected for the stated reason. Do **not** re-research.
+
+| Venue | ★ | Why skipped |
+|-------|---|-------------|
+| [sindresorhus/awesome-nodejs](https://github.com/sindresorhus/awesome-nodejs) | 66.4k | Node **package** catalog (HTTP / DB / Testing / Auth …). No boilerplate/starter section — an app starter doesn't fit. CC0, fresh, but wrong shape |
+| [Atarity/deploy-your-own-saas](https://github.com/Atarity/deploy-your-own-saas) | 9837 | Lists self-hostable *products* ("deploy your own VPN / music / Netflix …"), no boilerplate section. Also **maintainer stopped merging** — every recent PR (#80–#92) is unmerged |
+| [automata/awesome-jamstack](https://github.com/automata/awesome-jamstack) | 1367 | Sections are SSG / CMS / API / Serverless — **no starters section**. Our app is a dynamic SaaS (Postgres + sessions + Stripe), not static Jamstack, so it'd be a misfit PR |
+| [lukasmasuch/best-of-react](https://github.com/lukasmasuch/best-of-react) | 1071 | Auto-generated ranked list (`projects.yml` "Add project" flow exists) — but **last PR merged 2025-08-28 (~11 mo stale)**. Fails the ~6-mo freshness gate. Re-check only if it revives |
+| [dzharii/awesome-typescript](https://github.com/dzharii/awesome-typescript) | 5118 | **Archived** (read-only) — would have fit a "Typescript Project Starters" section, but accepts no PRs |
+| [johackim/awesome-indiehackers](https://github.com/johackim/awesome-indiehackers) | 642 | **GPL-3.0** content (not MIT-compatible) + no tools/starters section (people/blogs/podcasts only) + **maintainer stopped merging** (PRs #10–#27 all unmerged) |
+| [kaizen12219/awesome-react-resources](https://github.com/kaizen12219/awesome-react-resources) | 69 | Low reach; README not fetchable from default branch. Not worth a slot |
+| [matthiasfeist/awesome-drizzle](https://github.com/matthiasfeist/awesome-drizzle) | 3 | `awesome-drizzle` finally exists but at 3★ / ~8 mo stale — too small to be worth a PR. Re-check once it grows |
+| [petermekhaeil/awesome-turborepo](https://github.com/petermekhaeil/awesome-turborepo) | 12 | Stale (last push 2024-12) + low reach |
+| [2-fly-4-ai/awesome-shadcnui](https://github.com/2-fly-4-ai/awesome-shadcnui) | 555 | **Re-confirmed dead**: pushed 2025-06 (~13 mo stale), all recent PRs unmerged. Still skip |
+| [Built at Lightspeed](https://www.builtatlightspeed.com) | — | Jamstack themes/starters directory. Probe returned **HTTP 429** (rate-limited) — couldn't verify reachability or a submit flow. Marginal fit anyway (Jamstack). **MANUAL** — human verify before pursuing |
+
+> No email-channel venues this run: awesome-lists are PR-based and the template directories
+> (HTMLrev / Tailkits / Built at Lightspeed) are form-based, not email. Cold-emailing maintainers
+> to nudge the 8 pending PRs is pestering, not outreach — deliberately not done.
 
 ## Assets for any submission
 
