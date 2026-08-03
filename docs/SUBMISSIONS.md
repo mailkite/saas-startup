@@ -17,6 +17,7 @@ or the post goes live. Newest first.
 
 | Date | Venue (website) | Submission URL (PR/post) | Listing URL (when live) | Status |
 |------|-----------------|--------------------------|-------------------------|--------|
+| 2026-08-03 | [officialrajdeepsingh/awesome-nextjs](https://github.com/officialrajdeepsingh/awesome-nextjs) | [PR #88](https://github.com/officialrajdeepsingh/awesome-nextjs/pull/88) | _pending merge_ | `[~]` submitted |
 | 2026-08-02 | [iAmCorey/awesome-indie-hacker-tools](https://github.com/iAmCorey/awesome-indie-hacker-tools) | [PR #158](https://github.com/iAmCorey/awesome-indie-hacker-tools/pull/158) | _pending merge_ | `[~]` submitted |
 | 2026-08-01 | [sorrycc/awesome-javascript](https://github.com/sorrycc/awesome-javascript) | [PR #1133](https://github.com/sorrycc/awesome-javascript/pull/1133) | _closed w/o merge (no comment) 2026-08-01_ | `[-]` rejected |
 | 2026-08-01 | [lyqht/awesome-supabase](https://github.com/lyqht/awesome-supabase) | [PR #62](https://github.com/lyqht/awesome-supabase/pull/62) | _pending merge_ | `[~]` submitted |
@@ -44,6 +45,7 @@ Merge a PR, get listed. No account, no forms, no fees.
 | [-] | [enaqx/awesome-react](https://github.com/enaqx/awesome-react) | — | 74k★, but **no section fits** a full SaaS boilerplate. Skipped to avoid a rejected PR |
 | [~] | [birobirobiro/awesome-shadcn-ui](https://github.com/birobirobiro/awesome-shadcn-ui) | PR to README | 20.1k★. **Submitted 2026-07-17** → [PR #554](https://github.com/birobirobiro/awesome-shadcn-ui/pull/554), awaiting review. Added to `## Boilerplates / Templates` |
 | [~] | [bytefer/awesome-nextjs](https://github.com/bytefer/awesome-nextjs) | PR to README | 72★. **Submitted 2026-07-31** → [PR #23](https://github.com/bytefer/awesome-nextjs/pull/23), awaiting review (`## SaaS`) |
+| [~] | [officialrajdeepsingh/awesome-nextjs](https://github.com/officialrajdeepsingh/awesome-nextjs) | PR to README | 708★, MIT. **Submitted 2026-08-03** → [PR #88](https://github.com/officialrajdeepsingh/awesome-nextjs/pull/88), awaiting review (`## Next.js boilerplate`). Actively merges outside PRs (last #86 same day; even merged an AI-agent PR #72) — AI-friendly, no AI-PR ban. CONTRIBUTING asks ≥100★ but explicitly invites *unique* projects for review; submitted on the self-contained-auth (no auth vendor) differentiator, disclosed honestly in the PR body |
 | [x] | [bytefer/awesome-shadcn-ui](https://github.com/bytefer/awesome-shadcn-ui) | PR to README | 719★. **Listed 2026-07-30** → [PR #29](https://github.com/bytefer/awesome-shadcn-ui/pull/29) merged into the `Saas` table — ✅ our first live listing |
 | [~] | [xcomptek/awesome-saas-boilerplates](https://github.com/xcomptek/awesome-saas-boilerplates) | PR to README | 3.1k★. A list *of* SaaS boilerplates — topical bullseye. **Submitted 2026-07-29** → [PR #222](https://github.com/xcomptek/awesome-saas-boilerplates/pull/222), awaiting review |
 | [~] | [EinGuterWaran/awesome-opensource-boilerplates](https://github.com/EinGuterWaran/awesome-opensource-boilerplates) | PR to README | 1.9k★. "Free, production-ready" boilerplates. **Submitted 2026-07-29** → [PR #52](https://github.com/EinGuterWaran/awesome-opensource-boilerplates/pull/52), awaiting review |
@@ -103,6 +105,34 @@ A daily cron researches new venues and appends them here. Rules for anything it 
 3. **Free only.** Paid placements need a human decision — flag, don't add.
 4. **No duplicates** — check the tables above first.
 5. Record `★`, last-pushed date, and the evidence that it accepts submissions.
+
+### Researched & skipped (2026-08-03 run, 13:17 UTC)
+
+Fourth backlog research pass (4-hour cadence). **One** new venue acted on this run
+([officialrajdeepsingh/awesome-nextjs](https://github.com/officialrajdeepsingh/awesome-nextjs),
+708★ → [PR #88](https://github.com/officialrajdeepsingh/awesome-nextjs/pull/88)) — a fresh, MIT,
+actively-merging list (last outside PR merged the same day) with a `## Next.js boilerplate`
+section; it even merged a `copilot-swe-agent` PR (#72), so AI-authored PRs are clearly welcome.
+CONTRIBUTING lists a ≥100★ guideline but explicitly invites unique projects for review — our
+self-contained-auth (no auth vendor) angle is genuinely unique, and that (plus the repo being
+new/0★) is disclosed honestly in the PR body. All below were verified live this run (★, last
+push/merge, README headings). Do **not** re-research.
+
+Also this run: re-checked the 10 prior pending external PRs — all still **OPEN**, no new merges
+or closures since the 2026-08-02 pass (11 pending total now).
+
+| Venue | ★ | Why skipped |
+|-------|---|-------------|
+| [re50urces/Awesome-NextJs](https://github.com/re50urces/Awesome-NextJs) | 114 | **DEAD** — only PR ever merged is #1 on 2023-06-29; last push 2024-06-29. Fails the freshness gate hard |
+| [mahseema/awesome-saas-directories](https://github.com/mahseema/awesome-saas-directories) | 238 | A meta-list **of** SaaS directory sites (where to *list* a SaaS), not starter kits/templates. Wrong shape — we'd be an entry-into-a-list-of-lists |
+| [tyaga001/awesome-neon](https://github.com/tyaga001/awesome-neon) | 30 | Official-ish Neon list, but last push 2024-07-29 (~13 mo stale). Fails freshness gate |
+| [victorocna/awesome-react-starter](https://github.com/victorocna/awesome-react-starter) | 20 | Re-checked; still ~20★ = near-zero reach. Re-check if it grows |
+| [giovannism20/awesome-supabase](https://github.com/giovannism20/awesome-supabase) | 42 | Fresh (2026-08) but indexes **talks, tools, examples & articles** — not starters/templates. Wrong shape |
+| [shyakadavis/awesome-shadcn-svelte](https://github.com/shyakadavis/awesome-shadcn-svelte) | 137 | **Svelte**, not React/Next.js — wrong framework |
+| Remaining shadcn variants (agnostic-coder, y-h-v-h/shadverse, BankkRoll directory, vitalijalbu, ansarisaqlain987, vivek9patel) | ≤28 | Each <30★ and stale — near-zero reach. Re-check if any grows |
+
+> No email-channel venues again this run (same discipline): the fitting lists are PR-based, and
+> cold-emailing curators to add us or to nudge our 11 open PRs is pestering, not outreach.
 
 ### Researched & skipped (2026-08-02 run, 01:17 UTC)
 
