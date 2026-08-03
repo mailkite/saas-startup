@@ -17,6 +17,7 @@ or the post goes live. Newest first.
 
 | Date | Venue (website) | Submission URL (PR/post) | Listing URL (when live) | Status |
 |------|-----------------|--------------------------|-------------------------|--------|
+| 2026-08-03 | [brillout/awesome-react-components](https://github.com/brillout/awesome-react-components) | [PR #632](https://github.com/brillout/awesome-react-components/pull/632) | _pending merge_ | `[~]` submitted |
 | 2026-08-03 | [officialrajdeepsingh/awesome-nextjs](https://github.com/officialrajdeepsingh/awesome-nextjs) | [PR #88](https://github.com/officialrajdeepsingh/awesome-nextjs/pull/88) | _pending merge_ | `[~]` submitted |
 | 2026-08-02 | [iAmCorey/awesome-indie-hacker-tools](https://github.com/iAmCorey/awesome-indie-hacker-tools) | [PR #158](https://github.com/iAmCorey/awesome-indie-hacker-tools/pull/158) | _pending merge_ | `[~]` submitted |
 | 2026-08-01 | [sorrycc/awesome-javascript](https://github.com/sorrycc/awesome-javascript) | [PR #1133](https://github.com/sorrycc/awesome-javascript/pull/1133) | _closed w/o merge (no comment) 2026-08-01_ | `[-]` rejected |
@@ -40,6 +41,7 @@ Merge a PR, get listed. No account, no forms, no fees.
 | ✓ | Place | How | Notes |
 |---|-------|-----|-------|
 | [ ] | [vercel/examples](https://github.com/vercel/examples) | PR — `pnpm new-example` | **Not a one-line entry** — the example must live inside their monorepo, MIT, and Next.js examples must use `@vercel/examples-ui` styling. Its front-matter feeds vercel.com/templates, which is **closed for new submissions** (see Tier 3), so a merge may not surface as a template yet. Needs a human decision on approach before investing |
+| [~] | [brillout/awesome-react-components](https://github.com/brillout/awesome-react-components) | PR to README (`## Boilerplate`) | 48.0k★, CC0. **Submitted 2026-08-03** → [PR #632](https://github.com/brillout/awesome-react-components/pull/632), awaiting review (`## Boilerplate`). The flagship curated React-components list — has a literal "Boilerplate / scaffold / starter kit" section we fit. CONTRIBUTING has **no AI ban** but *requires* add = remove one un-awesome entry (PR removes archived `nwb`) and bans bare "React" in descriptions. Merge cadence is bursty (last batch 2026-01-26 merged 16 outside PRs; 57 open now) so it may wait — but at 48k★ it's the highest-reach venue we've tapped |
 | [~] | [unicodeveloper/awesome-nextjs](https://github.com/unicodeveloper/awesome-nextjs) | PR to README | 11.1k★. **Submitted 2026-07-17** → [PR #536](https://github.com/unicodeveloper/awesome-nextjs/pull/536), awaiting review. Added to `## Boilerplates` |
 | [-] | [aniftyco/awesome-tailwindcss](https://github.com/aniftyco/awesome-tailwindcss) | ~~PR~~ **hand-submit only** | 15.1k★. CONTRIBUTING.md **bans AI-authored/assisted PRs** — closed on sight, submitter may be banned. Gabe must add it by hand (📁 "Full templates" entry, `UI libraries, components & templates` section) |
 | [-] | [enaqx/awesome-react](https://github.com/enaqx/awesome-react) | — | 74k★, but **no section fits** a full SaaS boilerplate. Skipped to avoid a rejected PR |
@@ -105,6 +107,36 @@ A daily cron researches new venues and appends them here. Rules for anything it 
 3. **Free only.** Paid placements need a human decision — flag, don't add.
 4. **No duplicates** — check the tables above first.
 5. Record `★`, last-pushed date, and the evidence that it accepts submissions.
+
+### Researched & skipped (2026-08-03 run, 21:17 UTC)
+
+Fifth backlog research pass (4-hour cadence). **One** new venue acted on this run
+([brillout/awesome-react-components](https://github.com/brillout/awesome-react-components),
+48.0k★ → [PR #632](https://github.com/brillout/awesome-react-components/pull/632)) — the flagship
+curated React-components list. It has a literal `## Boilerplate` section ("_Scaffold / starter
+kit / Yeoman generator / stack ensemble / seed_") we fit exactly; CC0-licensed; demonstrably
+merges outside PRs (16 merged 2026-01-26); **no AI-PR ban**. CONTRIBUTING *requires* that any add
+also remove one un-awesome entry, so the PR is a 1:1 add/remove — it adds us (alphabetical, `M`)
+and removes `insin/nwb` (that repo is **archived**, i.e. no longer awesome). Caveat noted honestly
+in the PR body: the project is new/low-stars, and the list's merge cadence is bursty (last batch
+~6 mo ago, 57 PRs open) so it may wait. All below were verified live this run (★, push/merge
+cadence, README headings). Do **not** re-research.
+
+Also this run: re-checked the 11 prior pending external PRs — all still **OPEN**, no new merges
+or closures since the 2026-08-03 13:17 pass (12 pending total now, counting #632).
+
+| Venue | ★ | Why skipped |
+|-------|---|-------------|
+| [markodenic/web-development-resources](https://github.com/markodenic/web-development-resources) | 8,071 | MIT, fresh (2026-06), actively merges outside PRs (every few weeks). **Wrong shape:** docsify list of web-dev *utilities/galleries* — Hosting, Learning Platforms, Icons, Fonts, Photos, Illustrations, CSS Games, Online Tools, UI Inspiration, "HTML/CSS/JavaScript templates" (which holds *static* template marketplaces like TemplateMo/ThemeFisher/Web3Templates, not full-stack apps), "React UI libraries" (component libs). **No SaaS-starter / full-stack-boilerplate section.** CONTRIBUTING also warns "automated bot submissions … will not be accepted" + manual review — a marginal-fit PR is risky. Not a fit |
+| [lincolixavier/awesome-indie-hackers](https://github.com/lincolixavier/awesome-indie-hackers) | 118 | **No license** (null) + **no Templates/Boilerplates section** — it's a Portuguese-language tools-by-category list (Infra / Frontend / Pagamentos / Autenticação / Emails …). A full SaaS starter spans all categories; no single bucket fits. Wrong shape + license murk |
+| [itsdouges/awesome-typescript-ecosystem](https://github.com/itsdouges/awesome-typescript-ecosystem) | 141 | Fresh (2026-05) but a TS *ecosystem/tools* index, not a starters/templates list, and 141★ is modest. Wrong shape |
+| [devton/awesome-postgresql](https://github.com/devton/awesome-postgresql) | 85 | Sections: Extensions/Tools, Utilities, Blogs, Screencasts — Postgres *tooling*, no app-starter section. Same wrong-shape call as `dhamaniasad/awesome-postgres`. Re-check not warranted |
+| [Bharathi4real/awesome-nextjs](https://github.com/Bharathi4real/awesome-nextjs), [mahdibrr/awesome-nextjs-supabase](https://github.com/mahdibrr/awesome-nextjs-supabase) | 5 each | Fresh (2026-07/08) but **5★ = near-zero reach**. Re-check if either grows past ~30★ |
+| awesome-vercel variants (henryoman/awesome-vercel-native, *-vercel-alternatives, jacobhq/awesome-vercel) | ≤12 | All tiny (≤12★); the "alternatives" ones are wrong shape (hosting-alternative lists, not templates). Re-check not warranted |
+| gitcommitshow/awesome-authentication (137★, last push 2020), Alex0x47/awesome-indie-hackers-tools (62★, 2024-12), brookshi/awesome-typescript-projects (894★, 2023-06) | — | Stale (fail the 6-mo freshness gate) or wrong shape (auth/tools lists) |
+
+> No email-channel venues again this run (same discipline): the fitting lists are PR-based, and
+> cold-emailing curators to add us or to nudge our 11 open PRs is pestering, not outreach.
 
 ### Researched & skipped (2026-08-03 run, 13:17 UTC)
 
