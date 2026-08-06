@@ -17,6 +17,15 @@ or the post goes live. Newest first.
 
 | Date | Venue (website) | Submission URL (PR/post) | Listing URL (when live) | Status |
 |------|-----------------|--------------------------|-------------------------|--------|
+| 2026-08-05 | [giovannism20/awesome-supabase](https://github.com/giovannism20/awesome-supabase) | [PR #15](https://github.com/giovannism20/awesome-supabase/pull/15) | _pending merge_ | `[~]` submitted |
+| 2026-08-05 | [y-h-v-h/shadverse](https://github.com/y-h-v-h/shadverse) | [PR #3](https://github.com/y-h-v-h/shadverse/pull/3) | _pending merge_ | `[~]` submitted |
+| 2026-08-03 | [brillout/awesome-react-components](https://github.com/brillout/awesome-react-components) | [PR #632](https://github.com/brillout/awesome-react-components/pull/632) | _pending merge_ | `[~]` submitted |
+| 2026-08-03 | [officialrajdeepsingh/awesome-nextjs](https://github.com/officialrajdeepsingh/awesome-nextjs) | [PR #88](https://github.com/officialrajdeepsingh/awesome-nextjs/pull/88) | _pending merge_ | `[~]` submitted |
+| 2026-08-02 | [iAmCorey/awesome-indie-hacker-tools](https://github.com/iAmCorey/awesome-indie-hacker-tools) | [PR #158](https://github.com/iAmCorey/awesome-indie-hacker-tools/pull/158) | _pending merge_ | `[~]` submitted |
+| 2026-08-01 | [lyqht/awesome-supabase](https://github.com/lyqht/awesome-supabase) | [PR #62](https://github.com/lyqht/awesome-supabase/pull/62) | _pending merge_ | `[~]` submitted |
+| 2026-07-31 | [semlinker/awesome-typescript](https://github.com/semlinker/awesome-typescript) | [PR #177](https://github.com/semlinker/awesome-typescript/pull/177) | _pending merge_ | `[~]` submitted |
+| 2026-07-31 | [bytefer/awesome-nextjs](https://github.com/bytefer/awesome-nextjs) | [PR #23](https://github.com/bytefer/awesome-nextjs/pull/23) | _pending merge_ | `[~]` submitted |
+| 2026-07-29 | [xcomptek/awesome-saas-boilerplates](https://github.com/xcomptek/awesome-saas-boilerplates) | [PR #222](https://github.com/xcomptek/awesome-saas-boilerplates/pull/222) | _pending merge_ | `[~]` submitted |
 | 2026-07-17 | [awesome-shadcn-ui](https://github.com/birobirobiro/awesome-shadcn-ui) | [PR #554](https://github.com/birobirobiro/awesome-shadcn-ui/pull/554) | _pending merge_ | `[~]` submitted |
 | 2026-07-17 | [awesome-nextjs](https://github.com/unicodeveloper/awesome-nextjs) | [PR #536](https://github.com/unicodeveloper/awesome-nextjs/pull/536) | _pending merge_ | `[~]` submitted |
 
@@ -33,7 +42,15 @@ Merge a PR, get listed. No account, no forms, no fees.
 | [-] | [aniftyco/awesome-tailwindcss](https://github.com/aniftyco/awesome-tailwindcss) | ~~PR~~ **hand-submit only** | 15.1k★. CONTRIBUTING.md **bans AI-authored/assisted PRs** — closed on sight, submitter may be banned. Gabe must add it by hand (📁 "Full templates" entry, `UI libraries, components & templates` section) |
 | [-] | [enaqx/awesome-react](https://github.com/enaqx/awesome-react) | — | 74k★, but **no section fits** a full SaaS boilerplate. Skipped to avoid a rejected PR |
 | [~] | [birobirobiro/awesome-shadcn-ui](https://github.com/birobirobiro/awesome-shadcn-ui) | PR to README | 20.1k★. **Submitted 2026-07-17** → [PR #554](https://github.com/birobirobiro/awesome-shadcn-ui/pull/554), awaiting review. Added to `## Boilerplates / Templates` |
-| [ ] | [bytefer/awesome-nextjs](https://github.com/bytefer/awesome-nextjs) | PR to README | 68★ — low reach, but trivial |
+| [~] | [brillout/awesome-react-components](https://github.com/brillout/awesome-react-components) | PR to README | **48.1k★ — highest-reach venue.** `## Boilerplate` section. **Submitted 2026-08-03** → [PR #632](https://github.com/brillout/awesome-react-components/pull/632). Slow merge cadence (last batch Jan 2026); chase gently |
+| [~] | [semlinker/awesome-typescript](https://github.com/semlinker/awesome-typescript) | PR to README | 4.0k★. `## TypeScript Starters/Boilerplates`. **Submitted 2026-07-31** → [PR #177](https://github.com/semlinker/awesome-typescript/pull/177) |
+| [~] | [xcomptek/awesome-saas-boilerplates](https://github.com/xcomptek/awesome-saas-boilerplates) | PR to README | 3.1k★ — **exact-fit** SaaS-boilerplate list, Next.js section, actively merging. **Submitted 2026-07-29** → [PR #222](https://github.com/xcomptek/awesome-saas-boilerplates/pull/222) |
+| [~] | [iAmCorey/awesome-indie-hacker-tools](https://github.com/iAmCorey/awesome-indie-hacker-tools) | PR to README | 1.4k★ (zh). `## 模板 (Templates)` section. **Submitted 2026-08-02** → [PR #158](https://github.com/iAmCorey/awesome-indie-hacker-tools/pull/158) |
+| [~] | [officialrajdeepsingh/awesome-nextjs](https://github.com/officialrajdeepsingh/awesome-nextjs) | PR to README | 707★. Next.js boilerplate section, actively merging. **Submitted 2026-08-03** → [PR #88](https://github.com/officialrajdeepsingh/awesome-nextjs/pull/88) |
+| [~] | [lyqht/awesome-supabase](https://github.com/lyqht/awesome-supabase) | PR to README | 479★. `## Community Starters`. **Submitted 2026-08-01** → [PR #62](https://github.com/lyqht/awesome-supabase/pull/62) |
+| [~] | [giovannism20/awesome-supabase](https://github.com/giovannism20/awesome-supabase) | PR to README | 41★ — low reach, trivial. **Submitted 2026-08-05** → [PR #15](https://github.com/giovannism20/awesome-supabase/pull/15) |
+| [~] | [y-h-v-h/shadverse](https://github.com/y-h-v-h/shadverse) | PR to README | 28★ — low reach; shadcn ecosystem. **Submitted 2026-08-05** → [PR #3](https://github.com/y-h-v-h/shadverse/pull/3) |
+| [~] | [bytefer/awesome-nextjs](https://github.com/bytefer/awesome-nextjs) | PR to README | 71★ — low reach. **Submitted 2026-07-31** → [PR #23](https://github.com/bytefer/awesome-nextjs/pull/23) |
 | [ ] | GitHub topics | repo settings | ✅ **done** — `nextjs`, `nextjs15`, `saas-starter`, `saas-boilerplate`, `template`, … |
 
 ## Tier 2 — Launch platforms (one-shot traffic spikes)
@@ -84,6 +101,21 @@ A daily cron researches new venues and appends them here. Rules for anything it 
 3. **Free only.** Paid placements need a human decision — flag, don't add.
 4. **No duplicates** — check the tables above first.
 5. Record `★`, last-pushed date, and the evidence that it accepts submissions.
+
+### Flagged candidates (found 2026-08-06 sweep — NOT acted; see run PR)
+
+- [bytefer/awesome-shadcn-ui](https://github.com/bytefer/awesome-shadcn-ui) — 722★, pushed 2026-07-30, actively merging. Separate list from birobirobiro's.
+  **Held**: the shadcn space already has 2 open PRs (`awesome-shadcn-ui` #554, `shadverse` #3); a 3rd in the same window reads as spam. Revisit once those are reviewed.
+- [2-fly-4-ai/awesome-shadcnui](https://github.com/2-fly-4-ai/awesome-shadcnui) — 555★, pushed 2025-06-19 (~14 mo, outside the 6-mo window). Same shadcn-saturation reason; revisit if it resumes merging.
+
+### 2026-08-06 fleet sweep
+
+A full `gh search prs --author bucabay --state open` found **9 external PRs** listing this
+exact template across awesome-* lists (Next.js, TypeScript, React, shadcn, Supabase, SaaS-boilerplate,
+indie) that a sibling cron + earlier runs opened (2026-07-29 → 2026-08-05) **without logging them
+here**. All are now recorded above (log + Tier 1 table). This is the fleet-dedupe rule paying off:
+GitHub is the source of truth, not this file. No new external PR was opened this run — every
+high-value fitting list is already covered, and the rest are stale / low-reach / off-topic.
 
 ## Assets for any submission
 
