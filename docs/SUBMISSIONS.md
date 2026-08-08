@@ -17,6 +17,12 @@ or the post goes live. Newest first.
 
 | Date | Venue (website) | Submission URL (PR/post) | Listing URL (when live) | Status |
 |------|-----------------|--------------------------|-------------------------|--------|
+| 2026-08-08 | [brandonhimpfen/awesome-saas](https://github.com/brandonhimpfen/awesome-saas) | [PR #46](https://github.com/brandonhimpfen/awesome-saas/pull/46) | _pending merge_ | `[~]` submitted |
+| 2026-08-03 | [officialrajdeepsingh/awesome-nextjs](https://github.com/officialrajdeepsingh/awesome-nextjs) | [PR #88](https://github.com/officialrajdeepsingh/awesome-nextjs/pull/88) | _pending merge_ | `[~]` submitted (found via dedupe) |
+| 2026-08-01 | [lyqht/awesome-supabase](https://github.com/lyqht/awesome-supabase) | [PR #62](https://github.com/lyqht/awesome-supabase/pull/62) | _pending merge_ | `[~]` submitted (found via dedupe) |
+| 2026-07-31 | [bytefer/awesome-nextjs](https://github.com/bytefer/awesome-nextjs) | [PR #23](https://github.com/bytefer/awesome-nextjs/pull/23) | _pending merge_ | `[~]` submitted (found via dedupe) |
+| 2026-07-29 | [bytefer/awesome-shadcn-ui](https://github.com/bytefer/awesome-shadcn-ui) | [PR #29](https://github.com/bytefer/awesome-shadcn-ui/pull/29) (merged) | _merged_ | `[x]` live (found via dedupe) |
+| 2026-07-29 | [xcomptek/awesome-saas-boilerplates](https://github.com/xcomptek/awesome-saas-boilerplates) | [PR #222](https://github.com/xcomptek/awesome-saas-boilerplates/pull/222) | _pending merge_ | `[~]` submitted (found via dedupe) |
 | 2026-07-17 | [awesome-shadcn-ui](https://github.com/birobirobiro/awesome-shadcn-ui) | [PR #554](https://github.com/birobirobiro/awesome-shadcn-ui/pull/554) | _pending merge_ | `[~]` submitted |
 | 2026-07-17 | [awesome-nextjs](https://github.com/unicodeveloper/awesome-nextjs) | [PR #536](https://github.com/unicodeveloper/awesome-nextjs/pull/536) | _pending merge_ | `[~]` submitted |
 
@@ -33,7 +39,12 @@ Merge a PR, get listed. No account, no forms, no fees.
 | [-] | [aniftyco/awesome-tailwindcss](https://github.com/aniftyco/awesome-tailwindcss) | ~~PR~~ **hand-submit only** | 15.1k★. CONTRIBUTING.md **bans AI-authored/assisted PRs** — closed on sight, submitter may be banned. Gabe must add it by hand (📁 "Full templates" entry, `UI libraries, components & templates` section) |
 | [-] | [enaqx/awesome-react](https://github.com/enaqx/awesome-react) | — | 74k★, but **no section fits** a full SaaS boilerplate. Skipped to avoid a rejected PR |
 | [~] | [birobirobiro/awesome-shadcn-ui](https://github.com/birobirobiro/awesome-shadcn-ui) | PR to README | 20.1k★. **Submitted 2026-07-17** → [PR #554](https://github.com/birobirobiro/awesome-shadcn-ui/pull/554), awaiting review. Added to `## Boilerplates / Templates` |
-| [ ] | [bytefer/awesome-nextjs](https://github.com/bytefer/awesome-nextjs) | PR to README | 68★ — low reach, but trivial |
+| [~] | [bytefer/awesome-nextjs](https://github.com/bytefer/awesome-nextjs) | PR to README | 71★. **Submitted 2026-07-31** → [PR #23](https://github.com/bytefer/awesome-nextjs/pull/23) (SaaS section), awaiting review. Found via dedupe 2026-08-08 |
+| [~] | [bytefer/awesome-shadcn-ui](https://github.com/bytefer/awesome-shadcn-ui) | PR to README | 725★. **Merged 2026-07-29** → [PR #29](https://github.com/bytefer/awesome-shadcn-ui/pull/29) (Saas table). **LIVE.** Found via dedupe 2026-08-08 |
+| [~] | [xcomptek/awesome-saas-boilerplates](https://github.com/xcomptek/awesome-saas-boilerplates) | PR to README | 3.1k★. **Submitted 2026-07-29** → [PR #222](https://github.com/xcomptek/awesome-saas-boilerplates/pull/222) (Next.js section), awaiting review. Found via dedupe |
+| [~] | [officialrajdeepsingh/awesome-nextjs](https://github.com/officialrajdeepsingh/awesome-nextjs) | PR to README | 707★. **Submitted 2026-08-03** → [PR #88](https://github.com/officialrajdeepsingh/awesome-nextjs/pull/88) (boilerplate section), awaiting review. CONTRIBUTING prefers ≥100★. Found via dedupe |
+| [~] | [lyqht/awesome-supabase](https://github.com/lyqht/awesome-supabase) | PR to README | 479★. **Submitted 2026-08-01** → [PR #62](https://github.com/lyqht/awesome-supabase/pull/62) (Community Starters), awaiting review. Fits — starter supports Supabase Postgres. Found via dedupe |
+| [~] | [brandonhimpfen/awesome-saas](https://github.com/brandonhimpfen/awesome-saas) | PR to README | 7★ (low reach, but exact-fit **SaaS Boilerplates & Starter Kits** section). **Submitted 2026-08-08** → [PR #46](https://github.com/brandonhimpfen/awesome-saas/pull/46), awaiting review |
 | [ ] | GitHub topics | repo settings | ✅ **done** — `nextjs`, `nextjs15`, `saas-starter`, `saas-boilerplate`, `template`, … |
 
 ## Tier 2 — Launch platforms (one-shot traffic spikes)
@@ -84,6 +95,23 @@ A daily cron researches new venues and appends them here. Rules for anything it 
 3. **Free only.** Paid placements need a human decision — flag, don't add.
 4. **No duplicates** — check the tables above first.
 5. Record `★`, last-pushed date, and the evidence that it accepts submissions.
+
+### Researched 2026-08-08 — acted / future / skipped
+
+**Acted this run:** brandonhimpfen/awesome-saas → PR #46 (logged in Tier 1 + log above).
+
+**Future git-PR candidate (verified — stagger):**
+- `brandonhimpfen/awesome-stripe` — has a "starter kits" section; our starter uses Stripe. Same maintainer as awesome-saas → wait for #46 to land before submitting, to avoid a same-run double-hit to one author.
+
+**Skipped — verified, do NOT re-research (reason):**
+- `georgezouq/awesome-saas` (54★, active) — **no boilerplate/starter section**; every section is a SaaS *product* category. Doesn't fit.
+- `open-saas-directory/awesome-saas-directory` (113★, active) — actually "Open-Source SaaS **Alternatives**" (self-hostable products: Supabase, Strapi, Ghost…). A starter *template* is only a borderline fit (cf. LastSaaS under Backend & Infra) → **flag for human**, not auto-PR'd.
+- `2-fly-4-ai/awesome-shadcnui` (555★) — last push 2025-06 (>1yr stale). Fails 6-month rule.
+- `re50urces/Awesome-NextJs` (114★) — last push 2024-06 (>2yr stale). Fails 6-month rule.
+- `matthiasfeist/awesome-drizzle` (3★) — last push 2025-11; only a "Packages" section, no starters. Skip.
+- `tyaga001/awesome-saas-boilerplates-and-starter-kits` (26★) — last push 2024-11 (~9mo stale), inactive. Skip.
+- `brandonhimpfen/awesome-tailwindcss` (6★) — zero merged PRs ever; negligible reach. Skip.
+- `Correia-jpv/fucking-awesome-nextjs` & `fucking-awesome-tailwindcss` — mirrors of already-PR'd originals (unicodeveloper/awesome-nextjs, aniftyco/awesome-tailwindcss). Skip.
 
 ## Assets for any submission
 
