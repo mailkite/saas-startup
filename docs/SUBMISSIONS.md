@@ -28,6 +28,14 @@ The template must stay: MIT licensed, public, with a working live demo
 > pending awesome-list PRs unchanged; the 3 LIVE listings stand. No new git-PR venue cleared the bar
 > (best candidate `XiaomingX/indie-hacker-tools-plus`, 1785★, fails the "merges outside PRs" check —
 > 0 merged PRs ever). No PRs/emails this run (DRY RUN).
+>
+> **Update 2026-08-15 (run 01:17 UTC):** No new git-PR venue cleared the bar; no PRs/emails
+> sent. All 13 pending awesome-list PRs re-checked this run remain OPEN; the 3 LIVE listings
+> stand (`bytefer/awesome-shadcn-ui` #29, `officialrajdeepsingh/awesome-nextjs` #88,
+> `giovannism20/awesome-supabase` #15). Fleet-wide `gh search prs --author bucabay` scan found no
+> new unlogged saas-startup PRs (other campaigns' PRs — MailKite product, MCP registries, etc. —
+> are out of scope for this doc). Web template-directory discovery was blocked this run (search
+> engines returned a challenge page from this network); the GitHub search sweep carried the research.
 
 ---
 
@@ -140,6 +148,56 @@ A periodic cron researches new venues and appends them here. Rules for anything 
 3. **Free only.** Paid placements need a human decision — flag, don't add.
 4. **No duplicates** — check the tables above first, and **dedupe against GitHub** before any PR.
 5. Record `★`, last-pushed date, and the evidence that it accepts submissions.
+
+### Researched 2026-08-15 (run 01:17 UTC) — no new venue cleared the bar; no PR/email; log reconciled
+
+**The win this run is reconciliation again.** Every pending awesome-list PR was re-checked on
+GitHub this run: all 13 remain OPEN, no new merges/closes since the 00:31 run. The 3 LIVE
+listings stand (`bytefer/awesome-shadcn-ui` #29, `officialrajdeepsingh/awesome-nextjs` #88,
+`giovannism20/awesome-supabase` #15). A fleet-wide `gh search prs --author bucabay` scan surfaced
+no new unlogged saas-startup PRs (the other bucabay PRs in the scan belong to other campaigns —
+MailKite product, MCP registries, better-auth/novu/laudspeaker contributions — and are out of
+scope for this surface).
+
+**No git-PR venue cleared the bar** (archived / >6mo stale / no fit / no license / AI-PR ban),
+**no email was sent** (no venue surfaced a public contact email), **no manual additions**.
+
+**New skips — verified this run, do NOT re-research (reason):**
+- `Alchemyst-ai/awesome-saas` (421★, MIT, pushed 2026-08-14) — the **Alchemyst AI Platform
+  cookbook**: curated AI agents/templates *built on their own platform*. Not a Next.js SaaS
+  starter directory. Category mismatch.
+- `Atarity/deploy-your-own-saas` (**9.9k★**, pushed 2026-08-14, no license) — "deploy your own"
+  self-hostable open-source SaaS *apps* (VPN/music/photo/docs…), no starter/boilerplate section.
+  Category mismatch (a template is not a deployable product).
+- `altstackHQ/altstack-data` (321★, Apache-2.0, pushed 2026-08-15) — data layer for
+  thealtstack.com, a directory of open-source **alternatives to popular SaaS**. A starter template
+  is not an alternative-to-a-SaaS; same non-fit shape as `openalternative.co` (already flagged for
+  human).
+- `LlamaGenAI/awesome-free-saas` (334★, MIT, pushed 2026-04-29) — free SaaS **services**
+  (AI/CRM/docs/…), no starter section.
+- `better-auth/awesome` (393★, MIT, pushed 2025-07-17 ~13mo stale) — better-auth ecosystem list;
+  we don't use better-auth. Category mismatch.
+- `alexeyfv/awesome-free-postgres` (107★, MIT, pushed 2026-07-19) — free Postgres-as-a-Service
+  **hosting providers**, not starters.
+- `warrant-dev/awesome-authorization` (435★, CC0, pushed 2024-12-16 ~20mo stale) — authorization
+  resources; stale + category mismatch.
+- `karltaylor/awesome-auth-as-a-service` (17★, pushed 2026-07-09) — hosted auth **services**
+  (we're self-contained, no service); low reach.
+- `nikhilrayaprolu/awesome-open-saas` (242★, MIT, pushed 2024-01-17 ~2.5yr stale).
+- `StartupGuns/awesome-saas-boilerplates` (7★, MIT, pushed 2024-05-22 ~15mo stale).
+- `next-theme/awesome-next` (93★, no license, pushed 2026-07-30) — Hexo **NexT** theme plugins,
+  NOT Next.js. Category mismatch.
+- `zupcode-com/awesome-free-services-for-your-next-startup-or-saas` (227★, no license, pushed
+  2026-08-10) — free services list, no starter section, no license.
+- `next-dev-team/awesome-tailwind` (5★, pushed 2026-03-21) — negligible reach.
+- `vincentventalon/Boilerplates4saas_public` (0★, MIT, pushed 2025-04-21) — 0 stars.
+- `moshehbenavraham/Ultimate-Agent-Directory` (69★, MIT, pushed 2026-08-15) — AI-agent directory,
+  not SaaS starters.
+- `grunklejp/fck-saas` (57★, MIT, pushed 2024-06-21 ~14mo stale).
+
+**Web-directory discovery note:** search-engine queries from this network returned a challenge
+page (HTTP 202), so no new Tier 3 web directory was verifiable this run; the GitHub sweep above
+is complete for git-PR venues. Re-run web-directory discovery in a future run with browser access.
 
 ### Researched 2026-08-15 (run 00:31 UTC, DRY RUN) — 1 pending PR closed (rejected); no new venue cleared the bar; no PR/email
 
