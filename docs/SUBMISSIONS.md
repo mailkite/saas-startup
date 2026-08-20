@@ -110,7 +110,7 @@ The template must stay: MIT licensed, public, with a working live demo
 > challenge/"anomaly" shell with 0 organic results and Bing returned a challenge page, so no new
 > Tier 3 template-directory venue was verifiable. The GitHub sweep (top-starred *and* recently-pushed)
 > was saturated — no new git-PR venue cleared the bar. No PRs/emails sent (caps are maxima, not
-> targets). `main`'s `SUBMISSIONS.md` is STILL at 94 lines — this run's PR again carries the full
+> targets). `main`'s `SUBMISSIONS.md` is STILL at 94 lines — this run's PR (#40) again carries the full
 > accumulated log forward. **Owner: merge a run PR to stop the lossy handoff.**
 
 ---
