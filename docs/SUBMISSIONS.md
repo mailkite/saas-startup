@@ -8,17 +8,323 @@ submitted) — put the submission date and PR/post URL in Notes so we can chase 
 The template must stay: MIT licensed, public, with a working live demo
 (<https://saas-startup.mailkite.dev>) and a Deploy button.
 
+> **GitHub is the source of truth, not this log.** Before opening any PR, run
+> `gh pr list -R <owner/repo> --state all --author bucabay` — humans open PRs in sessions that
+> no log records. The log below is reconciled to GitHub as of 2026-08-10 (run 21:17 UTC) —
+> **19 bucabay PRs total**: 13 previously logged + **5 unlogged found this run** via a fleet-wide
+> `gh search prs --author bucabay` scan (merklefruit/SaaS4Devs #54, shadcnblocks/shadcntemplates #14,
+> giovannism20/awesome-supabase #15, brillout/awesome-react-components #632, sorrycc/awesome-javascript
+> #1133) + **1 opened this run** (ridloabelian/awesome-supabase-id #4). ⚠️ 2 of the 5 (SaaS4Devs,
+> shadcntemplates) were logged on older branches but **dropped from the accumulated doc** — the
+> run-to-run handoff is lossy; see this run's note. Fix: merge the latest run PR into `main`.
+>
+> **Update 2026-08-11 (run 17:17 UTC):** 2 pending PRs **merged → LIVE** this cycle —
+> `officialrajdeepsingh/awesome-nextjs` #88 (merged 2026-08-11) and `giovannism20/awesome-supabase` #15
+> (merged 2026-08-10). **3 listings now LIVE** (those two + `bytefer/awesome-shadcn-ui` #29). No new
+> git-PR venue cleared the bar; `saasboilerplates.com` added to Tier 3 (login-gated, manual).
+>
+> **Update 2026-08-15 (run 00:31 UTC, DRY RUN):** 1 pending PR flipped state — `mahdibrr/awesome-nextjs-supabase`
+> #24 **closed unmerged** by the maintainer (scope + promotional bar, **not** an AI-PR ban). All other
+> pending awesome-list PRs unchanged; the 3 LIVE listings stand. No new git-PR venue cleared the bar
+> (best candidate `XiaomingX/indie-hacker-tools-plus`, 1785★, fails the "merges outside PRs" check —
+> 0 merged PRs ever). No PRs/emails this run (DRY RUN).
+>
+> **Update 2026-08-15 (run 01:17 UTC):** No new git-PR venue cleared the bar; no PRs/emails
+> sent. All 13 pending awesome-list PRs re-checked this run remain OPEN; the 3 LIVE listings
+> stand (`bytefer/awesome-shadcn-ui` #29, `officialrajdeepsingh/awesome-nextjs` #88,
+> `giovannism20/awesome-supabase` #15). Fleet-wide `gh search prs --author bucabay` scan found no
+> new unlogged saas-startup PRs (other campaigns' PRs — MailKite product, MCP registries, etc. —
+> are out of scope for this doc). Web template-directory discovery was blocked this run (search
+> engines returned a challenge page from this network); the GitHub search sweep carried the research.
+>
+> **Update 2026-08-18 (run 01:17 UTC):** Reconciliation again — all 13 pending awesome-list PRs
+> re-checked this run remain OPEN; the 3 LIVE listings stand (`bytefer/awesome-shadcn-ui` #29,
+> `officialrajdeepsingh/awesome-nextjs` #88, `giovannism20/awesome-supabase` #15). Fleet-wide
+> `gh search prs --author bucabay` scan found no new unlogged saas-startup PRs in scope. No new
+> git-PR venue cleared the bar; no PRs/emails sent. **This run's PR carries the full accumulated
+> log forward onto `main`** (it had been stuck in unmerged run PRs #1–#33) to stop the lossy
+> run-to-run handoff — see "Researched 2026-08-18" below.
+>
+> **Update 2026-08-18 (run 17:17 UTC):** No new git-PR venue cleared the bar; no PRs/emails
+> sent. Reconciliation holds — all 13 pending awesome-list PRs re-checked this run remain OPEN,
+> the 3 LIVE listings stand (`bytefer/awesome-shadcn-ui` #29, `officialrajdeepsingh/awesome-nextjs`
+> #88, `giovannism20/awesome-supabase` #15), and the fleet-wide `gh search prs --author bucabay`
+> scan found no new unlogged saas-startup PRs (still **19 total**). `main`'s `SUBMISSIONS.md` is
+> STILL at 94 lines — the 01:17 run's PR (#34) is still OPEN/unmerged, so this run's PR (#35)
+> again carries the full accumulated log forward. **Owner: merge a run PR to stop the lossy handoff.**
+>
+> **Update 2026-08-19 (run 01:17 UTC):** Reconciliation holds — all 13 pending awesome-list PRs
+> re-checked this run remain OPEN, the 3 LIVE listings stand (`bytefer/awesome-shadcn-ui` #29,
+> `officialrajdeepsingh/awesome-nextjs` #88, `giovannism20/awesome-supabase` #15), and the
+> fleet-wide `gh search prs --author bucabay` scan found no new unlogged saas-startup PRs (still
+> **19 total**). **Web discovery is restored this run** — DuckDuckGo returned real results (it had
+> been challenge-blocked for weeks), surfacing **3 new free Tier 3 template-directory venues** (all
+> manual form submissions, all with a Next.js category, none listing us yet): `boilerplatelist.com`,
+> `saasboilerplates.dev`, `boilerplates4saas.com` — added to Tier 3 with step-by-step. No git-PR
+> venue cleared the bar (GitHub sweep saturated); no emails sent (all three are form-gated, no
+> public contact email). `main`'s `SUBMISSIONS.md` is STILL at 94 lines — this run's PR (#36)
+> again carries the full accumulated log forward. **Owner: merge a run PR to stop the lossy handoff.**
+
+> **Update 2026-08-19 (run 05:17 UTC):** Reconciliation holds — all 13 pending awesome-list PRs
+> re-checked this run remain OPEN, the 3 LIVE listings stand (`bytefer/awesome-shadcn-ui` #29,
+> `officialrajdeepsingh/awesome-nextjs` #88, `giovannism20/awesome-supabase` #15), and the
+> fleet-wide `gh search prs --author bucabay` scan found no new unlogged saas-startup PRs (still
+> **19 total**). **Web discovery is blocked again this run** — DuckDuckGo (HTML + lite) returned
+> empty/challenge pages from this network (intermittent since ~2026-08-15), so no new Tier 3
+> template-directory venue was verifiable. The GitHub sweep (top-starred + recently-pushed) of
+> `awesome saas` / `awesome saas boilerplate` / `awesome nextjs` / `awesome shadcn` /
+> `awesome starter kit` / `indie hacker tools` / `awesome react starter` returned only
+> already-acted-on lists and standing-skips. No git-PR venue cleared the bar; no PRs/emails sent
+> (caps are maxima, not targets). `main`'s `SUBMISSIONS.md` is STILL at 94 lines — this run's PR
+> (#37) again carries the full accumulated log forward. **Owner: merge a run PR to stop the lossy
+> handoff.**
+>
+> **Update 2026-08-20 (run 09:17 UTC):** Reconciliation holds — all 13 pending awesome-list PRs
+> re-checked this run remain OPEN, the 3 LIVE listings stand (`bytefer/awesome-shadcn-ui` #29,
+> `officialrajdeepsingh/awesome-nextjs` #88, `giovannism20/awesome-supabase` #15), and the
+> fleet-wide `gh search prs --author bucabay` scan found no new unlogged saas-startup PRs (still
+> **19 total**). **Web discovery blocked again** — DuckDuckGo (HTML + lite) and Bing both returned
+> challenge pages, so no new Tier 3 template-directory venue was verifiable. The GitHub sweep
+> (top-starred + recently-pushed) was saturated — no new git-PR venue cleared the bar. One standing
+> re-check candidate removed: `Bladerunner1994/awesome-nextjs` (brand-new, 0★) is now **deleted/404**
+> — no longer a venue. No PRs/emails sent (caps are maxima, not targets). `main`'s `SUBMISSIONS.md`
+> is STILL at 94 lines — this run's PR (#38) again carries the full accumulated log forward.
+> **Owner: merge a run PR to stop the lossy handoff.**
+>
+> **Update 2026-08-20 (run 13:17 UTC):** Reconciliation holds — all 13 pending awesome-list PRs
+> re-checked this run remain OPEN, the 3 LIVE listings stand (`bytefer/awesome-shadcn-ui` #29,
+> `officialrajdeepsingh/awesome-nextjs` #88, `giovannism20/awesome-supabase` #15), and the
+> fleet-wide `gh search prs --author bucabay` scan found no new unlogged saas-startup PRs (still
+> **19 total**). **Web discovery still degraded** — DuckDuckGo (HTML + lite) returned a challenge
+> shell with no organic results and Bing returned only generic Next.js doc results, so no new Tier 3
+> template-directory venue was verifiable. The GitHub sweep (10 query angles, top-starred *and*
+> recently-pushed) was saturated — no new git-PR venue cleared the bar. No PRs/emails sent (caps are
+> maxima, not targets). `main`'s `SUBMISSIONS.md` is STILL at 94 lines — this run's PR (#39) again
+> carries the full accumulated log forward. **Owner: merge a run PR to stop the lossy handoff.**
+>
+> **Update 2026-08-20 (run 17:17 UTC):** Reconciliation holds — all 13 pending awesome-list PRs
+> re-checked this run remain OPEN, the 3 LIVE listings stand (`bytefer/awesome-shadcn-ui` #29,
+> `officialrajdeepsingh/awesome-nextjs` #88, `giovannism20/awesome-supabase` #15), and the
+> fleet-wide `gh search prs --author bucabay` scan found no new unlogged saas-startup PRs (still
+> **19 total**). **Web discovery blocked again** — DuckDuckGo (HTML + lite) returned the
+> challenge/"anomaly" shell with 0 organic results and Bing returned a challenge page, so no new
+> Tier 3 template-directory venue was verifiable. The GitHub sweep (top-starred *and* recently-pushed)
+> was saturated — no new git-PR venue cleared the bar. No PRs/emails sent (caps are maxima, not
+> targets). `main`'s `SUBMISSIONS.md` is STILL at 94 lines — this run's PR (#40) again carries the full
+> accumulated log forward. **Owner: merge a run PR to stop the lossy handoff.**
+
+> **Update 2026-08-21 (run 01:17 UTC):** Reconciliation holds — all 13 pending awesome-list PRs
+> re-checked this run remain OPEN, the 3 LIVE listings stand (`bytefer/awesome-shadcn-ui` #29,
+> `officialrajdeepsingh/awesome-nextjs` #88, `giovannism20/awesome-supabase` #15), and the
+> fleet-wide `gh search prs --author bucabay` scan found no new unlogged saas-startup PRs (still
+> **19 total**). **Web discovery still blocked** — DuckDuckGo (HTML + lite) returned the
+> anomaly/botnet challenge shell and Bing returned a challenge page, so no new Tier 3
+> template-directory venue was verifiable. The GitHub sweep (top-starred *and* recently-pushed,
+> 14 query angles) was saturated — no new git-PR venue cleared the bar. No PRs/emails sent (caps are
+> maxima, not targets). `main`'s `SUBMISSIONS.md` is STILL at 94 lines — this run's PR (#41) again
+> carries the full accumulated log forward. **Owner: merge a run PR to stop the lossy handoff.**
+>
+> **Update 2026-08-21 (run 17:17 UTC):** Reconciliation holds — all 13 pending awesome-list PRs
+> re-checked this run remain OPEN, the 3 LIVE listings stand (`bytefer/awesome-shadcn-ui` #29,
+> `officialrajdeepsingh/awesome-nextjs` #88, `giovannism20/awesome-supabase` #15), and the
+> fleet-wide `gh search prs --author bucabay` scan found no new unlogged saas-startup PRs (still
+> **19 total**). **Web discovery still blocked** — DuckDuckGo (HTML + lite) returned the
+> challenge/anomaly shell with no organic results and Bing returned a localized challenge page, so
+> no new Tier 3 template-directory venue was verifiable. The GitHub sweep (top-starred *and*
+> recently-pushed) was saturated — every candidate this run already appears in the skip/standing-skip
+> lists, so no new git-PR venue cleared the bar. No PRs/emails sent (caps are maxima, not targets).
+> `main`'s `SUBMISSIONS.md` is STILL at 94 lines — this run's PR (#42) again carries the full
+> accumulated log forward. **Owner: merge a run PR to stop the lossy handoff.**
+>
+> **Update 2026-08-22 (run 01:17 UTC):** Reconciliation holds — all 13 pending awesome-list PRs
+> re-checked this run remain OPEN, the 3 LIVE listings stand (`bytefer/awesome-shadcn-ui` #29,
+> `officialrajdeepsingh/awesome-nextjs` #88, `giovannism20/awesome-supabase` #15), and the
+> fleet-wide `gh search prs --author bucabay` scan found no new unlogged saas-startup PRs (still
+> **19 total**). **Web discovery blocked again** — DuckDuckGo (HTML + lite) returned the
+> anomaly/challenge shell with no organic results and Bing returned a challenge page, so no new
+> Tier 3 template-directory venue was verifiable. The GitHub sweep (12 query angles, top-starred
+> *and* recently-pushed) was saturated — no new git-PR venue cleared the bar. No PRs/emails sent
+> (caps are maxima, not targets). `main`'s `SUBMISSIONS.md` is STILL at 94 lines — this run's PR
+> (#43) again carries the full accumulated log forward. **Owner: merge a run PR to stop the lossy
+> handoff.**
+>
+> **Update 2026-08-23 (run 01:18 UTC):** One pending PR flipped this cycle — `EinGuterWaran/awesome-opensource-boilerplates`
+> #52 was **closed unmerged** on 2026-08-22 12:04 UTC by the maintainer with the comment **"0 stars
+> and no commit for over a month"** — a maturity/adoption rejection, **not** an AI-PR ban
+> (CONTRIBUTING has none). Now logged `[-]`; pending PRs drop 13 → **12**; totals still **19**
+> (12 open + 3 merged + 4 closed). The 3 LIVE listings stand (`bytefer/awesome-shadcn-ui` #29,
+> `officialrajdeepsingh/awesome-nextjs` #88, `giovannism20/awesome-supabase` #15). No new git-PR
+> venue cleared the bar (GitHub sweep saturated); web discovery still challenge-blocked; no PRs/
+> emails sent (caps are maxima, not targets). `main`'s `SUBMISSIONS.md` is STILL at 94 lines —
+> this run's PR (#44) again carries the full accumulated log forward. **Owner: merge a run PR to
+> stop the lossy handoff.**
+>
+> **Update 2026-08-23 (run 05:17 UTC):** Reconciliation holds — all 12 pending awesome-list PRs
+> re-checked this run remain OPEN, no flips since the 01:18 run. The 3 LIVE listings stand
+> (`bytefer/awesome-shadcn-ui` #29, `officialrajdeepsingh/awesome-nextjs` #88,
+> `giovannism20/awesome-supabase` #15), and the fleet-wide `gh search prs --author bucabay` scan
+> found no new unlogged saas-startup PRs (still **19 total** — 12 open + 3 merged + 4 closed).
+> **Web discovery blocked again** — DuckDuckGo (HTML + lite) and Bing both returned challenge pages,
+> so no new Tier 3 template-directory venue was verifiable. The GitHub sweep (top-starred *and*
+> recently-pushed, 11 query angles) was saturated — no new git-PR venue cleared the bar. No
+> PRs/emails sent (caps are maxima, not targets). `main`'s `SUBMISSIONS.md` is STILL at 94 lines —
+> this run's PR (#45) again carries the full accumulated log forward. **Owner: merge a run PR to
+> stop the lossy handoff.**
+>
+> **Update 2026-08-24 (run 09:17 UTC):** Reconciliation holds — all 12 pending awesome-list PRs
+> re-checked this run remain OPEN, no flips since the 05:17 run. The 3 LIVE listings stand
+> (`bytefer/awesome-shadcn-ui` #29, `officialrajdeepsingh/awesome-nextjs` #88,
+> `giovannism20/awesome-supabase` #15), and the fleet-wide `gh search prs --author bucabay` scan
+> found no new unlogged saas-startup PRs (still **19 total** — 12 open + 3 merged + 4 closed).
+> **Web discovery still blocked** — DuckDuckGo (HTML + lite) returned the challenge/anomaly shell
+> with 0 organic results and Bing returned a localized challenge page, so no new Tier 3
+> template-directory venue was verifiable. The GitHub sweep (top-starred *and* recently-pushed,
+> 12 query angles) was saturated — no new git-PR venue cleared the bar. No PRs/emails sent (caps
+> are maxima, not targets). `main`'s `SUBMISSIONS.md` is STILL at 94 lines — this run's PR (#46)
+> again carries the full accumulated log forward. **Owner: merge a run PR to stop the lossy handoff.**
+>
+> **Update 2026-08-24 (run 13:17 UTC):** Reconciliation holds — all 12 pending awesome-list PRs
+> re-checked this run remain OPEN, no flips since the 09:17 run. The 3 LIVE listings stand
+> (`bytefer/awesome-shadcn-ui` #29, `officialrajdeepsingh/awesome-nextjs` #88,
+> `giovannism20/awesome-supabase` #15), and the fleet-wide `gh search prs --author bucabay` scan
+> found no new unlogged saas-startup PRs (still **19 total** — 12 open + 3 merged + 4 closed).
+> **Web discovery still blocked** — DuckDuckGo (HTML) returned 0 organic results and Bing returned
+> an empty challenge page, so no new Tier 3 template-directory venue was verifiable. The GitHub sweep
+> (top-starred *and* recently-pushed, 13 query angles) was saturated — no new git-PR venue cleared
+> the bar. No PRs/emails sent (caps are maxima, not targets). `main`'s `SUBMISSIONS.md` is STILL at
+> 94 lines — this run's PR (#47) again carries the full accumulated log forward. **Owner: merge a run
+> PR to stop the lossy handoff.**
+>
+> **Update 2026-08-24 (run 17:23 UTC):** Reconciliation holds — all 12 pending awesome-list PRs
+> re-checked this run remain OPEN, no flips since the 13:17 run. The 3 LIVE listings stand
+> (`bytefer/awesome-shadcn-ui` #29, `officialrajdeepsingh/awesome-nextjs` #88,
+> `giovannism20/awesome-supabase` #15), and the fleet-wide `gh search prs --author bucabay` scan
+> found no new unlogged saas-startup PRs (still **19 total** — 12 open + 3 merged + 4 closed).
+> **Web discovery still blocked** — DuckDuckGo (HTML + lite) returned the anomaly/challenge shell
+> with 0 organic results and Bing returned a localized challenge page, so no new Tier 3
+> template-directory venue was verifiable. The GitHub sweep (top-starred *and* recently-pushed,
+> 12 query angles) was saturated — no new git-PR venue cleared the bar. No PRs/emails sent (caps
+> are maxima, not targets). `main`'s `SUBMISSIONS.md` is STILL at 94 lines — this run's PR (#48)
+> again carries the full accumulated log forward. **Owner: merge a run PR to stop the lossy handoff.**
+>
+> **Update 2026-08-25 (run 01:17 UTC):** Reconciliation holds — all 12 pending awesome-list PRs
+> re-checked this run remain OPEN, no flips since the 17:23 run. The 3 LIVE listings stand
+> (`bytefer/awesome-shadcn-ui` #29, `officialrajdeepsingh/awesome-nextjs` #88,
+> `giovannism20/awesome-supabase` #15), and the fleet-wide `gh search prs --author bucabay` scan
+> found no new unlogged saas-startup PRs (still **19 total** — 12 open + 3 merged + 4 closed).
+> **Web discovery still blocked** — DuckDuckGo (HTML + lite) returned 0 organic results and Bing
+> returned a challenge page, so no new Tier 3 template-directory venue was verifiable. The GitHub
+> sweep (top-starred *and* recently-pushed, 10 query angles) was saturated — no new git-PR venue
+> cleared the bar. No PRs/emails sent (caps are maxima, not targets). `main`'s `SUBMISSIONS.md` is
+> STILL at 94 lines — this run's PR (#49) again carries the full accumulated log forward.
+> **Owner: merge a run PR to stop the lossy handoff.**
+
+> **Update 2026-08-25 (run 17:17 UTC):** Web discovery **restored** — DuckDuckGo HTML returned real
+> organic results this run (first time since ~2026-08-15), surfacing **2 new free Tier 3
+> template-directory venues** (both manual form submissions, both with a Next.js fit, neither listing
+> us yet): `nextjsstarter.com` and `starterindex.com` — added to Tier 3 with step-by-step.
+> Reconciliation holds — all 12 pending awesome-list PRs re-checked this run remain OPEN, the 3 LIVE
+> listings stand (`bytefer/awesome-shadcn-ui` #29, `officialrajdeepsingh/awesome-nextjs` #88,
+> `giovannism20/awesome-supabase` #15), and the fleet-wide `gh search prs --author bucabay` scan found
+> no new unlogged saas-startup PRs (still **19 total** — 12 open + 3 merged + 4 closed). No git-PR
+> venue cleared the bar (GitHub sweep saturated); no emails sent (both new venues are form-gated, no
+> public submission email). `main`'s `SUBMISSIONS.md` is STILL at 94 lines — this run's PR (#50) again
+> carries the full accumulated log forward. **Owner: merge a run PR to stop the lossy handoff.**
+
+> **Update 2026-08-26 (run 21:17 UTC):** Reconciliation holds — all 12 pending awesome-list PRs
+> re-checked this run remain OPEN, no flips since the 17:17 run. The 3 LIVE listings stand
+> (`bytefer/awesome-shadcn-ui` #29, `officialrajdeepsingh/awesome-nextjs` #88,
+> `giovannism20/awesome-supabase` #15), and the fleet-wide `gh search prs --author bucabay` scan
+> found no new unlogged saas-startup PRs (still **19 total** — 12 open + 3 merged + 4 closed).
+> **Web discovery blocked again** — DuckDuckGo (HTML + lite), Bing, Mojeek and Startpage all returned
+> challenge/empty pages, so no new Tier 3 template-directory venue was verifiable. The GitHub sweep
+> (top-starred *and* recently-pushed, 16 query angles) was saturated — no new git-PR venue cleared
+> the bar. No PRs/emails sent (caps are maxima, not targets). `main`'s `SUBMISSIONS.md` is STILL at
+> 94 lines — this run's PR (#51) again carries the full accumulated log forward.
+> **Owner: merge a run PR to stop the lossy handoff.**
+
+> **Update 2026-08-27 (run 09:17 UTC):** Reconciliation holds — all 12 pending awesome-list PRs
+> re-checked this run remain OPEN, no flips since the 21:17 run. The 3 LIVE listings stand
+> (`bytefer/awesome-shadcn-ui` #29, `officialrajdeepsingh/awesome-nextjs` #88,
+> `giovannism20/awesome-supabase` #15), and the fleet-wide `gh search prs --author bucabay` scan
+> found no new unlogged saas-startup PRs (still **19 total** — 12 open + 3 merged + 4 closed).
+> **Web discovery blocked again** — DuckDuckGo (HTML + lite), Bing and Mojeek all returned
+> challenge/empty pages with no organic results, so no new Tier 3 template-directory venue was
+> verifiable. The GitHub sweep (top-starred *and* recently-pushed, 14 query angles) was saturated —
+> no new git-PR venue cleared the bar; one strong-reach list rejected on fit
+> (`KrishMunot/awesome-startup`, 2333★ — no boilerplate/starter section). No PRs/emails sent (caps
+> are maxima, not targets). `main`'s `SUBMISSIONS.md` is STILL at 94 lines — this run's PR (#52)
+> again carries the full accumulated log forward. **Owner: merge a run PR to stop the lossy handoff.**
+
+> **Update 2026-08-27 (run 21:17 UTC):** Reconciliation holds — all 12 pending awesome-list PRs
+> re-checked this run remain OPEN, no flips since the 09:17 run. The 3 LIVE listings stand
+> (`bytefer/awesome-shadcn-ui` #29, `officialrajdeepsingh/awesome-nextjs` #88,
+> `giovannism20/awesome-supabase` #15), and the fleet-wide `gh search prs --author bucabay` scan
+> found no new unlogged saas-startup PRs (still **19 total** — 12 open + 3 merged + 4 closed).
+> **Web discovery restored** — DuckDuckGo HTML returned real organic results (it had been
+> challenge-blocked intermittently), surfacing **1 new free Tier 3 template-directory venue** (manual
+> Tally form, Next.js fit, not listing us): `boilerplatesearch.com` — added to Tier 3 with
+> step-by-step. The GitHub sweep (top-starred *and* recently-pushed, 20 query angles) was saturated —
+> no new git-PR venue cleared the bar. No PRs/emails sent (the new venue is form-gated, no public
+> email). `main`'s `SUBMISSIONS.md` is STILL at 94 lines — this run's PR (#53) again carries the full
+> accumulated log forward. **Owner: merge a run PR to stop the lossy handoff.**
+>
+> **Update 2026-08-28 (run 01:17 UTC):** Reconciliation holds — all 12 pending awesome-list PRs
+> re-checked this run remain OPEN, no flips since the 21:17 run. The 3 LIVE listings stand
+> (`bytefer/awesome-shadcn-ui` #29, `officialrajdeepsingh/awesome-nextjs` #88,
+> `giovannism20/awesome-supabase` #15), and the fleet-wide `gh search prs --author bucabay` scan
+> found no new unlogged saas-startup PRs (still **19 total** — 12 open + 3 merged + 4 closed).
+> **Web discovery blocked again** — DuckDuckGo (HTML + lite) returned the anomaly shell with 0 organic
+> results, Mojeek returned 403, and Bing returned poisoned/irrelevant results (Tom Cruise, not the
+> query), so no new Tier 3 template-directory venue was verifiable. The GitHub sweep (top-starred *and*
+> recently-pushed, 13 query angles) was saturated — no new git-PR venue cleared the bar. No PRs/emails
+> sent (caps are maxima, not targets). `main`'s `SUBMISSIONS.md` is STILL at 94 lines — this run's PR
+> (#54) again carries the full accumulated log forward. **Owner: merge a run PR to stop the lossy
+> handoff.**
+>
+> **Update 2026-08-28 (run 13:17 UTC):** Reconciliation holds — all 12 pending awesome-list PRs
+> re-checked this run remain OPEN, no flips since the 01:17 run. The 3 LIVE listings stand
+> (`bytefer/awesome-shadcn-ui` #29, `officialrajdeepsingh/awesome-nextjs` #88,
+> `giovannism20/awesome-supabase` #15), and the fleet-wide `gh search prs --author bucabay` scan
+> found no new unlogged saas-startup PRs (still **19 total** — 12 open + 3 merged + 4 closed).
+> **Web discovery degraded again** — DuckDuckGo HTML returned the anomaly/challenge shell with 0
+> organic results on most queries (one cached result surfaced only already-known boilerplate
+> *products* — `saasboilerplates.dev` tool page, `nexty.dev` directory-boilerplate,
+> `nextjsdirectory.com` — not submission venues), so no new Tier 3 template-directory venue was
+> verifiable. The GitHub sweep (top-starred *and* recently-pushed, ~20 query angles) was saturated —
+> no new git-PR venue cleared the bar; `XiaomingX/indie-hacker-tools-plus` (1823★) re-verified still
+> **0 merged PRs** (standing skip holds). No PRs/emails sent (caps are maxima, not targets). `main`'s
+> `SUBMISSIONS.md` is STILL at 94 lines — this run's PR (#55) again carries the full accumulated log
+> forward. **Owner: merge a run PR to stop the lossy handoff.**
+
 ---
 
 ## Submission log
 
 Every submission actually made, with its links. Fill in **Listing URL** once the PR merges
-or the post goes live. Newest first.
+or the post goes live. Newest first (by PR open date). All entries verified against GitHub.
 
 | Date | Venue (website) | Submission URL (PR/post) | Listing URL (when live) | Status |
 |------|-----------------|--------------------------|-------------------------|--------|
-| 2026-07-17 | [awesome-shadcn-ui](https://github.com/birobirobiro/awesome-shadcn-ui) | [PR #554](https://github.com/birobirobiro/awesome-shadcn-ui/pull/554) | _pending merge_ | `[~]` submitted |
-| 2026-07-17 | [awesome-nextjs](https://github.com/unicodeveloper/awesome-nextjs) | [PR #536](https://github.com/unicodeveloper/awesome-nextjs/pull/536) | _pending merge_ | `[~]` submitted |
+| 2026-08-10 | [ridloabelian/awesome-supabase-id](https://github.com/ridloabelian/awesome-supabase-id) | [PR #4](https://github.com/ridloabelian/awesome-supabase-id/pull/4) | _pending merge_ | `[~]` submitted (`## 🚀 SaaS Boilerplate (Next.js)`, Indonesian 🇮🇩). Brand-new list, 0 merged PRs yet |
+| 2026-08-08 | [mahdibrr/awesome-nextjs-supabase](https://github.com/mahdibrr/awesome-nextjs-supabase) | [PR #24](https://github.com/mahdibrr/awesome-nextjs-supabase/pull/24) | — | `[-]` rejected/closed 2026-08-14 — maintainer: list is Next.js **+ Supabase** and the starter only uses Supabase as a plain Postgres host (Drizzle + `postgres`, no `@supabase/*` / Supabase Auth / RLS); also fails the "maintained, non-promotional" bar (vendor org, no stars). **Not an AI-PR ban** — invited resubmit if we ship a real Supabase integration or gain adoption |
+| 2026-08-08 | [brandonhimpfen/awesome-saas](https://github.com/brandonhimpfen/awesome-saas) | [PR #46](https://github.com/brandonhimpfen/awesome-saas/pull/46) | — | `[-]` rejected/closed (maturity/adoption bar — not an AI-PR ban) |
+| 2026-08-05 | [giovannism20/awesome-supabase](https://github.com/giovannism20/awesome-supabase) | [PR #15](https://github.com/giovannism20/awesome-supabase/pull/15) (merged) | [README](https://github.com/giovannism20/awesome-supabase) | `[x]` **live** — merged 2026-08-10 22:12 UTC. Found unlogged via dedupe 2026-08-10 21:17 |
+| 2026-08-05 | [y-h-v-h/shadverse](https://github.com/y-h-v-h/shadverse) | [PR #3](https://github.com/y-h-v-h/shadverse/pull/3) | _pending merge_ | `[~]` submitted (found via dedupe 2026-08-09, was unlogged) |
+| 2026-08-03 | [brillout/awesome-react-components](https://github.com/brillout/awesome-react-components) | [PR #632](https://github.com/brillout/awesome-react-components/pull/632) | _pending merge_ | `[~]` submitted (Boilerplate section — **48k★**, highest-reach pending PR). Found unlogged via dedupe 2026-08-10 21:17 (prior "doesn't fit" skip was wrong) |
+| 2026-08-03 | [officialrajdeepsingh/awesome-nextjs](https://github.com/officialrajdeepsingh/awesome-nextjs) | [PR #88](https://github.com/officialrajdeepsingh/awesome-nextjs/pull/88) (merged) | [README](https://github.com/officialrajdeepsingh/awesome-nextjs) | `[x]` **live** — merged 2026-08-11 10:45 UTC (2nd confirmed listing) |
+| 2026-08-02 | [iAmCorey/awesome-indie-hacker-tools](https://github.com/iAmCorey/awesome-indie-hacker-tools) | [PR #158](https://github.com/iAmCorey/awesome-indie-hacker-tools/pull/158) | _pending merge_ | `[~]` submitted (`## 模板` / Templates, after Makerkit/Shipfast/Supastarter). Found via dedupe 2026-08-10, was unlogged |
+| 2026-08-01 | [sorrycc/awesome-javascript](https://github.com/sorrycc/awesome-javascript) | [PR #1133](https://github.com/sorrycc/awesome-javascript/pull/1133) | — | `[-]` rejected/closed (no boilerplate/starter section). Found unlogged via dedupe 2026-08-10 21:17 |
+| 2026-08-01 | [lyqht/awesome-supabase](https://github.com/lyqht/awesome-supabase) | [PR #62](https://github.com/lyqht/awesome-supabase/pull/62) | _pending merge_ | `[~]` submitted (Community Starters) |
+| 2026-07-31 | [bytefer/awesome-nextjs](https://github.com/bytefer/awesome-nextjs) | [PR #23](https://github.com/bytefer/awesome-nextjs/pull/23) | _pending merge_ | `[~]` submitted (SaaS section) |
+| 2026-07-31 | [semlinker/awesome-typescript](https://github.com/semlinker/awesome-typescript) | [PR #177](https://github.com/semlinker/awesome-typescript/pull/177) | _pending merge_ | `[~]` submitted (TypeScript Starters/Boilerplates) |
+| 2026-07-30 | [merklefruit/SaaS4Devs](https://github.com/merklefruit/SaaS4Devs) | [PR #54](https://github.com/merklefruit/SaaS4Devs/pull/54) | _pending merge_ | `[~]` submitted (`Complete Full-stack Boilerplates`). Found unlogged via dedupe 2026-08-10 21:17 (lost from older branch) |
+| 2026-07-29 | [EinGuterWaran/awesome-opensource-boilerplates](https://github.com/EinGuterWaran/awesome-opensource-boilerplates) | [PR #52](https://github.com/EinGuterWaran/awesome-opensource-boilerplates/pull/52) | — | `[-]` rejected/closed 2026-08-22 — maintainer: "0 stars and no commit for over a month" (maturity/adoption bar — **not** an AI-PR ban). Do not resubmit until the repo has real ★/adoption |
+| 2026-07-29 | [bytefer/awesome-shadcn-ui](https://github.com/bytefer/awesome-shadcn-ui) | [PR #29](https://github.com/bytefer/awesome-shadcn-ui/pull/29) (merged) | [Saas table](https://github.com/bytefer/awesome-shadcn-ui) | `[x]` **live** (only confirmed listing) |
+| 2026-07-29 | [xcomptek/awesome-saas-boilerplates](https://github.com/xcomptek/awesome-saas-boilerplates) | [PR #222](https://github.com/xcomptek/awesome-saas-boilerplates/pull/222) | _pending merge_ | `[~]` submitted (Next.js section) |
+| 2026-07-26 | [shadcnblocks/shadcntemplates](https://github.com/shadcnblocks/shadcntemplates) | [PR #14](https://github.com/shadcnblocks/shadcntemplates/pull/14) | _pending merge_ | `[~]` submitted (shadcn/ui templates/boilerplates directory). Found unlogged via dedupe 2026-08-10 21:17 (lost from older branch) |
+| 2026-07-17 | [birobirobiro/awesome-shadcn-ui](https://github.com/birobirobiro/awesome-shadcn-ui) | [PR #554](https://github.com/birobirobiro/awesome-shadcn-ui/pull/554) | _pending merge_ | `[~]` submitted (Boilerplates / Templates) |
+| 2026-07-17 | [unicodeveloper/awesome-nextjs](https://github.com/unicodeveloper/awesome-nextjs) | [PR #536](https://github.com/unicodeveloper/awesome-nextjs/pull/536) | _pending merge_ | `[~]` submitted (Boilerplates) |
 
 ---
 
@@ -33,7 +339,23 @@ Merge a PR, get listed. No account, no forms, no fees.
 | [-] | [aniftyco/awesome-tailwindcss](https://github.com/aniftyco/awesome-tailwindcss) | ~~PR~~ **hand-submit only** | 15.1k★. CONTRIBUTING.md **bans AI-authored/assisted PRs** — closed on sight, submitter may be banned. Gabe must add it by hand (📁 "Full templates" entry, `UI libraries, components & templates` section) |
 | [-] | [enaqx/awesome-react](https://github.com/enaqx/awesome-react) | — | 74k★, but **no section fits** a full SaaS boilerplate. Skipped to avoid a rejected PR |
 | [~] | [birobirobiro/awesome-shadcn-ui](https://github.com/birobirobiro/awesome-shadcn-ui) | PR to README | 20.1k★. **Submitted 2026-07-17** → [PR #554](https://github.com/birobirobiro/awesome-shadcn-ui/pull/554), awaiting review. Added to `## Boilerplates / Templates` |
-| [ ] | [bytefer/awesome-nextjs](https://github.com/bytefer/awesome-nextjs) | PR to README | 68★ — low reach, but trivial |
+| [x] | [bytefer/awesome-shadcn-ui](https://github.com/bytefer/awesome-shadcn-ui) | PR to README | 725★. **Merged 2026-07-29** → [PR #29](https://github.com/bytefer/awesome-shadcn-ui/pull/29) (Saas table). **LIVE.** Our only confirmed listing |
+| [~] | [bytefer/awesome-nextjs](https://github.com/bytefer/awesome-nextjs) | PR to README | ~70★, low reach but trivial. **Submitted 2026-07-31** → [PR #23](https://github.com/bytefer/awesome-nextjs/pull/23) (SaaS section), awaiting review |
+| [~] | [xcomptek/awesome-saas-boilerplates](https://github.com/xcomptek/awesome-saas-boilerplates) | PR to README | 3.1k★. **Submitted 2026-07-29** → [PR #222](https://github.com/xcomptek/awesome-saas-boilerplates/pull/222) (Next.js section), awaiting review |
+| [x] | [officialrajdeepsingh/awesome-nextjs](https://github.com/officialrajdeepsingh/awesome-nextjs) | PR to README | 707★. **[PR #88](https://github.com/officialrajdeepsingh/awesome-nextjs/pull/88) MERGED 2026-08-11 10:45 UTC** — entry live in README `## Next.js boilerplate`. **2nd confirmed listing** (CONTRIBUTING prefers ≥100★; merged anyway) |
+| [~] | [lyqht/awesome-supabase](https://github.com/lyqht/awesome-supabase) | PR to README | 479★. **Submitted 2026-08-01** → [PR #62](https://github.com/lyqht/awesome-supabase/pull/62) (Community Starters), awaiting review. Fits — starter supports Supabase Postgres |
+| [~] | [ridloabelian/awesome-supabase-id](https://github.com/ridloabelian/awesome-supabase-id) | PR to README | 0★ (new), Indonesian 🇮🇩. **Submitted 2026-08-10** → [PR #4](https://github.com/ridloabelian/awesome-supabase-id/pull/4) (`## 🚀 SaaS Boilerplate (Next.js)`). Exact fit; part of the active "Stack Nol Rupiah" awesome-list series; CONTRIBUTING specifies Indonesian descriptions. Fits — starter supports Supabase Postgres (auth is self-contained, stated honestly in the entry). New demographic reach. Brand-new (pushed 2026-07-15, 0 merged PRs yet) — re-check merge status later |
+| [x] | [giovannism20/awesome-supabase](https://github.com/giovannism20/awesome-supabase) | PR to README | 41★. **[PR #15](https://github.com/giovannism20/awesome-supabase/pull/15) MERGED 2026-08-10 22:12 UTC** — entry live in README starters section. Found unlogged via dedupe 2026-08-10 21:17 (earlier "no starters section" skip was stale). **3rd confirmed listing** |
+| [~] | [brillout/awesome-react-components](https://github.com/brillout/awesome-react-components) | PR to README | **48k★**. **OPEN [PR #632](https://github.com/brillout/awesome-react-components/pull/632)** (2026-08-03, found unlogged via dedupe 2026-08-10 21:17) — added to a Boilerplate section (prior "doesn't fit" skip was wrong; the list DOES have one). **Highest-reach pending PR — watch this merge** |
+| [-] | [sorrycc/awesome-javascript](https://github.com/sorrycc/awesome-javascript) | ~~PR~~ **closed** | 35k★. **[PR #1133](https://github.com/sorrycc/awesome-javascript/pull/1133) closed 2026-08-01** (found unlogged via dedupe 2026-08-10 21:17) — no boilerplate/starter section; closed on fit. Do not resubmit |
+| [~] | [merklefruit/SaaS4Devs](https://github.com/merklefruit/SaaS4Devs) | PR to README | 749★. **OPEN [PR #54](https://github.com/merklefruit/SaaS4Devs/pull/54)** (2026-07-30, `Complete Full-stack Boilerplates`). Found unlogged via dedupe 2026-08-10 21:17 (lost from older branch). Do not re-PR |
+| [~] | [shadcnblocks/shadcntemplates](https://github.com/shadcnblocks/shadcntemplates) | PR to README | 42★. **OPEN [PR #14](https://github.com/shadcnblocks/shadcntemplates/pull/14)** (2026-07-26). shadcn/ui templates/boilerplates directory (our dashboard is shadcn/ui). Found unlogged via dedupe 2026-08-10 21:17 (lost from older branch). Do not re-PR |
+| [-] | [mahdibrr/awesome-nextjs-supabase](https://github.com/mahdibrr/awesome-nextjs-supabase) | ~~PR~~ **rejected** | 5★. **PR #24 closed unmerged 2026-08-14** — scope: list is Next.js **+ Supabase**, our starter uses Supabase only as a plain Postgres host (no `@supabase/*` / Supabase Auth / RLS); plus the "maintained, non-promotional" bar (vendor org, no stars). Maintainer explicitly said **not** an AI-PR ban; invited resubmit if we ship a real Supabase integration or gain adoption |
+| [~] | [iAmCorey/awesome-indie-hacker-tools](https://github.com/iAmCorey/awesome-indie-hacker-tools) | PR to README (`## 模板`) | 1.4k★, active (pushed 2026-05, daily manual curation), MIT, welcomes PRs. Bilingual CN/EN indie-hacker tools list; `模板` (Templates) section lists our exact comparables (Makerkit / Shipfast / Supastarter — all Next.js SaaS starters). **Submitted 2026-08-02** → [PR #158](https://github.com/iAmCorey/awesome-indie-hacker-tools/pull/158), awaiting review. Found via dedupe 2026-08-10 (was unlogged) |
+| [~] | [semlinker/awesome-typescript](https://github.com/semlinker/awesome-typescript) | PR to README | 4.0k★, inclusive list. **Submitted 2026-07-31** → [PR #177](https://github.com/semlinker/awesome-typescript/pull/177) (`## TypeScript Starters/Boilerplates`) |
+| [-] | [EinGuterWaran/awesome-opensource-boilerplates](https://github.com/EinGuterWaran/awesome-opensource-boilerplates) | ~~PR~~ **rejected** | 1.9k★. **PR #52 closed unmerged 2026-08-22 12:04 UTC** — maintainer: "0 stars and no commit for over a month" (maturity/adoption bar, **not** an AI-PR ban). Do not resubmit until the repo has real ★/adoption |
+| [~] | [y-h-v-h/shadverse](https://github.com/y-h-v-h/shadverse) | PR to `data/projects.ts` | 28★. Collection of projects built with shadcn/ui (our dashboard is shadcn/ui). **Submitted 2026-08-05** → [PR #3](https://github.com/y-h-v-h/shadverse/pull/3), awaiting review. Found via dedupe 2026-08-09 (was unlogged) |
+| [-] | [brandonhimpfen/awesome-saas](https://github.com/brandonhimpfen/awesome-saas) | ~~PR~~ **rejected** | 7★. **PR #46 closed 2026-08-08** — maintainer: "does not meet acceptance criteria… maturity, adoption". Editorial maturity bar, **not** an AI-PR ban (CONTRIBUTING has none). Resubmit once the repo has real ★/adoption. → Do **not** submit to any brandonhimpfen list meanwhile (`awesome-stripe`, `awesome-postgresql`, `awesome-tailwindcss`) |
 | [ ] | GitHub topics | repo settings | ✅ **done** — `nextjs`, `nextjs15`, `saas-starter`, `saas-boilerplate`, `template`, … |
 
 ## Tier 2 — Launch platforms (one-shot traffic spikes)
@@ -48,8 +370,8 @@ Sequence these; don't burn them all at once. Product Hunt is worth preparing pro
 | [ ] | [dev.to](https://dev.to/new) | Article | Write the build story (self-contained auth), not an ad |
 | [ ] | [Fazier](https://fazier.com/submit) | Submit | Verified reachable |
 | [ ] | [MicroLaunch](https://microlaunch.net/submit) | Submit | Verified reachable |
-| [ ] | [Peerlist](https://peerlist.io) | Project | Probe blocked (403) — check manually |
-| [ ] | [Uneed](https://uneed.best) | Submit | Guessed URL 404'd — find the real one |
+| [ ] | [Peerlist](https://peerlist.io) | Project | Probe 403 — submit via browser, can't auto-verify |
+| [ ] | [Uneed](https://uneed.best/submit-a-tool) | Submit | **Verified reachable** — real URL is `/submit-a-tool` (the old `/submit` & `/submit-product` 404) |
 
 ## Tier 3 — Template directories
 
@@ -57,6 +379,13 @@ Sequence these; don't burn them all at once. Product Hunt is worth preparing pro
 |---|-------|-----|-------|
 | [ ] | [HTMLrev](https://htmlrev.com/free-nextjs-templates.html) | Submit form | Free-only, curated, has a Next.js category. ⚠️ refused connection from our network — verify manually |
 | [ ] | [Tailkits](https://tailkits.com/submit-product/) | Submit | Verified reachable. Pricing unstated — check it's free before submitting |
+| [ ] | [SaaS Boilerplates](https://saasboilerplates.com) | **Manual — account-gated (FREE)** | Curated "best SaaS boilerplates" directory with a **Next.js category** ([`/listing-category/next-js/`](https://saasboilerplates.com/listing-category/next-js/), ~12 listings: shipahead, starterkitpro, …). **How to submit:** 1) go to [`/submit-listing/`](https://saasboilerplates.com/submit-listing/) → it 302→`/join/`; 2) **create a free account** (name/email/password — also subscribes to the "SaaS Gems" newsletter); 3) submit the listing; 4) pick the **Next.js** category. Not listing us yet (verified 2026-08-11). Agent can't auto-submit (login wall) → human |
+| [ ] | [BoilerplateList](https://boilerplatelist.com) | **Manual — free form** | Curated boilerplate directory, **Next.js category** ([`/next-js-boilerplates/`](https://boilerplatelist.com/next-js-boilerplates/), 55 listings). Lists free, paid, and open-source entries with license + pricing shown. **How to submit:** 1) go to [`/submit/`](https://boilerplatelist.com/submit/); 2) fill the form — **Your Name**, **Email**, **Boilerplate Name** (e.g. "MailKite SaaS Starter"), **Website URL** (`https://github.com/mailkite/saas-startup`), **Description** (one-liner + "why different"); 3) tick "I agree to the Privacy Policy"; 4) Submit. Every submission is human-reviewed before listing. Not listing us yet (verified 2026-08-19). Agent can't auto-submit (form) → human |
+| [ ] | [saasboilerplates.dev](https://saasboilerplates.dev) | **Manual — free form** | "119+ SaaS Boilerplates" directory, **Next.js** framework filter. **How to submit:** 1) go to [`/submit`](https://saasboilerplates.dev/submit); 2) fill the form — **Full name**, **Email**, **Profile pic**, **Boilerplate URL** (`https://github.com/mailkite/saas-startup`); 3) the **Affiliate programme** field is optional (skip); 4) Submit. "Free and premium both welcome; full-stack boilerplates/starter kits only (no themes/plugins/UI kits)." Not listing us yet (verified 2026-08-19). Agent can't auto-submit (form) → human |
+| [ ] | [Boilerplates 4 SaaS](https://boilerplates4saas.com) | **Manual — free form** | Directory with a **Next.JS** frontend filter and a "FREE boilerplates" section. **How to submit:** 1) go to [`/contact/`](https://boilerplates4saas.com/contact/) (the page doubles as the "Submit a Boilerplate" form); 2) fill **URL of the boilerplate** (`https://github.com/mailkite/saas-startup`) and **Twitter handle of the maker** (`@mailkite_dev`); 3) the **affiliation** and **backlink/badge** fields are optional (they add a 0.5 ranking point, not mandatory); 4) Submit. Not listing us yet (verified 2026-08-19). Agent can't auto-submit (form) → human |
+| [ ] | [Next.js Starters](https://nextjsstarter.com) | **Manual — free form** | Directory of Next.js starters/boilerplates by @johnrushx (Shipixen), with Free / Premium / For-Directories categories. **How to submit:** 1) go to [`nextjsstarter.com`](https://nextjsstarter.com/) and scroll to the "Submit your NextJS starter" form (fields: **Your email**, **Your twitter**, **Project URL**); 2) paste `https://github.com/mailkite/saas-startup` as the Project URL; 3) Submit. Free listings get a no-follow link; a paid **$49** option publishes immediately with a forever do-follow link (optional — not required to be listed). Not listing us yet (verified 2026-08-25). Agent can't auto-submit (form) → human |
+| [ ] | [Starter Index](https://starterindex.com) | **Manual — free form** | "Find the best boilerplates and starter kits" directory (by @stforos). **How to submit:** 1) go to [`/add-boilerplate`](https://starterindex.com/add-boilerplate); 2) fill **Email** (required) and **Website** (`https://github.com/mailkite/saas-startup`, required); 3) **Affiliate Program** field is optional (skip); 4) Submit. **Free** — "Listing on Starterindex is free"; an AI agent crawls your landing page, emails you to review the data, and it goes live in ~72h. Featured slots are for affiliate listings (free) or via a fee to be featured without an affiliate program. If you have only a GitHub repo (no website), contact `hello@starterindex.com` first. Not listing us yet (verified 2026-08-25). Agent can't auto-submit (form) → human |
+| [ ] | [Boilerplate Search](https://boilerplatesearch.com/nextjs) | **Manual — free form (Tally)** | "A one-stop-shop for your boilerplate search" directory with a **Next.js** category ([`/nextjs`](https://boilerplatesearch.com/nextjs)) plus tag/keyword filters (SaaS, starter-kit, payments, auth, shadcn, Tailwind, …). Lists free and paid boilerplates with each one's price + tags shown. **How to submit:** 1) go to [`boilerplatesearch.com`](https://boilerplatesearch.com/) and click the **"Submit a Boilerplate"** button (opens a Tally form, `tally.so/r/3xpAZ9`); 2) fill in **Boilerplate name** ("MailKite SaaS Starter"), **URL** (`https://github.com/mailkite/saas-startup`), **description** (one-liner + "why different"), **tags** (Next.js, SaaS, starter-kit, payments, auth, shadcn/ui, Tailwind), and **price** (**Free**); 3) Submit. **Free to submit** — no listing fee observed; "Featured" slots appear editorially curated (paid placement unverified — flag if a fee appears). No public submission email (form-gated). Not listing us yet (verified 2026-08-27). Agent can't auto-submit (Tally form) → human |
 | [-] | [Vercel Templates](https://vercel.com/templates) | — | **CLOSED.** Vercel staff (Amy Egan), 2026-06-10: "We're not taking new templates at the moment", no timeline. `/templates/submit` is dead. Use vercel/examples instead |
 
 ## Tier 4 — Communities (read each one's self-promo rules first)
@@ -76,14 +405,1002 @@ A post that reads as an ad gets removed and can burn the account.
 
 ## Backlog → 100
 
-A daily cron researches new venues and appends them here. Rules for anything it adds:
+A periodic cron researches new venues and appends them here. Rules for anything it adds:
 
 1. **Git-PR venues first** — no forms, no accounts, no fees.
 2. **Verify before listing**: repo not archived, pushed within ~6 months, and actually
-   merging outside PRs. A dead awesome-list is not a venue.
+   merging outside PRs. A dead awesome-list is not a venue. (GitHub's repo "updated" date is
+   metadata/star activity — **trust the push/commit date**.)
 3. **Free only.** Paid placements need a human decision — flag, don't add.
-4. **No duplicates** — check the tables above first.
+4. **No duplicates** — check the tables above first, and **dedupe against GitHub** before any PR.
 5. Record `★`, last-pushed date, and the evidence that it accepts submissions.
+
+### Researched 2026-08-28 (run 13:17 UTC) — reconciliation; web discovery degraded; no new venue cleared the bar; no PR/email
+
+**Reconciliation (the baseline win again).** All 12 pending awesome-list PRs re-checked on GitHub
+remain OPEN, no flips since the 01:17 run. The 3 LIVE listings stand (`bytefer/awesome-shadcn-ui`
+#29, `officialrajdeepsingh/awesome-nextjs` #88, `giovannism20/awesome-supabase` #15). Fleet-wide
+`gh search prs --author bucabay` surfaced no new unlogged saas-startup PRs — still **19 total**
+(12 open + 3 merged + 4 closed), all logged above. (The other bucabay PRs in the scan — MailKite
+*product*, MCP registries, email-provider integrations — are out of scope for this surface.)
+
+**No new git-PR venue cleared the bar.** The GitHub sweep (top-starred *and* recently-pushed, ~20
+query angles — `awesome saas boilerplate` / `awesome nextjs boilerplate` / `awesome shadcn` /
+`saas boilerplate directory` / `awesome starter kit` / `awesome react starter` / `awesome templates` /
+`awesome supabase` / `awesome saas` / `awesome nextjs` / `awesome boilerplates` / `nextjs boilerplate` /
+`starter kit` / `indie hacker tools` / `awesome nextjs template` / `saas starter kit` /
+`awesome fullstack` / `shadcn templates` / `awesome boilerplate` / `nextjs template` / `awesome react` /
+`awesome tailwind templates` / `boilerplate directory` / `template directory` / `starter directory` /
+`awesome starter` / `nextjs saas starter`) returned only already-acted-on lists and standing-skips.
+`XiaomingX/indie-hacker-tools-plus` (1823★, push 2026-08-28) re-verified: still **0 merged PRs** —
+standing skip holds.
+
+**New skips — verified this run, do NOT re-research (reason):**
+- `salmanshahriar/Next-Elite` (107★, MIT, push 2026-08-28) — a Next.js **boilerplate product**, not
+  a curation directory.
+- `OnlyTraction/awesome-saas-submission-sites` (0★, push 2026-05-30) — a meta-list of SaaS
+  *launch/submission/review* sites (Product-Hunt-style), not a template directory; 0★.
+- `mrieck/claude-plugins` (0★, push 2026-08-26) — Claude Code plugins, not a template directory.
+
+**No emails sent** — no submission venue surfaced a public contact email (all Tier 2/3 are
+form/account-gated). Caps are maxima, not targets; quality over volume.
+
+**Web-directory discovery degraded.** DuckDuckGo HTML returned the anomaly/challenge shell with 0
+organic results on most queries this run (the one cached result that did return surfaced only
+already-known boilerplate *products* — `saasboilerplates.dev` tool page, `nexty.dev`
+directory-boilerplate, `nextjsdirectory.com` — not submission venues), so no new Tier 3
+template-directory venue was verifiable. GitHub search carried the research.
+
+### Researched 2026-08-28 (run 01:17 UTC) — reconciliation; web discovery blocked; no new venue cleared the bar; no PR/email
+
+**Reconciliation (the baseline win again).** All 12 pending awesome-list PRs re-checked on GitHub
+remain OPEN, no flips since the 21:17 run. The 3 LIVE listings stand (`bytefer/awesome-shadcn-ui`
+#29, `officialrajdeepsingh/awesome-nextjs` #88, `giovannism20/awesome-supabase` #15). Fleet-wide
+`gh search prs --author bucabay` surfaced no new unlogged saas-startup PRs — still **19 total**
+(12 open + 3 merged + 4 closed), all logged above. (The other bucabay PRs in the scan — MailKite
+*product*, MCP registries, email-provider integrations — are out of scope for this surface.)
+
+**No new git-PR venue cleared the bar.** The GitHub sweep (top-starred *and* recently-pushed, 13
+query angles — `awesome saas boilerplate` / `awesome nextjs boilerplate` / `awesome shadcn` /
+`saas boilerplate directory` / `awesome starter kit` / `indie hacker tools` / `awesome react starter` /
+`awesome tailwind templates` / `shadcn templates` / `awesome fullstack` / `awesome templates` /
+`awesome supabase` / `saas boilerplate` (updated-sort)) returned only already-acted-on lists and
+standing-skips. New 0★ boilerplate *products* this run (skip, do not re-research):
+`ChristopherMarques/saas-boilerplate`, `NextSpark-js/nextspark`, `turkcode-ai/nextjs-saas-boilerplate`,
+`openstarterkit/nextjs-saas-starter-kit`, `palwashasheikh/saas-boilerplate-cli` — all are the products
+themselves, not curation directories, 0–5★, can't verify outside-PR merges.
+`ishandutta2007/Awesome-SaaS-Security-Posture-Management` (0★, push 2026-08-27) — SaaS
+**security-posture** playbooks, not a starter directory (category mismatch). Nothing new cleared the
+bar; the surface remains saturated.
+
+**No emails sent** — no submission venue surfaced a public contact email (all Tier 2/3 are
+form/account-gated). Caps are maxima, not targets; quality over volume.
+
+**Web-directory discovery blocked again.** DuckDuckGo (HTML + lite) returned the anomaly shell with 0
+organic results, Mojeek returned 403 Forbidden, and Bing returned poisoned/irrelevant results (Tom
+Cruise — unrelated to the query) — no new Tier 3 template-directory venue was verifiable this run.
+GitHub search carried the research.
+
+### Researched 2026-08-27 (run 21:17 UTC) — web discovery restored; 1 new Tier 3 directory; no PR/email
+
+**Reconciliation (the baseline win again).** All 12 pending awesome-list PRs re-checked on GitHub
+remain OPEN, no flips since the 09:17 run. The 3 LIVE listings stand (`bytefer/awesome-shadcn-ui`
+#29, `officialrajdeepsingh/awesome-nextjs` #88, `giovannism20/awesome-supabase` #15). Fleet-wide
+`gh search prs --author bucabay` surfaced no new unlogged saas-startup PRs — still **19 total**
+(12 open + 3 merged + 4 closed), all logged above. (The other bucabay PRs in the scan — MailKite
+*product*, MCP registries, email-provider integrations — are out of scope.)
+
+**No new git-PR venue cleared the bar.** The GitHub sweep (top-starred *and* recently-pushed, 20
+query angles — `awesome saas boilerplate` / `awesome nextjs boilerplate` / `awesome shadcn` /
+`awesome starter kit` / `saas boilerplate directory` / `awesome saas starter` / `awesome templates` /
+`nextjs boilerplate` / `awesome react starter` / `awesome boilerplates` / `awesome supabase` /
+`indie hacker tools` + recently-pushed `awesome saas` / `awesome nextjs` / `awesome starter` /
+`saas boilerplate` / `awesome boilerplate` / `nextjs template` / `starter kit` / `awesome shadcn`)
+returned only already-acted-on lists and standing-skips. Re-verified this run (standing skips stand):
+`XiaomingX/indie-hacker-tools-plus` (1821★, Apache-2.0, pushed 2026-08-27) still has **0 merged
+PRs** (23 open) — still fails the "actively merges outside PRs" check; `victorocna/awesome-react-starter`
+(20★) is the author's own starter kit, not a curation list. Nothing new cleared the bar.
+
+**Web discovery restored.** DuckDuckGo HTML returned real organic results this run (it had been
+challenge-blocked intermittently). Swept `nextjs saas boilerplate submit directory` / `submit nextjs
+starter boilerplate free directory` / `saas starter kit directory submit`.
+
+**1 new Tier 3 template-directory venue added** (free, manual Tally form, Next.js category, not
+listing us — verified 2026-08-27 by fetching the homepage + `/nextjs` category page and grepping
+for "mailkite"): `boilerplatesearch.com`. No public GitHub data source (confirmed no github.com
+links except external boilerplate repos) and no published email (form-gated Tally), so no PR/email
+this run.
+
+**No emails sent** — the new venue is form-gated with no public submission email. Caps are maxima,
+not targets; quality over volume.
+
+### Researched 2026-08-27 (run 09:17 UTC) — reconciliation; no new venue cleared the bar; no PR/email
+
+**Reconciliation (the baseline win again).** All 12 pending awesome-list PRs re-checked on GitHub
+remain OPEN, no flips since the 21:17 run. The 3 LIVE listings stand (`bytefer/awesome-shadcn-ui`
+#29, `officialrajdeepsingh/awesome-nextjs` #88, `giovannism20/awesome-supabase` #15). Fleet-wide
+`gh search prs --author bucabay` surfaced no new unlogged saas-startup PRs — still **19 total**
+(12 open + 3 merged + 4 closed), all logged above. (The other bucabay PRs in the scan — MailKite
+*product*, MCP registries, email-provider integrations — are out of scope for this surface.)
+
+**No new git-PR venue cleared the bar.** The GitHub sweep (top-starred *and* recently-pushed, 14
+query angles — `awesome saas boilerplate` / `awesome nextjs boilerplate` / `saas boilerplate
+directory` / `awesome starter kit` / `awesome shadcn` / `indie hacker tools` / `awesome react
+starter` / `awesome boilerplates` / `starter kits` / `saas starter kit directory` / `awesome nextjs
+templates` / `awesome saas starter kit` / `boilerplate directory` / `awesome saas` + `awesome nextjs`
+(updated-sort)) returned only already-acted-on lists, standing-skips, and competitor boilerplate
+products.
+
+**New skips — verified this run, do NOT re-research (reason):**
+- `KrishMunot/awesome-startup` (**2333★**, MIT, pushed 2026-08-26, active) — "curated list of books,
+  videos, courses, tools and resources about making a startup". **No boilerplate/starter/template
+  section** — the `## Engineering and Infrastructure` section lists hosting/infra/tools (Vercel,
+  Railway, Fly.io, Render, Cloudflare, Supabase, Neon, Clerk, Sentry…), and the only "template" hit
+  in the README is YC SAFE legal documents. Same fit failure as `enaqx/awesome-react` /
+  `johackim/awesome-indiehackers`. Category mismatch → do not auto-PR.
+- `MkThingsHQ/mkdirs` (251★, Apache-2.0, pushed 2026-08-09) — "directory website template" (a
+  Next.js product for *building* directories), not a directory that accepts template submissions.
+  Category mismatch (same shape as `nextjsdirectory.com` / `dirstarter.com`).
+
+**No emails sent** — no submission venue surfaced a public contact email (all Tier 2/3 are
+form/account-gated). Caps are maxima, not targets; quality over volume.
+
+**Web-directory discovery blocked again.** DuckDuckGo (HTML + lite), Bing and Mojeek all returned
+challenge/empty pages with no organic results — no new Tier 3 template-directory venue was
+verifiable this run. GitHub search carried the research.
+
+### Researched 2026-08-26 (run 21:17 UTC) — reconciliation; no new venue cleared the bar; no PR/email
+
+**Reconciliation (the baseline win again).** All 12 pending awesome-list PRs re-checked on GitHub
+remain OPEN, no flips since the 17:17 run. The 3 LIVE listings stand (`bytefer/awesome-shadcn-ui`
+#29, `officialrajdeepsingh/awesome-nextjs` #88, `giovannism20/awesome-supabase` #15). Fleet-wide
+`gh search prs --author bucabay` surfaced no new unlogged saas-startup PRs — still **19 total**
+(12 open + 3 merged + 4 closed), all logged above. The other bucabay PRs in the scan (MailKite
+*product*, MCP registries, email-provider integrations) are out of scope for this surface.
+
+**No new git-PR venue cleared the bar.** The GitHub sweep (top-starred *and* recently-pushed, 16
+query angles — `awesome saas boilerplate` / `awesome nextjs boilerplate` / `saas boilerplate
+directory` / `awesome starter kit` / `awesome shadcn` / `indie hacker tools` / `awesome react
+starter` / `awesome templates` / `awesome supabase` / `awesome nextjs` (updated) / `awesome starter`
+(updated) / `saas boilerplate` (updated) / `awesome shadcn` (updated) / `nextjs boilerplate`
+(updated)) returned only already-acted-on lists and standing-skips.
+
+**New skips — verified this run, do NOT re-research (reason):**
+- `nrjdalal/awesome-templates` (29★, push 2026-08-26, no license) — **not a submission venue**: it is
+  the author's own collection of project-template *folders* served to his `npx gitpick` CLI tool
+  ("Clone a Template" via `gitpick`), refreshed every 8h. No third-party PR/submit path exists.
+- `weijunext/indie-hacker-tools` (7966★, push 2025-07-24 ~13mo stale, **no license**) — Chinese
+  indie-hacker tools list with a `## Web 开发模板` (Web dev templates) section that lists SaaS
+  templates (smart-excel-ai, Opensaas, Nexty.dev, SupaStarter). **Fails the ~6-month recency bar**
+  (last push 2025-07-24), is **not MIT-compatible** (no license), and is heavily self-promotional
+  (maintainer sells Nexty.dev + affiliate links). **Flag for human** — a bilingual CN reach is
+  valuable, but the stale/unlicensed/promotional list is a borderline fit; do not auto-PR.
+- `Bharathi4real/awesome-nextjs` (5★, push 2026-08-24) — brand-new, negligible reach, can't verify
+  it merges outside PRs.
+- `ever-works/awesome-starters` (6★, push 2026-08-04) — negligible reach, can't verify outside-PR merges.
+- `carve-studio/awesome-shadcn` (1★, push 2026-08-26) — negligible reach.
+- `Correia-jpv/fucking-awesome-nextjs` (131★, push 2026-08-26) — mirror of
+  `unicodeveloper/awesome-nextjs` (already PR'd #536); standing skip (already logged).
+- `SAHTUnknown/nextjs-saas-boilerplate`, `zeroboiler/zeroboiler.github.io`, `skipbit/slipway`,
+  `tkrbhargav/Nexora`, `justYu2001/saas-boilerplate` — 0★ boilerplate *products*, not curation lists.
+
+**No emails sent** — no submission venue surfaced a public contact email (all Tier 2/3 are
+form/account-gated). Caps are maxima, not targets; quality over volume.
+
+**Web-directory discovery blocked again.** DuckDuckGo (HTML + lite), Bing, Mojeek and Startpage all
+returned challenge/empty pages with no organic results — no new Tier 3 template-directory venue was
+verifiable this run. GitHub search carried the research.
+
+### Researched 2026-08-25 (run 17:17 UTC) — web discovery restored; 2 new Tier 3 template directories; no PR/email
+
+**Reconciliation (still the baseline win).** All 12 pending awesome-list PRs re-checked on GitHub
+remain OPEN, no flips since the 01:17 run. The 3 LIVE listings stand (`bytefer/awesome-shadcn-ui`
+#29, `officialrajdeepsingh/awesome-nextjs` #88, `giovannism20/awesome-supabase` #15). Fleet-wide
+`gh search prs --author bucabay` surfaced no new unlogged saas-startup PRs — still **19 total**
+(12 open + 3 merged + 4 closed), all logged above. The other bucabay PRs in the scan (MailKite
+*product*, MCP registries, provider campaigns) are out of scope. `XiaomingX/indie-hacker-tools-plus`
+(1813★) re-verified: still **0 merged PRs** — standing skip stands.
+
+**Web discovery restored.** DuckDuckGo HTML returned real organic results this run (first time since
+~2026-08-15). Swept `nextjs saas boilerplate submit directory` / `saas starter kit directory submit` /
+`submit nextjs starter boilerplate free directory`.
+
+**2 new Tier 3 template-directory venues added** (both **free**, both **manual form** submissions, both
+with a Next.js fit, neither listing us yet — verified 2026-08-25 by fetching the homepage + submit page
+and grepping for "mailkite"). Neither is git-PR-able (no public GitHub data source exposed) and neither
+publishes a submission email (both form-gated), so no PR/email this run:
+
+- `nextjsstarter.com` — directory by @johnrushx (Shipixen) with Free/Premium/For-Directories categories;
+  submit via the inline "Submit your NextJS starter" form (email + twitter + Project URL). Free listings
+  are no-follow; a paid $49 option publishes immediately with a do-follow link (optional).
+- `starterindex.com` — "Find the best boilerplates and starter kits" (by @stforos); submit at
+  `/add-boilerplate` (Email + Website required, Affiliate optional). **Free** ("Listing on Starterindex is
+  free"); an AI agent crawls the landing page and it goes live in ~72h. Contact `hello@starterindex.com`
+  for GitHub-only repos or paid featured placement.
+
+**Web candidates reviewed and skipped (do NOT re-research):**
+- `saasstarters.com` — the `/about/` page's only submit path is a PR to
+  `github.com/smirnov-am/awesome-saas-boilerplates`, which is now **404/deleted**; no contact email or
+  form anywhere on the site. Dead submit path → not a venue.
+- `listskit.com/saasstarters/` — a lorem-ipsum template demo ("Some text to describe…", `info@domain.com`
+  placeholder, "Best thing since sliced bread! Jason Leow"); not a real curated directory.
+- `saas-boilerplate.eu` — "Created by Manol" (same author as the already-skipped `man0l/nextjs-boilerplate-directory`);
+  the `/submit` page is **404** and the site is a low-quality SEO directory with an "AI Automation
+  Services" ad footer. Broken submit path.
+- `shadcn.io/template/` — the **official shadcn registry** template gallery (235+ templates; our dashboard
+  is shadcn/ui). Submission is login-gated (`/dashboard/contact` → `/sign-in`) via the shadcn registry
+  publish flow, not a form/PR. **Flag for human** — worth a browser investigation of the publish flow.
+- `nextjsthemes.dev` — a paid-**theme** marketplace (5748 themes, $49–$79), not a SaaS-starter directory;
+  no clear free submit path. Category mismatch.
+
+**No emails sent** — both new venues are form-gated with no published submission email. Caps are maxima,
+not targets; quality over volume.
+
+### Researched 2026-08-25 (run 01:17 UTC) — reconciliation; no new venue cleared the bar; no PR/email
+
+**Reconciliation (the baseline win again).** All 12 pending awesome-list PRs re-checked on GitHub
+remain OPEN, no flips since the 17:23 run. The 3 LIVE listings stand (`bytefer/awesome-shadcn-ui`
+#29, `officialrajdeepsingh/awesome-nextjs` #88, `giovannism20/awesome-supabase` #15). Fleet-wide
+`gh search prs --author bucabay` surfaced no new unlogged saas-startup PRs — still **19 total**
+(12 open + 3 merged + 4 closed), all logged above. (The other bucabay PRs in the scan — MailKite
+*product*, MCP registries, and email-provider integrations — are out of scope for this surface.)
+
+**No new git-PR venue cleared the bar.** The GitHub sweep (top-starred *and* recently-pushed, 10
+query angles — `awesome saas boilerplate` / `awesome nextjs boilerplate` / `saas boilerplate
+directory` / `awesome starter kit` / `awesome shadcn` / `indie hacker tools` / `awesome saas
+starter` / `nextjs boilerplate` / `awesome react starter` / `awesome templates` / `awesome supabase`)
+returned only already-acted-on lists and standing-skips. New negligible-reach repos this run (skip,
+do not re-research): `johinsDev/next-saas-boilerplate` (0★, pushed 2026-08-24), `Tomy-ch/nextjs-boilerplate`
+(2★, pushed 2026-08-25), `jonathanchw/nextjs-boilerplate` (2★, pushed 2026-08-25) — all are the
+*products themselves* (a boilerplate), not curation lists, 0–2★, no license, can't verify they merge
+outside PRs. `jellydn/next-app-starter` (283★, MIT, pushed 2026-08-21) is a starter-kit *product*,
+not a listing directory. Nothing new cleared the bar; the surface remains saturated.
+
+**No emails sent** — no submission venue surfaced a public contact email (all Tier 2/3 are
+form/account-gated). Caps are maxima, not targets; quality over volume.
+
+**Web-directory discovery still blocked.** DuckDuckGo (HTML + lite) returned 0 organic results and
+Bing returned a challenge page — no new Tier 3 template-directory venue was verifiable. GitHub search
+carried the research.
+
+### Researched 2026-08-24 (run 17:23 UTC) — reconciliation; no new venue cleared the bar; no PR/email
+
+**Reconciliation (the baseline win again).** All 12 pending awesome-list PRs re-checked on GitHub
+remain OPEN, no flips since the 13:17 run. The 3 LIVE listings stand (`bytefer/awesome-shadcn-ui`
+#29, `officialrajdeepsingh/awesome-nextjs` #88, `giovannism20/awesome-supabase` #15). Fleet-wide
+`gh search prs --author bucabay` surfaced no new unlogged saas-startup PRs — still **19 total**
+(12 open + 3 merged + 4 closed), all logged above.
+
+**No new git-PR venue cleared the bar.** The GitHub sweep (top-starred *and* recently-pushed, 12
+query angles — `awesome saas boilerplate` / `awesome nextjs boilerplate` / `saas boilerplate
+directory` / `awesome starter kit` / `awesome shadcn` / `indie hacker tools` / `awesome saas`
+(updated-sort) / `awesome nextjs` (updated-sort) / `saas boilerplate` (updated-sort) / `nextjs
+boilerplate` (updated-sort) / `awesome boilerplate` (updated-sort) / `awesome templates`
+(updated-sort)) returned only already-acted-on lists and standing-skips. New negligible-reach repos
+this run (skip, do not re-research): `justYu2001/saas-boilerplate` (0★, pushed 2026-08-24),
+`Chama2001/ai-smart-resume-builder` (1★, pushed 2026-08-23), `JuanPabloGilA/create-your-saas-boilerplate`
+(0★, pushed 2026-08-23) — all are the *products* themselves (a boilerplate), not curation lists,
+0–1★, no license, can't verify they merge outside PRs. `speedpy/speedpy` (78★, MIT, Django) and
+`JuanPabloGilA/your-saas-starterkit` (89★, React 19/Elysia) are competitor boilerplates, not venues.
+Nothing new cleared the bar; the surface remains saturated.
+
+**No emails sent** — no submission venue surfaced a public contact email (all Tier 2/3 are
+form/account-gated). Caps are maxima, not targets; quality over volume.
+
+**Web-directory discovery still blocked.** DuckDuckGo (HTML + lite) returned the anomaly/challenge
+shell with 0 organic results and Bing returned a localized challenge page — no new Tier 3
+template-directory venue was verifiable. GitHub search carried the research.
+
+### Researched 2026-08-24 (run 13:17 UTC) — reconciliation; no new venue cleared the bar; no PR/email
+
+**Reconciliation (the baseline win again).** All 12 pending awesome-list PRs re-checked on GitHub
+remain OPEN, no flips since the 09:17 run. The 3 LIVE listings stand (`bytefer/awesome-shadcn-ui`
+#29, `officialrajdeepsingh/awesome-nextjs` #88, `giovannism20/awesome-supabase` #15). Fleet-wide
+`gh search prs --author bucabay` surfaced no new unlogged saas-startup PRs — still **19 total**
+(12 open + 3 merged + 4 closed), all logged above.
+
+**No new git-PR venue cleared the bar.** The GitHub sweep (top-starred *and* recently-pushed, 13
+query angles — `awesome saas boilerplate` / `awesome nextjs` / `awesome shadcn` / `awesome starter
+kit` / `awesome supabase` / `indie hacker tools` / `awesome saas` (updated-sort) / `saas boilerplate`
+(updated-sort) / `nextjs boilerplate` (updated-sort) / `awesome boilerplate` / `awesome react starter` /
+`awesome starter` / `awesome saas starter` / `awesome templates`) returned only already-acted-on
+lists and standing-skips. New negligible-reach repos this run (skip, do not re-research):
+`enhansome/enhansome-saas-boilerplates` (0★, **no license**, no description, pushed 2026-08-23,
+0 PRs ever — same author as the already-skipped `enhansome-Awesome-NextJs`; brand-new SEO-shaped
+0★ list, can't verify it merges outside PRs) and `Emmraan/awesome-saas-alternatives` (1★, pushed
+2026-08-24 — SaaS **alternatives**, not starters; category mismatch). Nothing new cleared the bar;
+the surface remains saturated.
+
+**No emails sent** — no submission venue surfaced a public contact email (all Tier 2/3 are
+form/account-gated). Caps are maxima, not targets; quality over volume.
+
+**Web-directory discovery still blocked.** DuckDuckGo (HTML) returned the challenge/anomaly shell
+with 0 organic results and Bing returned an empty challenge page (no organic links) — no new Tier 3
+template-directory venue was verifiable. GitHub search carried the research.
+
+### Researched 2026-08-24 (run 09:17 UTC) — reconciliation; no new venue cleared the bar; no PR/email
+
+**Reconciliation (the baseline win again).** All 12 pending awesome-list PRs re-checked on GitHub
+remain OPEN, no flips since the 05:17 run. The 3 LIVE listings stand (`bytefer/awesome-shadcn-ui`
+#29, `officialrajdeepsingh/awesome-nextjs` #88, `giovannism20/awesome-supabase` #15). Fleet-wide
+`gh search prs --author bucabay` surfaced no new unlogged saas-startup PRs — still **19 total**
+(12 open + 3 merged + 4 closed), all logged above.
+
+**No new git-PR venue cleared the bar.** The GitHub sweep (top-starred *and* recently-pushed, 12
+query angles — `awesome saas boilerplate` / `awesome nextjs boilerplate` / `awesome saas starter` /
+`awesome shadcn` / `awesome starter kit` / `awesome saas` (updated-sort) / `awesome nextjs`
+(updated-sort) / `saas boilerplate` (updated-sort) / `awesome supabase` / `indie hacker tools` /
+`awesome react starter` / `nextjs template directory`) returned only already-acted-on lists and
+standing-skips. New negligible-reach repos this run (skip, do not re-research): `Serennity007/
+awesome-nextjs` (0★, MIT, pushed 2026-08-20 — brand-new, can't verify it merges outside PRs),
+`u4078974/awesome-saas-boilerplates` (3★), `ddaikodaiko/awesome-saas-boilerplates` (0★),
+`vibhacode/top-saas-boilerplates` (0★). Nothing new cleared the bar; the surface remains saturated.
+
+**No emails sent** — no submission venue surfaced a public contact email (all Tier 2/3 are
+form/account-gated). Caps are maxima, not targets; quality over volume.
+
+**Web-directory discovery still blocked.** DuckDuckGo (HTML + lite) returned the challenge/anomaly
+shell with 0 organic results and Bing returned a localized challenge/consent page (no organic
+links) — no new Tier 3 template-directory venue was verifiable. GitHub search carried the research.
+
+### Researched 2026-08-23 (run 05:17 UTC) — reconciliation; no new venue cleared the bar; no PR/email
+
+**Reconciliation (the baseline win again).** All 12 pending awesome-list PRs re-checked on GitHub
+remain OPEN, no flips since the 01:18 run. The 3 LIVE listings stand (`bytefer/awesome-shadcn-ui`
+#29, `officialrajdeepsingh/awesome-nextjs` #88, `giovannism20/awesome-supabase` #15). Fleet-wide
+`gh search prs --author bucabay` surfaced no new unlogged saas-startup PRs — still **19 total**
+(12 open + 3 merged + 4 closed), all logged above.
+
+**No new git-PR venue cleared the bar.** The GitHub sweep (top-starred *and* recently-pushed, 11
+query angles — `awesome saas boilerplate` / `awesome nextjs` / `awesome shadcn` / `awesome starter
+kit` / `saas boilerplate directory` / `nextjs boilerplate` / `awesome supabase` / `indie hacker
+tools` / `awesome react starter` / `awesome saas` (updated-sort) / `awesome
+boilerplate|starter|template` (updated-sort)) returned only already-acted-on lists and
+standing-skips. Nothing new appeared in the ~4h since the 01:18 run; the surface remains saturated.
+
+**No emails sent** — no submission venue surfaced a public contact email (all Tier 2/3 are
+form/account-gated). Caps are maxima, not targets; quality over volume.
+
+**Web-directory discovery still blocked.** DuckDuckGo (HTML + lite) returned the challenge/anomaly
+shell with no organic results and Bing returned a challenge page — no new Tier 3 template-directory
+venue was verifiable. GitHub search carried the research.
+
+### Researched 2026-08-23 (run 01:18 UTC) — 1 pending PR rejected; no new venue cleared the bar; no PR/email
+
+**Reconciliation (the baseline win, plus one state flip).** The 13 pending awesome-list PRs were
+re-checked on GitHub this run: **12 remain OPEN**, and **one flipped to CLOSED-unmerged** —
+`EinGuterWaran/awesome-opensource-boilerplates` #52 (closed 2026-08-22 12:04 UTC) by the maintainer
+with the comment **"0 stars and no commit for over a month"** — a maturity/adoption rejection, **not**
+an AI-PR ban (CONTRIBUTING has none). Now logged `[-]` in the submission log + Tier 1. The 3 LIVE
+listings stand (`bytefer/awesome-shadcn-ui` #29, `officialrajdeepsingh/awesome-nextjs` #88,
+`giovannism20/awesome-supabase` #15). Fleet-wide `gh search prs --author bucabay` surfaced no new
+unlogged saas-startup PRs — still **19 total** (12 open + 3 merged + 4 closed), all logged above.
+
+**No new git-PR venue cleared the bar.** The GitHub sweep (top-starred *and* recently-pushed, 10
+query angles — `awesome saas` / `awesome saas boilerplate` / `awesome nextjs` / `awesome shadcn` /
+`awesome starter kit` / `indie hacker tools` / `awesome react starter` / `saas boilerplate directory` /
+`nextjs boilerplate` / `awesome supabase`) was saturated — every candidate already appears in the
+skip/standing-skip lists. Nothing new appeared in the ~24h since the 08-22 run.
+
+**No emails sent** — no submission venue surfaced a public contact email (all Tier 2/3 are
+form/account-gated). Caps are maxima, not targets; quality over volume.
+
+**Web-directory discovery still blocked.** DuckDuckGo (HTML) returned the challenge shell with no
+organic results — no new Tier 3 template-directory venue was verifiable. GitHub search carried the
+research.
+
+### Researched 2026-08-22 (run 01:17 UTC) — reconciliation; no new venue cleared the bar; no PR/email
+
+**Reconciliation (the baseline win again).** All 13 pending awesome-list PRs re-checked on GitHub
+remain OPEN, no flips since the 17:17 run. The 3 LIVE listings stand (`bytefer/awesome-shadcn-ui` #29,
+`officialrajdeepsingh/awesome-nextjs` #88, `giovannism20/awesome-supabase` #15). Fleet-wide
+`gh search prs --author bucabay` surfaced no new unlogged saas-startup PRs — still **19 total**
+(13 open + 3 merged + 3 closed), all logged above.
+
+**No new git-PR venue cleared the bar.** The GitHub sweep (top-starred *and* recently-pushed, 12 query
+angles) returned only already-acted-on lists and standing-skips. Nothing new appeared in the ~8h since
+the 17:17 run; the surface remains saturated.
+
+**No emails sent** — no submission venue surfaced a public contact email (all Tier 2/3 are
+form/account-gated). Caps are maxima, not targets; quality over volume.
+
+**Web-directory discovery still blocked.** DuckDuckGo (HTML + lite) returned the anomaly/challenge
+shell with no organic results and Bing returned a challenge page — no new Tier 3 template-directory
+venue was verifiable. GitHub search carried the research.
+
+### Researched 2026-08-21 (run 17:17 UTC) — reconciliation; no new venue cleared the bar; no PR/email
+
+**Reconciliation (the baseline win again).** All 13 pending awesome-list PRs re-checked on GitHub
+remain OPEN, no flips since the 01:17 run. The 3 LIVE listings stand (`bytefer/awesome-shadcn-ui` #29,
+`officialrajdeepsingh/awesome-nextjs` #88, `giovannism20/awesome-supabase` #15). Fleet-wide
+`gh search prs --author bucabay` surfaced no new unlogged saas-startup PRs — still **19 total**
+(13 open + 3 merged + 3 closed), all logged above.
+
+**No new git-PR venue cleared the bar.** The GitHub sweep (top-starred *and* recently-pushed, 10 query
+angles) returned only already-acted-on lists and standing-skips. Re-confirmed this run (already in the
+skip / standing-skip lists — do NOT re-research):
+- `brandonhimpfen/awesome-stripe` (4★, no license, pushed 2026-05) — re-verified **0 merged outside
+  PRs** (6 outside PRs all CLOSED unmerged; maintainer curates solo). Reinforces the standing
+  "do not submit to any brandonhimpfen list" block.
+- `casdoor/awesome-auth` (540★, CC0, pushed 2026-08-15) — already skipped (no starter/template
+  section; auth libraries by language only).
+- `dhamaniasad/awesome-postgres` (12k★) — already in standing skips (no starter/templates section).
+- `georgezouq/awesome-saas` (53★), `matthiasfeist/awesome-drizzle` (3★), `nrjdalal/awesome-templates`
+  (29★), `txpipe/awesome-starter-kits` (27★), `Correia-jpv/fucking-awesome-nextjs` (131★ mirror),
+  `re50urces/Awesome-NextJs` (114★) — already in standing skips (stale / no fit / no license / mirror).
+- `NarHakobyan/awesome-nest-boilerplate` (2.8k★, pushed 2026-06) — NestJS-specific boilerplate list;
+  our starter is Next.js/React. Category mismatch.
+
+**No emails sent** — no submission venue surfaced a public contact email (all Tier 2/3 are
+form/account-gated). Caps are maxima, not targets; quality over volume.
+
+**Web-directory discovery still blocked.** DuckDuckGo (HTML + lite) returned the challenge/anomaly
+shell with no organic results and Bing returned a localized challenge page (no organic links) — no new
+Tier 3 template-directory venue was verifiable. GitHub search carried the research.
+
+### Researched 2026-08-21 (run 01:17 UTC) — reconciliation; no new venue cleared the bar; no PR/email
+
+**Reconciliation (the baseline win again).** All 13 pending awesome-list PRs re-checked on GitHub
+remain OPEN, no flips since the 17:17 run. The 3 LIVE listings stand (`bytefer/awesome-shadcn-ui` #29,
+`officialrajdeepsingh/awesome-nextjs` #88, `giovannism20/awesome-supabase` #15). Fleet-wide
+`gh search prs --author bucabay` surfaced no new unlogged saas-startup PRs — still **19 total**
+(13 open + 3 merged + 3 closed), all logged above. The other bucabay PRs in the scan belong to the
+MailKite *product* / MCP-registry / provider campaigns and are out of scope.
+
+**No new git-PR venue cleared the bar.** The GitHub sweep (top-starred *and* recently-pushed, 14 query
+angles) returned only already-acted-on lists and standing-skips. New skips verified this run, do NOT
+re-research (reason):
+- `liangzhengtao/awesome-nextjs` (0★, MIT, pushed 2026-08-20) — "Best Next.js resources"; brand-new,
+  0★, zero merged PRs — can't verify it merges outside PRs. Negligible reach.
+- `liangzhengtao/awesome-tailwind-plugins` (0★, pushed 2026-08-20) — Tailwind **plugins**, not
+  templates/starters; 0★.
+- `liangzhengtao/awesome-typescript-advanced` (0★, pushed 2026-08-20) — advanced TS resources, no
+  starter section; 0★.
+- `JohnDeved/awesome-typescript-compilers` (58★, MIT, pushed 2026-08-20) — TypeScript **compilers**
+  list, not app starters. Category mismatch.
+- `MosheRivkin/awesome-shadcn-svelte` (14★, MIT, pushed 2026-08-20) — shadcn/**Svelte**, not
+  shadcn/ui React (our dashboard is React/Next.js). Category mismatch.
+- `sshailabh/awesome-template-engine` (73★, MIT, pushed 2026-08-16) — template **engines**
+  (Handlebars/EJS/…), not app boilerplates. Category mismatch.
+
+**No emails sent** — no submission venue surfaced a public contact email (all Tier 2/3 are
+form/account-gated). Caps are maxima, not targets; quality over volume.
+
+**Web-directory discovery still blocked.** DuckDuckGo (HTML + lite) returned the anomaly/botnet
+challenge shell and Bing returned a challenge page — no new Tier 3 template-directory venue was
+verifiable. GitHub search carried the research.
+
+### Researched 2026-08-20 (run 17:17 UTC) — reconciliation; no new venue cleared the bar; no PR/email
+
+**Reconciliation (the baseline win again).** All 13 pending awesome-list PRs re-checked on GitHub
+remain OPEN, no flips since the 13:17 run. The 3 LIVE listings stand (`bytefer/awesome-shadcn-ui` #29,
+`officialrajdeepsingh/awesome-nextjs` #88, `giovannism20/awesome-supabase` #15). Fleet-wide
+`gh search prs --author bucabay` surfaced no new unlogged saas-startup PRs — still **19 total**
+(13 open + 3 merged + 3 closed), all logged above. The other bucabay PRs in the scan belong to the
+MailKite *product* / MCP-registry / provider campaigns and are out of scope (notably
+`songtianlun/selfhost-hub` #27, opened this cycle, is the MailKite **Server** self-host catalog, not
+saas-startup).
+
+**No new git-PR venue cleared the bar.** The GitHub sweep (top-starred *and* recently-pushed, 14 query
+angles) returned only already-acted-on lists and standing-skips. Nothing new appeared in the ~4h
+since the 13:17 run; the surface remains saturated.
+
+**Web-directory discovery still degraded.** DuckDuckGo (HTML + lite) returned the challenge/"anomaly"
+shell with 0 organic results, and Bing returned a challenge page — no template-directory venues
+surfaced. No new Tier 3 venue was verifiable. GitHub search carried the research.
+
+**No emails sent** — no submission venue surfaced a public contact email (all Tier 2/3 are
+form/account-gated). Caps are maxima, not targets; quality over volume.
+
+### Researched 2026-08-20 (run 13:17 UTC) — reconciliation; no new venue cleared the bar; no PR/email
+
+**Reconciliation (the baseline win again).** All 13 pending awesome-list PRs re-checked on GitHub
+remain OPEN, no flips since the 09:17 run. The 3 LIVE listings stand (`bytefer/awesome-shadcn-ui` #29,
+`officialrajdeepsingh/awesome-nextjs` #88, `giovannism20/awesome-supabase` #15). Fleet-wide
+`gh search prs --author bucabay` surfaced no new unlogged saas-startup PRs — still **19 total**
+(13 open + 3 merged + 3 closed), all logged above. The other bucabay PRs in the scan belong to the
+MailKite *product* / MCP-registry / provider campaigns and are out of scope.
+
+**No new git-PR venue cleared the bar.** The GitHub sweep (top-starred *and* recently-pushed, 10 query
+angles — `awesome saas boilerplate` / `awesome nextjs` / `awesome shadcn` / `awesome starter kit` /
+`saas boilerplate directory` / `nextjs boilerplate` / `awesome boilerplate` / `awesome react starter` /
+`awesome fullstack` / `indie hacker tools`) returned only already-acted-on lists and standing-skips.
+Nothing new appeared in the ~4h since the 09:17 run; the surface remains saturated.
+
+**Web-directory discovery still degraded.** DuckDuckGo (HTML + lite) returned a challenge shell with
+no organic results, and Bing returned only generic Next.js documentation results (nextjs.org,
+Wikipedia, Vercel) — no template-directory venues surfaced. No new Tier 3 venue was verifiable.
+GitHub search carried the research.
+
+**No emails sent** — no submission venue surfaced a public contact email (all Tier 2/3 are
+form/account-gated). Caps are maxima, not targets; quality over volume.
+
+### Researched 2026-08-20 (run 09:17 UTC) — reconciliation; no new venue cleared the bar; no PR/email
+
+**Reconciliation (the baseline win again).** All 13 pending awesome-list PRs re-checked on GitHub
+remain OPEN, no flips since the 05:17 run. The 3 LIVE listings stand (`bytefer/awesome-shadcn-ui` #29,
+`officialrajdeepsingh/awesome-nextjs` #88, `giovannism20/awesome-supabase` #15). Fleet-wide
+`gh search prs --author bucabay` surfaced no new unlogged saas-startup PRs — still **19 total**
+(13 open + 3 merged + 3 closed), all logged above. The other bucabay PRs in the scan belong to the
+MailKite *product* / MCP-registry campaigns and are out of scope.
+
+**No new git-PR venue cleared the bar.** The GitHub sweep (top-starred *and* recently-pushed) of
+`awesome saas` / `awesome saas boilerplate` / `awesome nextjs` / `awesome shadcn` /
+`awesome starter kit` / `awesome templates` / `awesome fullstack` / `awesome react starter` /
+`indie hacker tools` / `nextjs boilerplate` / `saas boilerplate directory` returned only
+already-acted-on lists and standing-skips. Re-checks of the two long-standing "re-check later"
+candidates this run:
+- `XiaomingX/indie-hacker-tools-plus` (1795★, pushed 2026-08-19) — **re-verified: still 0 merged
+  non-maintainer PRs** (26 total PRs, all OPEN). Still fails the "actively merges outside PRs" check.
+  Standing skip; re-check only if it starts merging.
+- `Bladerunner1994/awesome-nextjs` (0★) — **repo deleted / 404** this run. Removed from re-check
+  consideration; no longer a venue.
+
+**No emails sent** — no submission venue surfaced a public contact email (all Tier 2/3 are
+form/account-gated). Caps are maxima, not targets; quality over volume.
+
+**Web-directory discovery blocked again.** DuckDuckGo (HTML + lite) and Bing both returned challenge
+pages from this network this run (intermittent since ~2026-08-15); no new Tier 3 template-directory
+venue was verifiable. GitHub search carried the research.
+
+### Researched 2026-08-19 (run 05:17 UTC) — reconciliation; no new venue cleared the bar; no PR/email
+
+**Reconciliation (the win again).** All 13 pending awesome-list PRs re-checked on GitHub remain
+OPEN, no flips since the 01:17 run. The 3 LIVE listings stand (`bytefer/awesome-shadcn-ui` #29,
+`officialrajdeepsingh/awesome-nextjs` #88, `giovannism20/awesome-supabase` #15). Fleet-wide
+`gh search prs --author bucabay` surfaced no new unlogged saas-startup PRs — still **19 total**
+(13 open + 3 merged + 3 closed), all logged above. The other bucabay PRs in the scan belong to the
+MailKite *product* / MCP-registry campaigns and are out of scope.
+
+**No new git-PR venue cleared the bar.** The GitHub sweep (top-starred *and* recently-pushed) of
+`awesome saas` / `awesome saas boilerplate` / `awesome nextjs` / `awesome shadcn` /
+`awesome starter kit` / `indie hacker tools` / `awesome react starter` returned only
+already-acted-on lists and standing-skips. New skips verified this run, do NOT re-research (reason):
+- `man0l/nextjs-boilerplate-directory` (0★, **no license**, pushed 2026-01-11 ~7mo stale) —
+  surfaced by DDG as a "nextjs boilerplate directory", but it's an empty personal repo (no
+  description, 0★, no license). Fails license + recency + reach.
+- `ductinhkzz/awesome-nextjs-boilerplate` (1★, pushed 2026-06-18) — 1★, negligible reach; can't
+  verify it merges outside PRs.
+- `avigadasky/awesome-starter-kits` (0★, pushed 2026-05-14) — 0★, negligible reach.
+
+**No emails sent** — no submission venue surfaced a public contact email (all Tier 2/3 are
+form/account-gated). Caps are maxima, not targets; quality over volume.
+
+**Web-directory discovery blocked again.** DuckDuckGo (HTML + lite) returned empty/challenge
+pages from this network this run; no new Tier 3 template-directory venue was verifiable. GitHub
+search carried the research.
+
+### Researched 2026-08-19 (run 01:17 UTC) — web discovery restored; 3 new Tier 3 template directories; no PR/email
+
+**Reconciliation (still the baseline win).** All 13 pending awesome-list PRs re-checked on GitHub
+remain OPEN, no flips since the 17:17 run. The 3 LIVE listings stand (`bytefer/awesome-shadcn-ui`
+#29, `officialrajdeepsingh/awesome-nextjs` #88, `giovannism20/awesome-supabase` #15). Fleet-wide
+`gh search prs --author bucabay` surfaced no new unlogged saas-startup PRs — still **19 total**
+(13 open + 3 merged + 3 closed), all logged above. The other bucabay PRs in the scan belong to the
+MailKite *product* / MCP-registry campaigns and are out of scope.
+
+**Web discovery restored.** DuckDuckGo HTML search returned real results this run (it had been
+challenge-blocked from this network since ~2026-08-15). Used it to sweep template directories for
+`nextjs saas boilerplate submit` / `saas starter kit directory` / `awesome nextjs saas boilerplate`.
+
+**3 new Tier 3 template-directory venues added** (all **free**, all **manual form** submissions, all
+with a **Next.js** category, none listing us yet — verified 2026-08-19 by fetching the homepage +
+submit page + category page and grepping for "mailkite"). Added to the Tier 3 table with
+step-by-step. None is git-PR-able (no public GitHub data source exposed — confirmed no github.com
+links in their HTML) and none publishes a contact email (all form-gated), so no PR/email this run:
+
+- `boilerplatelist.com` — curated boilerplate directory; Next.js category has 55 listings; submit
+  form at `/submit/` (Name / Email / Boilerplate Name / Website URL / Description). Free (FAQ:
+  "can be free, paid, or open source — each listing shows license + pricing"). Paid exposure is a
+  separate `Advertising` product (sidebar banners €199–299/mo) — not required to be listed.
+- `saasboilerplates.dev` — "119+ SaaS Boilerplates"; submit form at `/submit` (Full name / Email /
+  Profile pic / Boilerplate URL / optional affiliate). Free ("Submit … for free"). Full-stack
+  boilerplates/starter kits only.
+- `boilerplates4saas.com` — directory by "Vincent" with a Next.JS filter + "FREE boilerplates"
+  section; submit via the `/contact/` page ("Submit a Boilerplate": URL + maker Twitter handle;
+  affiliation/backlink optional, +0.5 ranking point each). Free.
+
+**No git-PR venue cleared the bar.** The GitHub sweep (top-starred + recently-pushed) of
+`awesome saas` / `saas boilerplate` / `awesome nextjs` / `awesome shadcn` / `awesome starter` /
+`awesome supabase` / `awesome tailwind` / `awesome react` / `awesome typescript` / `awesome template` /
+`indie hacker tools` / `awesome boilerplate` / `awesome starter kit` / `awesome fullstack` returned
+only already-acted-on lists and standing-skips. New skips verified this run, do NOT re-research
+(reason):
+
+- `Cech1337/awesome-saas-management` (0★, no license, pushed 2026-08-12) — "Templates, checklists,
+  and guides for SaaS subscription management" — operational playbooks, not a starter directory.
+- `ToolRelief/Awesome-SaaS-Cost-Optimization-2026` (1★, no license, pushed 2026-08-11) — SaaS cost
+  optimization framework, not a template directory.
+- `skiffer/awesome-saas-fast-stack` (0★, no license, pushed 2026-07-03) — "tools to go idea→MVP→growth";
+  no starter section, negligible reach.
+- `TypeScript-Unofficial/awesome-typescript` (1★, pushed 2026-08-13) — brand-new, 1★, can't verify
+  it merges outside PRs; negligible reach.
+- `stephen-taipei/awesome-tailwind-ui-templates-1000` (1★, pushed 2026-04-15) — Tailwind **UI
+  templates** (landing-page snippets), not full SaaS starters; 1★; SEO-shaped repo.
+- `nextjstemplates.com` (site) — the `NextJSTemplates` GitHub org is a showcase of the maintainer's
+  **own** templates (skillsaint, play, startup, solid, NextBlog, openai-nextjs-starter); no submit
+  path or data source → not a venue.
+- `nextjsdirectory.com` / `nexttemplates.dev` / `topboilerplate.com` / `dirstarter.com` — these are
+  boilerplates **for building directories** (products), not directories that accept template
+  submissions. Category mismatch.
+
+**No emails sent** — the 3 new venues are form-gated with no published contact email (all email
+paths are "Contact us" forms). Caps are maxima, not targets; quality over volume.
+
+### Researched 2026-08-18 (run 17:17 UTC) — reconciliation; no new venue cleared the bar; no PR/email
+
+**Reconciliation (the win again).** Every pending awesome-list PR re-checked on GitHub: all
+13 remain OPEN, no flips since the 01:17 run. The 3 LIVE listings stand (`bytefer/awesome-shadcn-ui`
+#29, `officialrajdeepsingh/awesome-nextjs` #88, `giovannism20/awesome-supabase` #15). Fleet-wide
+`gh search prs --author bucabay` surfaced no new unlogged saas-startup PRs — still **19 total**
+(13 open + 3 merged + 3 closed), all logged above. The other bucabay PRs in the scan belong to the
+MailKite *product* / MCP-registry campaigns and are out of scope.
+
+**Doc integrity — still leaking.** `main`'s `SUBMISSIONS.md` is still at 94 lines (2 log entries):
+the 01:17 run's PR (#34) carrying the full log is still OPEN/unmerged. This run's PR (#35) carries
+the full accumulated log forward again. **Owner: merge one of these run PRs into `main` (and close
+the superseded #1–#34) to stop the run-to-run lossy handoff.**
+
+**No new git-PR venue cleared the bar** — the GitHub sweep (top-starred + recently-pushed) of
+`awesome saas` / `saas boilerplate` / `awesome nextjs` / `awesome shadcn` / `awesome starter` /
+`awesome supabase` / `awesome tailwind` / `awesome react` / `awesome typescript` / `awesome template` /
+`indie hacker tools` / `awesome boilerplate` / `awesome starter kit` / `awesome fullstack` found
+nothing new that fits. New skips verified this run, do NOT re-research (reason):
+
+- `weijunext/indie-hacker-tools` (**7958★**, no license, pushed 2025-07-24 ~13mo stale) — CN indie-hacker
+  tools list with a `## Web 开发模板` section, but no license and ~13 months since the last push; the
+  templates table is dominated by the maintainer's own paid Nexty.dev plus other paid templates. Fails
+  license + recency.
+- `XiaomingX/indie-hacker-tools-plus` (1791★, Apache-2.0, pushed 2026-08-17) — **re-verified**: still
+  **0 merged PRs ever** (23 outside PRs all OPEN). Still fails the "actively merges outside PRs" check.
+  Standing skip; re-check only if it starts merging.
+- `MrKomish/awesome-saas` (46★, MIT, pushed 2019-04-08 ~7yr stale) — dead.
+- `ixartz/awesome-saas-boilerplates` (17★, no license, pushed 2024-09-13 ~23mo stale).
+- `egoist/awesome-starter` (22★, no license, pushed 2017-07-25 dead).
+- `diptangsu/awesome-starter-templates` (16★, no license, pushed 2023-01-06 dead).
+- `starters-dev/awesome-starters` (23★, no license, pushed 2022-10-23 dead).
+- `fabiospampinato/awesome-template` (18★, no license, "templates for Template" placeholder).
+- `ellerbrock/awesome-boilerplates` (pushed 2019-05-14 dead).
+- `aidevtoolkit/indie-hacker-tools` (2★, no license, pushed 2024-06-25 stale).
+- `ANVEAI/awesome-indie-hacking` (0★, no license), `skiffer/indie-hacker-tools-1` (0★, no license),
+  `wgvip168/directory` (0★, no license) — negligible reach / unlicensed.
+
+**No emails sent** — no submission venue surfaced a public contact email (all Tier 2/3 are
+form/account-gated). Caps are maxima, not targets; quality over volume.
+
+**Web-directory discovery still blocked.** Bing from this network returned a challenge page again;
+web search is unavailable. GitHub search carried the research.
+
+### Researched 2026-08-18 (run 01:17 UTC) — reconciliation; no new venue cleared the bar; no PR/email
+
+**Reconciliation (the win this run).** Every pending awesome-list PR re-checked on GitHub: all
+13 remain OPEN, no flips since the 2026-08-15 run. The 3 LIVE listings stand
+(`bytefer/awesome-shadcn-ui` #29, `officialrajdeepsingh/awesome-nextjs` #88,
+`giovannism20/awesome-supabase` #15). Fleet-wide `gh search prs --author bucabay` surfaced no new
+unlogged saas-startup PRs (the other hits — `YuzeHao2023/Awesome-MCP-Servers` #398,
+`pluja/awesome-privacy` #998, `boxyhq/saas-starter-kit` #2576 — belong to the MailKite *product*
+campaign, out of scope here).
+
+**Doc integrity fix.** `main`'s `SUBMISSIONS.md` has been stuck at 94 lines (2 log entries) since
+2026-07-17 because every auto-run PR (#1–#33) is still OPEN and never merged. This run's branch
+carries the **full accumulated log forward** (21 submission-log rows, reconciled Tier 1, and all
+backlog research) so that merging *this* PR lands the complete state on `main` and stops the
+run-to-run lossy handoff. **Owner: merge this PR (and ideally close the superseded #1–#33).**
+
+**No new git-PR venue cleared the bar** — GitHub sweep (top-starred *and* recently-pushed) of
+`awesome saas` / `saas boilerplate` / `awesome template` / `awesome starter` / `nextjs awesome` /
+`awesome shadcn` / `awesome supabase` / `awesome tailwind` / `awesome react` / `awesome typescript`
+found nothing new that fits. New skips verified this run, do NOT re-research (reason):
+
+- `nrjdalal/awesome-templates` (29★, pushed 2026-08-18, **10 merged PRs**, no license) — NOT a
+  curated link list. It's a repo of *generated reference templates* (each entry is a folder produced
+  by a `create-*` script via a GitHub Action, "refreshed every 8 hours"); contributing means adding a
+  shell script, not a one-line entry linking our starter. Model mismatch + no license.
+- `ever-works/awesome-starters` (6★, CC-BY-SA-4.0, pushed 2026-08-04, 1 merged PR) — "Boilerplates &
+  Starter Kits" but the README is **WIP** ("stay tuned"), the real list lives in an Ever Co. **Notion**
+  doc, and the 3 in-repo entries are Ever's own + 1 commercial. Vendor's own ecosystem, negligible
+  reach. Marginal → skip.
+- `theshubh77/awesome-saas-directories` (54★, CC0-1.0, pushed 2026-08-15, 17 merged PRs) — a
+  meta-list of **SaaS product launch directories** (Product Hunt, BetaList, ~165 more), not a place
+  to list a starter *template*. Reviewed as a source; no new Tier 3 template-directory venue in it
+  (the launch platforms are product-launch venues already covered by Tier 2 scope).
+- `GetStream/awesome-saas-services` (559★, pushed 2024-01) — B2B SaaS *services* (hosting/email/payments),
+  no starter/templates section; also stale. Category mismatch.
+- `enhansome/enhansome-Awesome-NextJs` (0★, created 2026-08-12, **0 merged PRs**, no license) —
+  brand-new, can't verify it merges outside PRs; no license.
+- `Nisaraistudio/awesome-nextjs` (0★, MIT, created 2026-08-10, **0 merged PRs**) — brand-new,
+  0 merged, can't verify merges.
+- `carve-studio/awesome-shadcn` (1★, created 2026-04, 0 merged, no license) — shadcn *components &
+  registries*, not templates/starters; category mismatch.
+
+**No emails sent** — no submission venue surfaced a public contact email (all Tier 2/3 are
+form/account-gated). Caps are maxima, not targets; quality over volume.
+
+**Web-directory discovery still blocked.** DuckDuckGo from this network returned HTTP 202
+(challenge page) again this run; web search is unavailable. GitHub search carried the research.
+
+### Researched 2026-08-15 (run 01:17 UTC) — no new venue cleared the bar; no PR/email; log reconciled
+
+**The win this run is reconciliation again.** Every pending awesome-list PR was re-checked on
+GitHub this run: all 13 remain OPEN, no new merges/closes since the 00:31 run. The 3 LIVE
+listings stand (`bytefer/awesome-shadcn-ui` #29, `officialrajdeepsingh/awesome-nextjs` #88,
+`giovannism20/awesome-supabase` #15). A fleet-wide `gh search prs --author bucabay` scan surfaced
+no new unlogged saas-startup PRs (the other bucabay PRs in the scan belong to other campaigns —
+MailKite product, MCP registries, better-auth/novu/laudspeaker contributions — and are out of
+scope for this surface).
+
+**No git-PR venue cleared the bar** (archived / >6mo stale / no fit / no license / AI-PR ban),
+**no email was sent** (no venue surfaced a public contact email), **no manual additions**.
+
+**New skips — verified this run, do NOT re-research (reason):**
+- `Alchemyst-ai/awesome-saas` (421★, MIT, pushed 2026-08-14) — the **Alchemyst AI Platform
+  cookbook**: curated AI agents/templates *built on their own platform*. Not a Next.js SaaS
+  starter directory. Category mismatch.
+- `Atarity/deploy-your-own-saas` (**9.9k★**, pushed 2026-08-14, no license) — "deploy your own"
+  self-hostable open-source SaaS *apps* (VPN/music/photo/docs…), no starter/boilerplate section.
+  Category mismatch (a template is not a deployable product).
+- `altstackHQ/altstack-data` (321★, Apache-2.0, pushed 2026-08-15) — data layer for
+  thealtstack.com, a directory of open-source **alternatives to popular SaaS**. A starter template
+  is not an alternative-to-a-SaaS; same non-fit shape as `openalternative.co` (already flagged for
+  human).
+- `LlamaGenAI/awesome-free-saas` (334★, MIT, pushed 2026-04-29) — free SaaS **services**
+  (AI/CRM/docs/…), no starter section.
+- `better-auth/awesome` (393★, MIT, pushed 2025-07-17 ~13mo stale) — better-auth ecosystem list;
+  we don't use better-auth. Category mismatch.
+- `alexeyfv/awesome-free-postgres` (107★, MIT, pushed 2026-07-19) — free Postgres-as-a-Service
+  **hosting providers**, not starters.
+- `warrant-dev/awesome-authorization` (435★, CC0, pushed 2024-12-16 ~20mo stale) — authorization
+  resources; stale + category mismatch.
+- `karltaylor/awesome-auth-as-a-service` (17★, pushed 2026-07-09) — hosted auth **services**
+  (we're self-contained, no service); low reach.
+- `nikhilrayaprolu/awesome-open-saas` (242★, MIT, pushed 2024-01-17 ~2.5yr stale).
+- `StartupGuns/awesome-saas-boilerplates` (7★, MIT, pushed 2024-05-22 ~15mo stale).
+- `next-theme/awesome-next` (93★, no license, pushed 2026-07-30) — Hexo **NexT** theme plugins,
+  NOT Next.js. Category mismatch.
+- `zupcode-com/awesome-free-services-for-your-next-startup-or-saas` (227★, no license, pushed
+  2026-08-10) — free services list, no starter section, no license.
+- `next-dev-team/awesome-tailwind` (5★, pushed 2026-03-21) — negligible reach.
+- `vincentventalon/Boilerplates4saas_public` (0★, MIT, pushed 2025-04-21) — 0 stars.
+- `moshehbenavraham/Ultimate-Agent-Directory` (69★, MIT, pushed 2026-08-15) — AI-agent directory,
+  not SaaS starters.
+- `grunklejp/fck-saas` (57★, MIT, pushed 2024-06-21 ~14mo stale).
+
+**Web-directory discovery note:** search-engine queries from this network returned a challenge
+page (HTTP 202), so no new Tier 3 web directory was verifiable this run; the GitHub sweep above
+is complete for git-PR venues. Re-run web-directory discovery in a future run with browser access.
+
+### Researched 2026-08-15 (run 00:31 UTC, DRY RUN) — 1 pending PR closed (rejected); no new venue cleared the bar; no PR/email
+
+**The win this run is reconciliation again.** The mandatory dedupe scan shows one pending awesome-list
+PR flipped state since the last run: `mahdibrr/awesome-nextjs-supabase` #24 was **closed unmerged** by
+the maintainer on 2026-08-14. It is now logged as rejected (Tier 1 + log above). Every other pending
+awesome-list PR is unchanged (still OPEN); the 3 LIVE listings (`bytefer/awesome-shadcn-ui` #29,
+`officialrajdeepsingh/awesome-nextjs` #88, `giovannism20/awesome-supabase` #15) remain the confirmed merges.
+
+**One strong-reach candidate found and rejected on the "merges outside PRs" bar:**
+- `XiaomingX/indie-hacker-tools-plus` (1785★, pushed 2026-08-14, Apache-2.0, CN/EN indie-hacker tools
+  list) — has an exact-fit section `## Web 开发模板 → ### 全栈 SaaS 启动器 (SaaS Starters)` (currently
+  T3 Stack + Marblism), and the intro says "欢迎大家提 PR 和 issues". BUT the `贡献方法` section routes
+  submissions to **issues**, and the repo has **0 merged PRs ever** (30+ outside PRs all OPEN since
+  2026-07) with the tools-list README last edited 2026-05-10 — the recent pushes are to
+  `docs/company-analytics` (the repo doubles as an agent's research-output repo). Fails the "actually
+  merging outside PRs" check → **do not act**; re-check later if the maintainer starts merging.
+
+**New skips — verified this run, do NOT re-research (reason):**
+- `mahseema/awesome-saas-directories` (241★, pushed 2026-02-14), `theshubh77/awesome-saas-directories`
+  (54★, pushed 2026-08-10), `ammohitchaprana/Awesome-SaaS-Directories` (19★, pushed 2026-03-17) — all
+  **meta-lists of SaaS launch directories** (Product Hunt-style platforms), not template/starter
+  submission venues.
+- `ever-works/awesome-starters` (6★, CC-BY-SA-4.0, pushed 2026-08-04) — Ever Co.'s own marketing list;
+  README points to their **Notion** for the real list, repo is explicitly WIP, and the only
+  "Open-Source" entries are their own Ever® starter kits. No CONTRIBUTING. Negligible reach.
+- `nrjdalal/awesome-templates` (29★, **no license**, pushed 2026-08-14) — a `gitpick`-style **template
+  monorepo** (clone a folder), refreshed every 8h by the author; not a listing directory.
+- `lonewolfyx/shadcn-hub` (2★, MIT, pushed 2026-08-07) — a Nuxt/Vue **website** aggregating shadcn
+  resources; no data-file/README submission path exposed; 2★ negligible reach (bytefer + birobirobiro
+  + shadverse already cover shadcn reach).
+- `awesome-saas/awesome-saas` (42★, MIT, pushed 2025-06-14) — SaaS **tools** list (Productivity / CRM /
+  Auth / …), no boilerplate/starter section; ~14mo stale.
+- `wolfgunblood/saas-boilerplate-directory` (48★, **no license**, pushed 2024-11-15) — has a Next.js
+  section + Contributing, but ~21mo stale and unlicensed.
+
+**No emails sent, no PRs opened this run (DRY RUN)** — no git-PR venue cleared the bar and no venue
+surfaced a public contact email. Caps are maxima, not targets; quality over volume.
+
+### Researched 2026-08-11 (run ~17:17 UTC) — 2 PRs merged → LIVE; 1 new Tier 3 venue (manual); no new PR/email
+
+**The win this run is reconciliation, not volume.** The mandatory fleet-wide dedupe scan
+(`gh search prs --author bucabay`) found **two pending awesome-list PRs merged** since the last
+reconciliation — both now LIVE listings (verified the entry renders in each merged README). No new
+git-PR venue cleared the bar this run; the saas-startup submission surface is saturated and every
+strong-fit list is already acted-on.
+
+**Two PRs flipped `[~]` → `[x]` LIVE this cycle:**
+- `officialrajdeepsingh/awesome-nextjs` (707★) → **[PR #88](https://github.com/officialrajdeepsingh/awesome-nextjs/pull/88) MERGED 2026-08-11 10:45 UTC**
+  — entry live at README `## Next.js boilerplate` (line 153). **2nd confirmed listing.**
+- `giovannism20/awesome-supabase` (41★) → **[PR #15](https://github.com/giovannism20/awesome-supabase/pull/15) MERGED 2026-08-10 22:12 UTC**
+  — entry live at README starters section (line 77). **3rd confirmed listing.**
+
+**3 listings now LIVE total:** `bytefer/awesome-shadcn-ui` #29 (2026-07-30) + the two above.
+All other pending awesome-list PRs re-checked this run remain OPEN (no new closes/merges);
+`sorrycc/awesome-javascript` #1133 and `brandonhimpfen/awesome-saas` #46 remain the only closes.
+
+**One new Tier 3 venue added (manual — login-gated, FREE):**
+- `saasboilerplates.com` (HTTP 200) — curated "best SaaS boilerplates" directory with a **Next.js
+  category** (`/listing-category/next-js/`, ~12 listings). Submit path `/submit-listing/` 302→`/join/`
+  (must create a free account; also opts into the "SaaS Gems" newsletter). Not already listing us
+  (verified). Added to Tier 3 with step-by-step. Agent can't auto-submit (account wall) → human.
+
+**New skips — verified this run, do NOT re-research (reason):**
+- `henryoman/awesome-vercel-native` (12★, pushed 2026-08-02, active) — for projects built on the
+  **Vercel Native SDK** only (sections: Official / Libraries / Framework Integrations / Apps /
+  Examples / Skills / Tooling). Our standard Next.js starter isn't built on the Native SDK →
+  category mismatch. Only 2 merged PRs, both the maintainer's.
+- `birobirobiro/awesome-shadcn-ui-site` (16★, pushed 2026-05-13) — the **Next.js website renderer**
+  for `birobirobiro/awesome-shadcn-ui`, which we already PR'd (#554, OPEN). Same data source; a PR
+  here would duplicate #554.
+- `amanbolat/awesome-postgres-with-stars` (0★, pushed 2026-08-10) — brand-new Postgres **tools**
+  list, no starter section (same as the `dhamaniasad` precedent); 0★, 1 day old.
+- Adjacent-tech lists swept and rejected: `awesome-vercel-alternatives` (×3, alternatives-not-fit),
+  `abiriadev/awesome-react-server-components` (0★, stale 2024), `lazylagom/awesome-nextjs15-*`
+  (0★ abandoned competitor boilerplates), `brookshi/awesome-typescript-projects` (894★ but stale
+  ~3yr), `itsdouges/awesome-typescript-ecosystem` (TS transformers/plugins/handbooks, not starters),
+  `CodelyTV/awesome-typescript-examples` (language examples, not a starter directory),
+  `Correia-jpv/fucking-awesome-*` (mirrors of already-PR'd originals).
+
+**No emails sent this run** — no submission venue surfaced a public contact email this cycle (all
+Tier 2/3 are form/account-gated). Caps are maxima, not targets; quality over volume.
+
+### Researched 2026-08-10 (run ~21:17 UTC) — 1 PR opened (ridloabelian); 5 unlogged bucabay PRs reconciled
+
+**PR opened this run (1) — exact fit, new demographic reach:**
+- `ridloabelian/awesome-supabase-id` (0★, pushed 2026-07-15, MIT, Indonesian 🇮🇩) → **[PR #4](https://github.com/ridloabelian/awesome-supabase-id/pull/4)**
+  in `## 🚀 SaaS Boilerplate (Next.js)`. Part of the actively-curated "Stack Nol Rupiah" awesome-list
+  series for indie hackers Indonesia; CONTRIBUTING specifies Indonesian table descriptions, no AI ban.
+  Fits — starter supports Supabase Postgres (auth is self-contained; stated honestly in the entry so
+  the maintainer isn't misled). Brand-new (0 merged PRs yet) — re-check merge status in a later run.
+
+**Five unlogged bucabay PRs reconciled via the mandatory fleet-wide dedupe scan**
+(`gh search prs --author bucabay`, not re-PR'd — fleet rule 2026-08-03). **This is the real integrity
+win of the run.** Two failure modes caught: (1) prior "no-fit" skip notes were stale because a PR was
+already open; (2) **two of these were logged on older branches but DROPPED from the accumulated doc**
+— the run-to-run handoff (read-prev-branch → branch-from-main → restore) is lossy when a run reads
+sparse `main` instead of the previous branch. Root cause: prior runs' PRs (#20–#30) are all OPEN /
+never merged into `main`, so `main`'s `SUBMISSIONS.md` is stuck at 94 lines and each run must re-carry
+the full log forward. **Action for owner: merge the latest run PR into `main` to stop the leak.**
+- `merklefruit/SaaS4Devs` (749★) → **OPEN [PR #54](https://github.com/merklefruit/SaaS4Devs/pull/54)** (2026-07-30, `Complete Full-stack Boilerplates`). Was logged on `20260730-1717`, lost from the doc.
+- `shadcnblocks/shadcntemplates` (42★) → **OPEN [PR #14](https://github.com/shadcnblocks/shadcntemplates/pull/14)** (2026-07-26, shadcn/ui templates directory). Was logged on `20260719-1316`, lost from the doc.
+- `giovannism20/awesome-supabase` (41★) → **OPEN [PR #15](https://github.com/giovannism20/awesome-supabase/pull/15)** (2026-08-05). Was unlogged.
+- `brillout/awesome-react-components` (**48k★** — highest-reach pending PR) → **OPEN [PR #632](https://github.com/brillout/awesome-react-components/pull/632)** (2026-08-03, added to its Boilerplate section — the list DOES have one; prior "doesn't fit" skip was wrong). Was unlogged. **Watch this merge.**
+- `sorrycc/awesome-javascript` (35k★) → **[PR #1133](https://github.com/sorrycc/awesome-javascript/pull/1133) CLOSED 2026-08-01** (no boilerplate/starter section; closed on fit). Was unlogged. Do not resubmit.
+
+**New skips — verified this run, do NOT re-research (reason):**
+- `Bharathi4real/awesome-nextjs` (5★, pushed 2026-08-04, merges outside PRs) — **no boilerplate/templates
+  section**; structure is UI-kits / design-systems / tools / learning-resources / inspiration. A full SaaS
+  starter has no home (the merged "Security Headers Starter" PR #2 is a dev utility, not a full app).
+  Marginal fit + negligible reach.
+- `Bladerunner1994/awesome-nextjs` (0★, pushed 2026-08-09) — **perfect description** ("boilerplates…
+  Starter Kits for blogs, SaaS, e-commerce") + clean CONTRIBUTING, BUT **brand-new (1 day), 0★, zero
+  merged PRs — cannot verify it merges outside PRs.** Re-check in ~2–3 months if it gains adoption;
+  exact-fit candidate.
+- `Frenxys/awesome-nextjs-websites` (2★, pushed 2026-04-08) — showcases **live Next.js
+  websites/portfolios**, not a starters/templates directory; 0 merged outside PRs. Category mismatch.
+- `vgtopup-app/awesome-tailwindcss-resources` (0★, pushed 2026-06-24) — Tailwind
+  **component-libraries/tools/resources** (its "UI Kits & Templates" is Tailwind-specific); 0 merged PRs;
+  "Recommended" section is the maintainer's own game-top-up businesses. Marginal fit + low signal.
+- `lincolixavier/awesome-indie-hackers` (118★, pushed 2026-04-06, merges outside PRs, PT-BR) — **no
+  boilerplates/templates section**; organized by service category (Infra / Auth / Payments / …). Same
+  fit failure as `johackim/awesome-indiehackers`.
+- `Alex0x47/awesome-indie-hackers-tools` (62★, pushed **2024-12-06** ~20mo stale) — has a Boilerplates
+  section, but the repo is abandoned (0 merges); migrated to the **indiedev.tools** website (see flagged).
+- `gitcommitshow/awesome-authentication` (137★, pushed **2020-08-10** ~6yr stale) — auth learning
+  resources (crypto/JWT/OAuth theory), no starters section; dead.
+- `sasikanth513/awesome-nextjs-boilerplates` (4★, pushed 2024-06-17 ~26mo stale);
+  `codebruinc/awesome-stripe` (0★, pushed 2025-08-22 ~12mo stale);
+  `Akash52/awesome-tailwindcss-project` (1★, pushed 2022-07 ~4yr stale) — all stale.
+- `furudo-erika/awesome-supabase-alternatives` — alternatives *to* Supabase, not starters.
+  `TableAIApp/awesome-postgresql-github` — Postgres tools, no starter section (same as `dhamaniasad`
+  precedent). `SalesUpLabs/appsutra` — pushed 2025-10 (~10mo stale).
+- React component/native/hooks/renderer lists (`jondot/awesome-react-native`, `rehooks/awesome-react-hooks`,
+  `jxom/awesome-react-headless-components`, `jbranchaud/awesome-react-design-systems`, …) — all category
+  mismatch per the `enaqx/awesome-react` precedent.
+- ridloabelian sister lists (`awesome-cloudflare-id` / `-google-free-id` / `-telegram-infra-id` /
+  `-oracle-free-id`) — free-tier *infra* lists, not app templates.
+
+**Flagged for human (do not auto-act):**
+- **indiedev.tools** — live successor to the stale `Alex0x47/awesome-indie-hackers-tools` GitHub list;
+  "Indie Dev Tools Directory" with a Boilerplates category. Website submit path (form/login) not verified
+  by the agent — investigate in a browser. Possible Tier 3 manual addition.
+
+**No emails sent this run** — no venue with a public contact email surfaced (all Tier 2/3 are
+form/account-gated). Caps are maxima, not targets; quality over volume.
+
+### Researched 2026-08-10 (run ~17:17 UTC) — one unlogged PR reconciled; no new venue acted
+
+**Why this run shipped no new PR/email:** the one new strong-fit git-PR venue found this run
+was already acted-on (unlogged). Every other researched list fails fit or recency (see skips).
+
+**One unlogged bucabay PR found via the mandatory dedupe check and logged this run** (not
+re-PR'd — fleet rule 2026-08-03):
+- `iAmCorey/awesome-indie-hacker-tools` (1.4k★, active, MIT, exact fit) → **OPEN [PR #158](https://github.com/iAmCorey/awesome-indie-hacker-tools/pull/158)** (2026-08-02, `## 模板` /
+  Templates — lists Makerkit/Shipfast/Supastarter alongside). Was unlogged. Bilingual CN/EN
+  indie-hacker tools list updated daily by hand; merges outside PRs.
+
+**New skips — verified this run, do NOT re-research (reason):**
+- `casdoor/awesome-auth` (538★, pushed 2026-07, active, merges outside PRs) — **no fitting
+  section**: organizes auth **libraries/tools by language** (`Authentication > Node.js`, …) +
+  SSO/IAM + Articles; no starters/templates/apps section. Same fit failure as enaqx/awesome-react.
+- `johackim/awesome-indiehackers` (644★, pushed 2026-03, active) — **no tools/templates
+  section**: sections are Indie Hackers (people), Blogs, Books, Podcasts, Communities, Courses,
+  YouTube. A starter doesn't fit.
+- `coderabbitai/awesome-coderabbit` (473★, pushed 2026-06) — only a **"Projects Using
+  CodeRabbit"** showcase (repos using CodeRabbit in CI); not a general starter directory.
+  Fit only if we adopt CodeRabbit — not a listing venue.
+- `farhan523/awesome-js-starters` (70★, pushed 2026-07) — lists **npm packages** with
+  examples, not app starters/templates. Category mismatch.
+- `unicodeveloper/awesome-opensource-apps` (3.9k★) — README reads **"Awesome Python
+  Scripts"**; description/README mismatch, not an apps directory. Skip.
+- `PaulleDemon/awesome-landing-pages` (1.0k★, pushed 2026-05) — gallery of **free landing-page
+  designs** to copy, not an app-starter/boilerplate directory. Category mismatch.
+- `vihar/awesome-oss-saas` (336★) — last push **2024-12-30** (~20mo stale).
+- `mezod/awesome-indie` (11.7k★) — last push **2024-06-12** (~2yr stale).
+- `melvin0008/awesome-projects-boilerplates` (1.4k★) — last push **2024-08-06** (~2yr stale).
+- `txpipe/awesome-starter-kits` (27★) — last push **2025-04-03** (~16mo stale); txpipe is a
+  Cardano/blockchain org, likely domain-specific.
+- `cerberauth/awesome-jwt` (9★, active) — JWT **libraries/resources**, no starters section.
+- Competing boilerplates surfaced by search (`wasp-lang/open-saas`, `ixartz/SaaS-Boilerplate`,
+  `thedevdojo/wave`, `boxyhq/saas-starter-kit`, `d-ivashchuk/cascade`, `saasforge/…`) are the
+  **products themselves**, not curation lists — not venues.
+
+### Researched 2026-08-09 (run ~17:17 UTC) — log reconciliation; no new venue acted
+
+**Why this run shipped no new PR/email:** every strong-fit git-PR venue is already acted-on.
+**Two unlogged bucabay PRs were found via the mandatory dedupe check and logged this run** (not
+re-PR'd — fleet rule 2026-08-03):
+- `EinGuterWaran/awesome-opensource-boilerplates` (1.9k★, active, exact category fit) → **OPEN [PR #52](https://github.com/EinGuterWaran/awesome-opensource-boilerplates/pull/52)** (2026-07-29, `### React & Next.js`). Was unlogged.
+- `y-h-v-h/shadverse` (28★, active, projects-built-with-shadcn list) → **OPEN [PR #3](https://github.com/y-h-v-h/shadverse/pull/3)** (2026-08-05, `data/projects.ts`). Was unlogged.
+
+**Log reconciliation (the real win this run):** `main`'s log had fallen behind GitHub reality
+(prior auto-run PRs were never merged to `main`). Re-verified all of bucabay's awesome-list PRs
+on GitHub and wrote them into the log/Tier 1 above — **12 PRs total: 1 LIVE merge
+(bytefer/awesome-shadcn-ui #29), 1 rejected (brandonhimpfen #46), 10 OPEN/pending**. Also lifted
+the dedupe rule to the top of the doc.
+
+**New skips — verified this run, do NOT re-research (reason):**
+- `getaclue00/awesome-saas-starters` (16★) — **dead**: last commit **2021-01-16**; **5 open PRs sitting unmerged** (one since 2024-06); PR #1 closed. Maintainer does not merge outside PRs. (Search "updatedAt" 2026-06 is metadata, not code.)
+- `sorrycc/awesome-javascript` (35k★, active, merges outside PRs) — **ACTED-ON**: [PR #1133](https://github.com/sorrycc/awesome-javascript/pull/1133) **closed 2026-08-01** (no boilerplate/starter section; closed on fit). Found unlogged via dedupe 2026-08-10 21:17. Do not resubmit.
+- `brillout/awesome-react-components` (48k★, pushed 2026-01) — **ACTED-ON**: OPEN [PR #632](https://github.com/brillout/awesome-react-components/pull/632) (found unlogged via dedupe 2026-08-10 21:17; added to its Boilerplate section — the list DOES have one, so the prior "doesn't fit" skip was wrong). Do not re-PR.
+- `shadcn-examples/shadcn-examples` (466★, pushed 2026-04) — **examples/components** (copy-paste UI snippets), not full apps/starters; **zero merged outside PRs** (maintainer-curated). Fails both fit + the "merges outside PRs" check.
+- `pg-tr/awesome-postgres` (200★, pushed 2024-06 ~26mo stale) — fork of dhamaniasad, stale.
+- `devton/awesome-postgresql` (85★, active) — tools/scripts/slides, **no starter section**.
+- `victorocna/awesome-react-starter` (20★, active) — the author's **own starter kit**, not a curation list. Not a venue.
+- `lazylagom/awesome-nextjs15-*` & `awesome-turborepo-boilerplate` — all 0★, abandoned competitor boilerplates, not lists.
+- `creotip/awesome-trpc` (9★, pushed 2024-02) — stale; we don't use tRPC anyway.
+- `maileroo/awesome-transactional-emailing` (1★, 2025-06) — lists **services by pricing**, not starters.
+- "awesome-fullstack" lists (newlinedotco, kevindeasis) — learning-resource lists, not starter directories; stale.
+
+**Flagged for human (do not auto-act):**
+- `madewithshadcn.com` (HTTP 200) — JS SPA; curl returns no HTML, no source repo found, **can't verify a public submit process**. Inspect in a browser.
+- `openalternative.co` (`/submit` → 307 → "Sign In") — **login-gated**; an open-source-*alternatives*-to-commercial-products directory (self-hostable software). A starter *template* is a borderline/non-fit — same shape as open-saas-directory. Manual, human decision.
+- `starter.dev` (thisdot/starter.dev, HTTP 200) — curated, hand-picked boilerplate set; CONTRIBUTING is for the repo's own code, not external boilerplate submissions. Manual/human.
+- `boilerplatehub.com` (HTTP 200) — "Best SaaS Boilerplates" gallery, but links back to `EinGuterWaran/awesome-opensource-boilerplates` (already PR'd #52). No independent submit path found.
+
+### Standing skips — verified across prior + this run, do NOT re-research
+
+- `petermekhaeil/awesome-turborepo` (12★) — last push 2024-12-21 (~20mo stale).
+- `korfuri/awesome-monorepo` (5.8k★) — last push 2024-08; "Notable public monorepos" is company-scale, no starter fit.
+- `dhamaniasad/awesome-postgres` (12k★, active) — **no starter/templates section** (every section is a Postgres tool category).
+- `giovannism20/awesome-supabase` (41★, active) — **ACTED-ON**: [PR #15](https://github.com/giovannism20/awesome-supabase/pull/15) **MERGED 2026-08-10 22:12 UTC** (found unlogged via dedupe 2026-08-10 21:17). Do not re-PR. (Earlier "no starters section" skip was stale.)
+- `dzharii/awesome-typescript` — **archived**.
+- `georgezouq/awesome-saas` (54★, active) — **no boilerplate/starter section** (SaaS *product* categories).
+- `open-saas-directory/awesome-saas-directory` (113★) — actually "Open-Source SaaS **Alternatives**"; a starter is only borderline → flag for human.
+- `2-fly-4-ai/awesome-shadcnui` (555★) — last push 2025-06 (>1yr stale).
+- `re50urces/Awesome-NextJs` (114★) — last push 2024-06 (>2yr stale).
+- `matthiasfeist/awesome-drizzle` (3★) — only a "Packages" section, no starters.
+- `tyaga001/awesome-saas-boilerplates-and-starter-kits` (26★) — last push 2024-11, inactive.
+- `brandonhimpfen/awesome-tailwindcss` (6★) — zero merged PRs ever; negligible reach.
+- `brandonhimpfen/awesome-stripe` / `awesome-postgresql` — **BLOCKED** (same maintainer that rejected PR #46 to awesome-saas on 2026-08-08). Do not submit to any brandonhimpfen list until the repo has real ★/adoption.
+- `Correia-jpv/fucking-awesome-nextjs` & `fucking-awesome-tailwindcss` — mirrors of already-PR'd originals.
 
 ## Assets for any submission
 
