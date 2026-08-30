@@ -309,6 +309,19 @@ The template must stay: MIT licensed, public, with a working live demo
 > PRs/emails sent (the new venue is form-gated, no public email). `main`'s `SUBMISSIONS.md` is STILL
 > at 94 lines — this run's PR (#56) again carries the full accumulated log forward.
 > **Owner: merge a run PR to stop the lossy handoff.**
+>
+> **Update 2026-08-30 (run 05:17 UTC):** Reconciliation holds — all 12 pending awesome-list PRs
+> re-checked this run remain OPEN, no flips since the 01:17 run. The 3 LIVE listings stand
+> (`bytefer/awesome-shadcn-ui` #29, `officialrajdeepsingh/awesome-nextjs` #88,
+> `giovannism20/awesome-supabase` #15), and the fleet-wide `gh search prs --author bucabay` scan
+> found no new unlogged saas-startup PRs (still **19 total** — 12 open + 3 merged + 4 closed).
+> **Web discovery blocked again** — DuckDuckGo (HTML + lite) returned the "bots use DuckDuckGo too"
+> challenge shell, Bing returned a challenge page, and Mojeek returned an empty/403 response — so
+> no new Tier 3 template-directory venue was verifiable. The GitHub sweep (top-starred *and*
+> recently-pushed, ~28 query angles) was saturated — no new git-PR venue cleared the bar. No
+> PRs/emails sent (caps are maxima, not targets). `main`'s `SUBMISSIONS.md` is STILL at 94 lines —
+> this run's PR again carries the full accumulated log forward.
+> **Owner: merge a run PR to stop the lossy handoff.**
 
 ---
 
@@ -428,6 +441,34 @@ A periodic cron researches new venues and appends them here. Rules for anything 
 3. **Free only.** Paid placements need a human decision — flag, don't add.
 4. **No duplicates** — check the tables above first, and **dedupe against GitHub** before any PR.
 5. Record `★`, last-pushed date, and the evidence that it accepts submissions.
+
+### Researched 2026-08-30 (run 05:17 UTC) — reconciliation; web discovery blocked; no new venue cleared the bar; no PR/email
+
+**Reconciliation (the baseline win again).** All 12 pending awesome-list PRs re-checked on GitHub
+remain OPEN, no flips since the 01:17 run. The 3 LIVE listings stand (`bytefer/awesome-shadcn-ui`
+#29, `officialrajdeepsingh/awesome-nextjs` #88, `giovannism20/awesome-supabase` #15). Fleet-wide
+`gh search prs --author bucabay` (open + closed, 121 unique PRs total) surfaced no new unlogged
+saas-startup PRs — still **19 total** (12 open + 3 merged + 4 closed), all logged above. (The other
+bucabay PRs in the scan — MailKite *product* / MCP registries / email-provider integrations /
+better-auth / symfony / anymail / nextacular / novu / laudspeaker — are out of scope for this surface.)
+
+**No new git-PR venue cleared the bar.** The GitHub sweep (top-starred *and* recently-pushed, ~28
+query angles — `awesome saas boilerplate` / `awesome nextjs boilerplate` / `awesome shadcn` /
+`saas boilerplate directory` / `awesome starter kit` / `awesome supabase` / `nextjs template` /
+`awesome boilerplate` / `starter kit directory` / `indie hacker tools` / `awesome saas starter` /
+`awesome nextjs` / `awesome templates` / `awesome react starter` + recently-pushed `awesome saas` /
+`awesome nextjs` / `awesome starter` / `saas boilerplate` / `nextjs boilerplate` / `awesome shadcn` /
+`starter kit` / `boilerplate directory` / `template directory` / `awesome supabase`) returned only
+already-acted-on lists and standing-skips. Nothing new appeared in the ~4h since the 01:17 run; the
+surface remains saturated.
+
+**Web-directory discovery blocked again.** DuckDuckGo (HTML + lite) returned the "Unfortunately,
+bots use DuckDuckGo too" challenge shell with 0 organic results, Bing returned a challenge page
+(no organic `<h2><a>` links), and Mojeek returned an empty/403 response — no new Tier 3
+template-directory venue was verifiable this run. GitHub search carried the research.
+
+**No PRs/emails sent** — no new venue cleared the bar and no venue surfaced a public contact email.
+Caps are maxima, not targets; quality over volume.
 
 ### Researched 2026-08-30 (run 01:17 UTC) — reconciliation; web discovery restored; 1 new Tier 3 directory; no PR/email
 
