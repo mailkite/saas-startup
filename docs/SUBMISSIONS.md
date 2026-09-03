@@ -17,6 +17,7 @@ or the post goes live. Newest first.
 
 | Date | Venue (website) | Submission URL (PR/post) | Listing URL (when live) | Status |
 |------|-----------------|--------------------------|-------------------------|--------|
+| 2026-09-03 | [Open Source Boilerplates](https://opensourceboilerplates.com) | Tally submit form → submission `xV6NPjo`; + intro email to curator (sadekirfan3@gmail.com, msg `msg_27e3e6710e3c41e0806a4f6da9f6c52b`) | _pending review_ | `[~]` submitted |
 | 2026-07-17 | [awesome-shadcn-ui](https://github.com/birobirobiro/awesome-shadcn-ui) | [PR #554](https://github.com/birobirobiro/awesome-shadcn-ui/pull/554) | _pending merge_ | `[~]` submitted |
 | 2026-07-17 | [awesome-nextjs](https://github.com/unicodeveloper/awesome-nextjs) | [PR #536](https://github.com/unicodeveloper/awesome-nextjs/pull/536) | _pending merge_ | `[~]` submitted |
 
@@ -57,6 +58,8 @@ Sequence these; don't burn them all at once. Product Hunt is worth preparing pro
 |---|-------|-----|-------|
 | [ ] | [HTMLrev](https://htmlrev.com/free-nextjs-templates.html) | Submit form | Free-only, curated, has a Next.js category. ⚠️ refused connection from our network — verify manually |
 | [ ] | [Tailkits](https://tailkits.com/submit-product/) | Submit | Verified reachable. Pricing unstated — check it's free before submitting |
+| [~] | [Open Source Boilerplates](https://opensourceboilerplates.com) | Tally form | Free directory of open-source starters (stars/licence/last-update per entry; React & Next.js section lists nextjs/saas-starter, open-saas, KolbySisk). Run by @sadekships. **Submitted 2026-09-03** via <https://tally.so/r/wv0Qal> (single field "Github link" = repo URL) → submission `xV6NPjo`; intro email sent to sadekirfan3@gmail.com same day. If not live in ~3 weeks: DM [@sadekships](https://x.com/sadekships) |
+| [ ] | [Statichunt](https://statichunt.com/nextjs-templates) | Submit form | 1450+ Next.js templates directory, **free** ("Submission is free. However, we offer premium placement options" — decline paid), reviewed in 3–5 business days. Form is JS-only, cannot be automated. **How:** 1) open <https://statichunt.com/submit>; 2) under **Themes** click **Submit Now**; 3) name `MailKite SaaS Starter`, demo `https://saas-startup.mailkite.dev`, repo `https://github.com/mailkite/saas-startup`, SSG `Next.js`, CSS `Tailwind`, category `SaaS / Boilerplate`, licence `MIT`, price `Free`; 4) description: paste the one-liner from *Assets*. Also worth an entry in their **Websites** showcase with the demo URL |
 | [-] | [Vercel Templates](https://vercel.com/templates) | — | **CLOSED.** Vercel staff (Amy Egan), 2026-06-10: "We're not taking new templates at the moment", no timeline. `/templates/submit` is dead. Use vercel/examples instead |
 
 ## Tier 4 — Communities (read each one's self-promo rules first)
@@ -84,6 +87,10 @@ A daily cron researches new venues and appends them here. Rules for anything it 
 3. **Free only.** Paid placements need a human decision — flag, don't add.
 4. **No duplicates** — check the tables above first.
 5. Record `★`, last-pushed date, and the evidence that it accepts submissions.
+
+### Researched & rejected (don't re-check)
+
+- **2026-09-03 run:** `awe50me/AwesomeNextjs` (114★, last push 2024-06 — dead); `jiji262/awesome-react-boilerplate` (archived, 2016); `hardinbhaliya1981/awesome-react` (6★, 2020); `Alchemyst-ai/awesome-saas` (Alchemyst-platform-only templates, no fit); `theshubh77/awesome-saas-directories` + `ammohitchaprana/Awesome-SaaS-Directories` (lists of directories, not templates); `listskit.com/saasstarters` (**paid-products only**, explicitly excludes open source); `boilerplatefast.com` (DNS dead); `jamstackthemes.dev/submit` (404). GitHub repo search for awesome-lists pushed since 2026-03 in nextjs/saas/boilerplate/shadcn/tailwind/react-starter/drizzle/stripe/fullstack niches returned no un-logged venue — the git-PR channel is close to saturated; new reach is now directories (form/manual) and launch platforms.
 
 ## Assets for any submission
 
