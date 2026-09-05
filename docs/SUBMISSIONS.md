@@ -400,6 +400,18 @@ The template must stay: MIT licensed, public, with a working live demo
 > / React Digest / This Week In React (no submission channel) checked and skipped. Run 13 (13:17 UTC) crashed before
 > acting; its staged doc was identical to PR #63's branch, so nothing was lost. Doc based on PR #63's branch (`main`
 > still stale). **Owner: merge a run PR to stop the lossy handoff.**
+>
+> **Update 2026-09-05 (run 23:23 UTC, agentq run 145 — one-time `subq` backfill, no outbound action):** this doc's
+> whole history was written into the fleet-wide `subq` ledger — **127 rows imported, 0 duplicates, 0 collisions**
+> with any sibling lane (the ledger held only 4 rows for other products before this run). Breakdown: 21 PRs (14
+> `submitted`, 3 `live`, 4 `rejected`), 5 curator emails + 1 form (`submitted`), LibHunt (`listing-found`/`live`),
+> 28 `manual` and 12 `needs-login` directory/launch-platform rows, 53 `skip` and 6 `blocked` rule-outs (AI-PR ban,
+> brandonhimpfen lists, network-blocked sites). **Convention for future runs:** GitHub-repo venues are keyed as
+> `owner/repo` (name-kind key) — check them with `subq check --venue owner/repo --product saas-startup --allow-name`;
+> a full `https://github.com/...` URL collapses to `github.com` and reports CLEAR, which is wrong. Web venues are
+> keyed by host. Verified: `unicodeveloper/awesome-nextjs` → exit 4, `aniftyco/awesome-tailwindcss` → exit 5,
+> `nextjsweekly.com` → exit 4, `boilerplatelist.com` (manual) → exit 0. Doc based on PR #64's branch (`main` still
+> stale). See "Backfill 2026-09-05" below for what was and was not recorded.
 
 ---
 
@@ -562,6 +574,45 @@ A periodic cron researches new venues and appends them here. Rules for anything 
 3. **Free only.** Paid placements need a human decision — flag, don't add.
 4. **No duplicates** — check the tables above first, and **dedupe against GitHub** before any PR.
 5. Record `★`, last-pushed date, and the evidence that it accepts submissions.
+6. **The `subq` ledger is the gate** (since 2026-09-05): `subq check --venue <host> --product saas-startup`
+   (add `--allow-name` and use `owner/repo` for GitHub lists) before acting, `subq record …` in the same run.
+   This doc is the narrative; the ledger is the index.
+
+### Backfill 2026-09-05 (run 23:23 UTC, agentq run 145) — SUBMISSIONS.md history → `subq` ledger; no outbound action
+
+**What was done.** One-time bookkeeping run (task 141): every venue this doc records as acted-on was written to
+the shared `subq` ledger from `/tmp/backfill-submissions.jsonl` (product `saas-startup`, lane `submissions`,
+project `mailkite-submissions`). Result: **`subq: imported 127, duplicates 0, errors 0 (of 127)`**. Before the
+import the ledger held 4 rows, all for other products (`mailkite-platform` × 3, `mailkite-server` × 1, from the
+`directory-submissions` and `wp-plugin-promo` lanes) — so **no sibling lane had claimed any of our venues** and
+there are no collisions for Gabe to resolve. Two shared hosts exist across products and do not collide:
+`saashub.com` (ours `needs-login`; wp-plugin-promo holds it for `mailkite-platform`) and `libhunt.com` (ours
+`live`; wp-plugin-promo holds it for `mailkite-server`).
+
+**Rows by kind (127):**
+- **21 git-PR venues** (`action: pr`) — 14 `submitted` (open PRs), 3 `live` with listing URLs (`bytefer/awesome-shadcn-ui`
+  #29, `officialrajdeepsingh/awesome-nextjs` #88, `giovannism20/awesome-supabase` #15), 4 `rejected` (sorrycc #1133,
+  mahdibrr #24, EinGuterWaran #52, brandonhimpfen #46). `OSSDrop/OSSDrop` is keyed as `ossdrop.com` and
+  `shadcnblocks/shadcntemplates` as `shadcntemplates.com` (the projects' own domains, per the backfill rule).
+- **6 claiming email/form rows** (`submitted`): opensourceboilerplates.com (Tally `xV6NPjo` + email),
+  boilerplates.directory, starterkitdirectory.com, nextjsweekly.com, scrolllaunch.com, indiedev.tools — each with its
+  message id as evidence. **1 `listing-found`/`live`**: libhunt.com.
+- **40 human-only venues**: 28 `manual` (free forms / DM-only / badge decisions) and 12 `needs-login`, covering every
+  Tier 2 and Tier 3 row that is tabled with a step-by-step. None of these blocks a sibling lane.
+- **59 rule-outs**: 53 `skip` (no fit / stale / dead / not a venue — the standing-skip lists and the closed
+  Vercel Templates, OpenSourceAlternative.to, cooperpress.com, etc.) and 6 `blocked` (`aniftyco/awesome-tailwindcss`
+  AI-PR ban; `brandonhimpfen/awesome-stripe` + `awesome-postgresql` after the #46 rejection; `builtatlightspeed.com`
+  429, `openhunts.com` 403, `madewithshadcn.com` JS shell — all three need a human browser check, then `subq void`).
+
+**Deliberately NOT recorded:** Hacker News, Product Hunt, Indie Hackers, dev.to, the Reddit subs and the Discords
+(Tier 2/4 rows with nothing done — HN/Reddit belong to `hn-submit`, launches to `launch-sequencer`, dev.to to
+`blog-syndicate`; a row here would only confuse their gates); the 0–5★ boilerplate *products* named in the research
+log (not venues); and GitHub topics (repo settings, not a venue).
+
+**Ledger conventions learned (apply from the next run):** GitHub repos are name-kind keys — pass `owner/repo` and
+`--allow-name` to `subq check`; a full `https://github.com/owner/repo` URL normalises to `github.com` and returns
+CLEAR, which is a false negative. Web venues are host keys (`www.` stripped). `submitted → live` later is
+`subq record … --advance`, not a new row. The next run must `subq record` every action in the same run as before.
 
 ### Researched 2026-09-05 (run 22:42 UTC) — reconciliation; LibHunt already live; 1 maker email; 3 new free manual rows; no PR
 
