@@ -407,7 +407,10 @@ The template must stay: MIT licensed, public, with a working live demo
 > `submitted`, 3 `live`, 4 `rejected`), 5 curator emails + 1 form (`submitted`), LibHunt (`listing-found`/`live`),
 > 28 `manual` and 12 `needs-login` directory/launch-platform rows, 53 `skip` and 6 `blocked` rule-outs (AI-PR ban,
 > brandonhimpfen lists, network-blocked sites). **Convention for future runs:** GitHub-repo venues are keyed as
-> `owner/repo` (name-kind key) — check them with `subq check --venue owner/repo --product saas-startup --allow-name`;
+> `owner/repo` — **correction 2026-09-06:** `--allow-name` is obsolete. `subq` now keys code hosts as
+> `github.com/<owner>/<repo>`, so check them with the plain repo URL:
+> `subq check --venue https://github.com/<owner>/<repo> --product saas-startup`; the 127 rows this
+> lane backfilled were migrated by `subq rekey --apply`, so nothing needs redoing;
 > a full `https://github.com/...` URL collapses to `github.com` and reports CLEAR, which is wrong. Web venues are
 > keyed by host. Verified: `unicodeveloper/awesome-nextjs` → exit 4, `aniftyco/awesome-tailwindcss` → exit 5,
 > `nextjsweekly.com` → exit 4, `boilerplatelist.com` (manual) → exit 0. Doc based on PR #64's branch (`main` still
@@ -426,6 +429,24 @@ The template must stay: MIT licensed, public, with a working live demo
 > listings stand; fleet-wide `gh search prs --author bucabay` surfaced no unlogged saas-startup PRs. Total is now **22**
 > (15 open + 3 merged + 4 closed). `subq check` ran before every action and `subq record` after (rows #178–#190). Doc based
 > on PR #65's branch (`main` still stale). **Owner: merge a run PR to stop the lossy handoff.**
+>
+> **Update 2026-09-06 (run 09:51 UTC, agentq run 158):** **2 external PRs opened** — both exact-fit sections found by a GitHub
+> *topic* sweep (`--topic awesome-list` × `indie-hackers` / `startup-tools`) that ~30 prior keyword sweeps had missed:
+> **Awesome Solo Founder OSS** (`princepal9120/awesome-solo-founder-oss`, 63★, MIT, pushed 2026-07-27, `## Starter kits` table with
+> Open SaaS + ixartz; README **and** `data/tools.yml`, per its PR template) → [PR #10](https://github.com/princepal9120/awesome-solo-founder-oss/pull/10);
+> **Awesome-independent-tools** (`yaolifeng0629/Awesome-independent-tools`, **2,450★**, pushed 2026-07-04, bilingual CN/EN indie-dev
+> tools list whose 「Web 开发框架或模板」 section lists Open SaaS / smart-excel-ai / ixartz / Vercel subscription-payments) →
+> [PR #132](https://github.com/yaolifeng0629/Awesome-independent-tools/pull/132) (both READMEs, Chinese description). **0 emails sent** —
+> the one drafted (LaunchFree.io founder Julie James, `hello@launchfree.io`) was refused three times by `send-as.sh` with **exit 6 (D1
+> unreachable, fails closed)**; not forced — retry next run. **3 new free manual rows**: Tier 2 **LaunchFree.io / The Runway** (free
+> forever, no login, 3-step JS form, dofollow + weekly-newsletter pick); Tier 3 **React Libraries** (`reactlibraries.com`, free
+> client-side form, 281-kit Starter Kits category) and **WindyBase** (Tally form needing a cover-image upload). 4 rule-outs ledgered
+> (`buildkits.dev` $99/yr; `awesometailwind.com` mirror of the AI-PR-banned aniftyco list; `tailwindresources.com` = Built At
+> Lightspeed's submit path, 429 here; `finderlaunch.com` anonymous/login/templated pricing). Reconciliation holds — all **15 previously
+> pending PRs re-checked on GitHub remain OPEN** (`pingcap/ossinsight` #3121's only comment and red checks are Vercel's
+> fork-authorization step, not our change); the 3 LIVE listings stand; fleet-wide `gh search prs --author bucabay` surfaced no unlogged
+> saas-startup PRs. Total is now **24** (17 open + 3 merged + 4 closed). `subq check` ran before every action and `subq record` after
+> (rows #256–#264). Doc based on PR #66's branch (`main` still stale). **Owner: merge a run PR to stop the lossy handoff.**
 
 ---
 
@@ -436,6 +457,8 @@ or the post goes live. Newest first (by PR open date). All entries verified agai
 
 | Date | Venue (website) | Submission URL (PR/post) | Listing URL (when live) | Status |
 |------|-----------------|--------------------------|-------------------------|--------|
+| 2026-09-06 | [yaolifeng0629/Awesome-independent-tools](https://github.com/yaolifeng0629/Awesome-independent-tools) | [PR #132](https://github.com/yaolifeng0629/Awesome-independent-tools/pull/132) | _pending merge_ | `[~]` submitted (「Web 开发框架或模板」/ "Web Framework", right after nextjs subscription payments, in `README.md` **and** `README_en.md`; `(免费)` tag, Chinese description). 2,450★, AGPL-3.0 list, pushed 2026-07-04; outside PRs merged 2026-04-12 → 05-11 (#26–#36) but ~17 outside PRs open since 08-09 — slow reviewer; README also names the site form <https://www.indietools.work/submit> as a contribution entry (human fallback). `subq` #263 |
+| 2026-09-06 | [princepal9120/awesome-solo-founder-oss](https://github.com/princepal9120/awesome-solo-founder-oss) | [PR #10](https://github.com/princepal9120/awesome-solo-founder-oss/pull/10) | _pending merge_ | `[~]` submitted (`## Starter kits` table + `data/tools.yml`, appended after XcodeBuildMCP iOS Template; PR template filled, maintainer disclosure). 63★, MIT, pushed 2026-07-27; outside PRs merged 2026-06-01 (#2) and 07-26 (#5), 4 open. `subq` #262 |
 | 2026-09-06 | [pingcap/ossinsight](https://github.com/pingcap/ossinsight) | [PR #3121](https://github.com/pingcap/ossinsight/pull/3121) | _pending merge_ | `[~]` submitted (**new collection** `configs/collections/10144.saas-starter-kit.yml`, 18 repos, ours last with a maintainer disclosure). 2.5k★, Apache-2.0, pushed 2026-09-01; outside collection PRs merged 2026-04-09 (#2897) and 2026-05-07 (#3060), but 8 outside PRs sit open since 04-21 — expect a slow review. Id 10144 chosen because open PRs #3055/#3101 use 10142 and #3087 uses 10143. `subq` #178 |
 | 2026-09-06 | [IndieTools](https://www.indietools.app) | Fit question to maker Cengiz Yılmaz (cengiz@indietools.app — the `mailto:` on `/contact`; msg `msg_bb0920ca321541a48496143a9e35b9f1`, exit 0) before the login-gated free listing (Tier 3 row). `subq` #190 | _awaiting reply_ | `[~]` submitted |
 | 2026-09-05 | [Indie Dev Tools](https://indiedev.tools) | Fit question to maker Alexandre Grisey (pro@alexandre-grisey.fr — the `mailto:` in the site footer; msg `msg_578123bfa13c446f90f51172793aa074`, exit 0) before the login-gated "Add your tool" submission (Tier 3 row) | _awaiting reply_ | `[~]` submitted |
@@ -500,6 +523,8 @@ Merge a PR, get listed. No account, no forms, no fees.
 | [~] | [OSSDrop/OSSDrop](https://github.com/OSSDrop/OSSDrop) | PR to `data/tools.json` | 101★, pushed 2026-09-05, CC0 list content, no AI-PR clause. Community-curated "Product Hunt for open-source" — the README (14 categories, live star badges, 7-day trending cards) is **generated nightly from `data/tools.json`**; one tool per PR, ≤140-char honest description, OSI licence required, "no dead or abandoned repos" (no star minimum). Also a website (<https://www.ossdrop.com>, GitHub sign-in) built from the same data. **Submitted 2026-09-05** → [PR #27](https://github.com/OSSDrop/OSSDrop/pull/27) (category `web-apis` — "what it does, not what it's built with"; offered to move it if they prefer `developer-tools-cli`). Merges outside PRs within days (#16–#24 all by outside authors, 2026-08-26 → 09-02) |
 | [~] | [spekulatius/awesome-saas-starter-kits](https://github.com/spekulatius/awesome-saas-starter-kits) | PR to `readme.md` | **0★, created 2026-09-05** (Peter Thaleikis, 743 followers, 57 repos — a serial awesome-list maintainer). "Curated list of open source and source-available starter kits, boilerplates, and building blocks for launching a SaaS product" — `## Next.js` section lists nextjs/saas-starter, next-saas-stripe-starter, ixartz, Nextacular, BoxyHQ, Makerkit Lite (our exact comparables). CC0, awesome-lint CI, CONTRIBUTING: new branch, bottom of section, `- [name](https) - Capitalised description ending in period.` — no AI-PR clause. **Submitted 2026-09-05** → [PR #1](https://github.com/spekulatius/awesome-saas-starter-kits/pull/1). Fails the "merges outside PRs" check only because it is hours old (same call as `ridloabelian/awesome-supabase-id`) — re-check |
 | [~] | [pingcap/ossinsight](https://github.com/pingcap/ossinsight) | PR to `configs/collections/` | **2.5k★**, Apache-2.0, pushed 2026-09-01. OSS Insight (PingCAP) tracks star/contributor trends per "collection"; CONTRIBUTING invites new collections by PR (`100XX.<name>.yml`, `id/name/items`, `node scripts/verify-collection.mjs`), no AI-PR clause. It has BaaS / Web Framework / React Framework collections but **no starter-kit one**, so the honest entry is a new **SaaS Starter Kit** collection listing the category (18 verified open-source kits, ours included last with a disclosure) rather than squeezing a 0★ repo into an existing collection. **Submitted 2026-09-06** → [PR #3121](https://github.com/pingcap/ossinsight/pull/3121) (id 10144; open PRs already use 10142/10143). Outside collection PRs merged 2026-04-09 and 2026-05-07, yet 8 outside PRs are open since 04-21 — slow reviewer, re-check monthly. Once merged the collection page is <https://ossinsight.io/collections/saas-starter-kit> |
+| [~] | [princepal9120/awesome-solo-founder-oss](https://github.com/princepal9120/awesome-solo-founder-oss) | PR to README + `data/tools.yml` | 63★, MIT, pushed 2026-07-27, awesome-badge list "OSS/source-available stack for solo founders" with a `## Starter kits` table (Open SaaS, ixartz/SaaS-Boilerplate, XcodeBuildMCP iOS Template). CONTRIBUTING: one category per tool (`starter-kit`), short factual "what job this does" description, canonical GitHub URL, README and `data/tools.yml` kept aligned; **no AI-PR clause**. Selection criteria (public source, useful to one-person companies, maintained, "replaces a real SaaS cost center") — ours replaces a hosted-auth bill. Merges outside PRs (#2 2026-06-01, #5 07-26; #1/#6/#8/#9 open). **Submitted 2026-09-06** → [PR #10](https://github.com/princepal9120/awesome-solo-founder-oss/pull/10) |
+| [~] | [yaolifeng0629/Awesome-independent-tools](https://github.com/yaolifeng0629/Awesome-independent-tools) | PR to `README.md` + `README_en.md` | **2,450★**, pushed 2026-07-04, bilingual CN/EN "独立开发 / AI 出海" tools list (site <https://www.indietools.work>, curator yaolifeng, bi-weekly WeChat digest). 「Web 开发框架或模板」 lists our exact comparables (smart-excel-ai, Open SaaS, ShipFast, SupaStarter, ixartz, Vercel subscription-payments, Taxonomy) with `(免费)/(付费)` tags. Rules: fork → branch → `[工具名称](链接) - 简短描述`, "质量比数量更重要"; **no AI-PR clause**; README also points to the site's `/submit` form (Cloudflare-obfuscated email — not emailed). Outside PRs merged 04-12 → 05-11 (#26–#36); ~17 open since 08-09 → slow. **Submitted 2026-09-06** → [PR #132](https://github.com/yaolifeng0629/Awesome-independent-tools/pull/132). If it stalls, a human can use the site form instead |
 | [ ] | GitHub topics | repo settings | ✅ **done** — `nextjs`, `nextjs15`, `saas-starter`, `saas-boilerplate`, `template`, … |
 
 ## Tier 2 — Launch platforms (one-shot traffic spikes)
@@ -527,6 +552,7 @@ Sequence these; don't burn them all at once. Product Hunt is worth preparing pro
 | [ ] | [PeerPush](https://peerpush.com) | **Manual — free queue, login** | "Product discovery for people and AI" directory (structured listings indexed by search engines + AI assistants, MCP platform tag) with a **Developer Tools** category (~31% of listings). **Free** tier = "wait in line behind paid users"; Standard $39 (instant), $89 / $229 promoted — **decline all paid**; Outrank-board bids from $5 — **decline**. **How to submit:** 1) create a free account at <https://peerpush.com>; 2) **Add your product** → paste `https://saas-startup.mailkite.dev` (AI prefill), fix the name to `MailKite SaaS Starter`, tagline = one-liner, category **Developer Tools**, platform Web, add repo `https://github.com/mailkite/saas-startup` in the description; 3) choose **Free**, submit. Contact email is Cloudflare-obfuscated (not emailed). Verified 2026-09-05 (homepage + `/pricing`); not listing us. Login-gated → human |
 | [~] | [ScrollLaunch](https://www.scrolllaunch.com) | **Manual — free tier, login** (+ email sent 2026-09-05) | Weekly launch board for indie makers/SaaS founders (398 products all-time) with a **DevTool** category. **Free** = $0 forever: weekly leaderboard slot (up to 20 free listings/week), product page, maker dashboard — but the dofollow link only holds "while the badge stays on your site" (**Gabe decides** on a third-party badge; a plain listing is still free). Premium $19 / Premium+ $39 per product, ads $19–$29/wk, newsletter $299/issue, directory-submission service $99–$199 — **decline all paid**. Founder **Kalash Vasaniya** (`kalash@scrolllaunch.com`) emailed 2026-09-05 with two fit questions (open-source templates OK? badge-less free listing OK?) — msg `msg_1deef153…`. **How to submit** (after/without the reply): 1) sign up at <https://www.scrolllaunch.com>; 2) **New Launch** (`/dashboard/products/new`) → paste `https://saas-startup.mailkite.dev` (AI prefill), name `MailKite SaaS Starter`, tagline = one-liner, category **DevTool** (+ SaaS), description = one-liner + "Why it's different" + repo link; 3) choose **Free**; 4) optionally add their badge to the demo footer for the dofollow link. Verified 2026-09-05 (homepage + `/pricing` + `/products`); not listing us; no open-source starters on the board today (fit is the question asked). Login-gated → human |
 | [ ] | [Launch Llama — tools directory](https://tools.launchllama.co) | **Manual — free, Google/email login** | Startup/tool directory attached to the **Launch Llama** newsletter (weekly, Tuesdays, "55,000+ founders, developers and CTOs", readers at Google/Stripe/Notion; founder is `linkedin.com/in/tomotto96`). Lists AI tools, dev tools and open-source agents; every free listing is "considered for a free newsletter feature". **Free**: submit, get listed, earn upvotes, newsletter consideration. Paid: **Featured** membership (pinned + priority placement), **Instant Launch** one-time add-on (skips the review queue), newsletter ads via Passionfroot — **decline all paid**. **How to submit:** 1) open <https://tools.launchllama.co/submit> → **Sign up for free** or **Continue with Google**; 2) click **Submit** (top nav) → name `MailKite SaaS Starter`, URL `https://saas-startup.mailkite.dev`, tagline = one-liner from Assets, description = one-liner + "Why it's different" + repo `https://github.com/mailkite/saas-startup`, category Developer Tools / Open Source, logo `apps/web/app/opengraph-image.png`; 3) leave Featured / Instant Launch unticked; 4) submit — rolling review before listing. No public email (contact form at `launchllama.co/contact` only; not contacted). Verified 2026-09-05 (homepage + `/submit` + the "submit your product free" post); not listing us. Login-gated → human |
+| [ ] | [LaunchFree.io — The Runway](https://launchfree.io) | **Manual — free form, no login** (+ email refused exit 6 → retry) | Free launch directory (founder **Julie James**, Automated Income Tools LLC, `hello@launchfree.io`; live since 2026-05-06) for "AI tools, SaaS, developer tools … open-source projects" — **"Zero fees. Ever. The core listing is free. It will always be free."**; revenue is optional sponsored placements only. Every listing: permanent indexed page, **dofollow backlink**, weekly-newsletter consideration, upvotes; human review ~24 h; **no badge requirement**. **How to submit:** 1) open <https://launchfree.io/submit> (3-step JS form, no account); 2) **Step 1** — Launch Name `MailKite SaaS Starter`, Launch URL `https://saas-startup.mailkite.dev`, Tagline (≤80) `Next.js SaaS starter with auth built into your app`; 3) **Step 2** — Category **Dev Tools**, Description (100–1,200 chars) = one-liner + "Why it's different" + repo `https://github.com/mailkite/saas-startup`, "Why did you build this?" = one honest paragraph (no hosted-auth vendor), Launch Status **Live**, Pricing **Open Source**, skip MRR, screenshots = a hosted copy of `apps/web/app/opengraph-image.png`; 4) **Step 3** — Name `Gabe`, Email `gabe@mailkite.dev`, short bio, X `@mailkite_dev`, logo URL, "How did you hear about us?" = search, tick Terms; submit. Fit/intro email to Julie drafted 2026-09-06 but `send-as.sh` returned **exit 6** three times (ledger DB unreachable — fails closed; not forced). **Next run retries the send before any human submission.** Verified 2026-09-06 (homepage + `/submit`; `/about` 404); not listing us. JS form → human |
 
 ## Tier 3 — Template directories
 
@@ -565,6 +591,8 @@ Sequence these; don't burn them all at once. Product Hunt is worth preparing pro
 | [~] | [IndieTools](https://www.indietools.app) | **Manual — free, login** (+ email sent 2026-09-06) | "Permanent indie product directory" by solo founder **Cengiz Yılmaz** (`cengiz@indietools.app`, cengizyilmaz.net): 603 products, 592 founder profiles, 187 technology tags; tracks whether a product is still maintained and who is behind it. Accepts "SaaS, apps, developer tools … software-led products"; its blog runs a "Best SaaS Boilerplates for Solo Founders" guide (SumGit, ShipThing, …) so boilerplates are in scope. **Free** listing ("completely free and always has been"); Premium (followed link) and Featured (30-day campaign) are paid — **decline**; paying "never changes the review standard or organic ranking". Manual review checks the product is live and the submitter's relationship to it. Fit question emailed 2026-09-06 (`msg_bb0920ca…`) — open-source/free product vs "bootstrapped digital products" bar; if Cengiz replies, Gabe releases via `approve-reply.sh` — **never re-email**. **How to submit:** 1) sign in at <https://www.indietools.app/submit>; 2) product `MailKite SaaS Starter`, URL `https://saas-startup.mailkite.dev`, description = one-liner + "Why it's different" + repo link, category Developer Tools, platform Web, technologies Next.js · TypeScript · Tailwind · PostgreSQL · Stripe, logo `apps/web/app/opengraph-image.png`; 3) connect the GitHub repo so star/commit numbers show as ours; 4) choose **Free**, send to the review queue. Verified 2026-09-06 (homepage, `/submit`, `/about`, `/contact`, `/blog`); not listing us. Login-gated → human |
 | [ ] | [Open Source Startups](https://www.opensourcestartups.com) | **Manual — free form, no login (borderline fit)** | "GitHub-native" directory of 849 open-source projects + 1,580 public APIs by Tiny Startup Studio (curator **Jaisal**, jaisal.co; no email). Categories: Developer Tools (118), Web Framework (48), Auth & Security, UI Components, Database, … — **no template/starter category**, and the visible listings are large projects (n8n, Supabase, Bun, Astro), so a 0★ starter is a borderline fit; submit under **Developer Tools** and let their review decide. **Free** — "FREE · AUTO-SYNCED FROM GITHUB · UPDATES HOURLY", no paid tier anywhere. **How to submit:** 1) open <https://www.opensourcestartups.com/submit> (no account); 2) **GitHub Repository** `https://github.com/mailkite/saas-startup` → **Fetch Data** (pulls stars/language/licence/topics); 3) **Project Name** `MailKite SaaS Starter`, **Tagline** (≤160) = one-liner, **Description** = "Why it's different", **Category** Developer Tools, **Website** `https://saas-startup.mailkite.dev`, **Your Name** `Gabe`, **Email** `gabe@mailkite.dev`; 4) submit. Client-side React form (no `action`), so the agent can't post it → human. Verified 2026-09-06 (homepage, `/submit`, both category pages); not listing us |
 | [ ] | [Changelog News](https://changelog.com/news) | **Manual — free, login form** | Weekly developer newsletter + podcast by **Jerod Santo** (Changelog Media), **26,539 subscribers**, Mondays; "features the best community submissions". Submissions go through <https://changelog.com/news/submit> — "sign in / up to submit news" (profile used for attribution), fields **URL**, **Title**, **What's interesting about it?** (Markdown). Rules: no how-tos/tutorials, no commercial products (sponsorship instead), "your own work" explicitly welcome — "If your fellow devs will find it interesting, submit it… Keep it positive. Keep it hacker." **Free**; sponsorship is separate — **decline**. **How to submit:** 1) sign in at the submit page; 2) URL `https://github.com/mailkite/saas-startup`, title `MailKite SaaS Starter — Next.js SaaS boilerplate with auth that runs in your own app`, blurb = "Why it's different" (no Clerk/Auth0/Supabase account, MIT, Stripe + teams + Drizzle) + demo link; 3) submit — email notification if it runs. No public submission email (form is the channel; not emailed). Verified 2026-09-06 (`/news`, `/news/submit`); not featured yet. Login-gated → human |
+| [ ] | [React Libraries](https://www.reactlibraries.com/starter-kits) | **Manual — free form, no login** | React/Next.js library directory with a **Starter Kits** category of **281 entries** (shadcn-nextjs free dashboard, Next-shadcn-dashboard, AI SaaS boilerplate, …) plus a newsletter. "All approved submissions are featured completely free!" **How to submit:** 1) open <https://www.reactlibraries.com/submissions>; 2) **Submission Type** → the starter-kit/template option if offered (defaults to *Library*); 3) **Email** `gabe@mailkite.dev`, **Author name** `MailKite`, **Author URL** `https://saas-startup.mailkite.dev`; 4) **GitHub URL** `https://github.com/mailkite/saas-startup` (leave NPM URL blank — not a package); 5) **Comments** = one-liner + "Why it's different" + demo link; 6) Submit. Client-side Next.js form (no `action`) → the agent can't post it. Anonymous operator; `reactlibraries@gmail.com` is published only for content-removal requests (generic → not emailed). Verified 2026-09-06 (`/starter-kits`, `/submissions`; `/about` 404); not listing us. Form → human |
+| [ ] | [WindyBase](https://windybase.com/items?tech=nextjs) | **Manual — free Tally form (needs file upload)** | "Weekly curated Tailwind CSS template and tool directory" (X `@heywindybase`, no email) with **SaaS Templates**, Dashboard Templates and a **Next.js** tech filter; free and premium items side by side ($14–$77 templates); no fee or paid-placement language. **How to submit:** 1) click **Submit Item** → <https://tally.so/r/me9X4e>; 2) **Title** `MailKite SaaS Starter`, **Creator** `MailKite`, **Type** **Template**, **Description** = one-liner + "Why it's different" + "MIT, free, repo https://github.com/mailkite/saas-startup"; 3) **Cover Image** = upload `apps/web/app/opengraph-image.png` (required file field — the reason the agent didn't submit); 4) **Demo Link** `https://saas-startup.mailkite.dev`, **Buy Link** `https://github.com/mailkite/saas-startup`, **Price** `0`; 5) "Do you have an affiliate program?" → **No**; 6) Submit. Verified 2026-09-06 (homepage + Tally form fields); not listing us. Tally + upload → human |
 | [-] | [OpenSourceAlternative.to](https://www.opensourcealternative.to/submit) | **Flag — borderline fit** | Free waitlist is "6+ months"; $29 buys a 48-h review — **decline**. Criteria: open source, actively maintained, *self-hosted alternative to a named proprietary tool* — a starter template only fits if framed as an alternative to a paid boilerplate (e.g. ShipFast). Same non-fit shape as `openalternative.co` (already flagged). Contact `osa@reimer.me` (not emailed). Human decision |
 | [-] | [Vercel Templates](https://vercel.com/templates) | — | **CLOSED.** Vercel staff (Amy Egan), 2026-06-10: "We're not taking new templates at the moment", no timeline. `/templates/submit` is dead. Use vercel/examples instead |
 
@@ -595,8 +623,94 @@ A periodic cron researches new venues and appends them here. Rules for anything 
 4. **No duplicates** — check the tables above first, and **dedupe against GitHub** before any PR.
 5. Record `★`, last-pushed date, and the evidence that it accepts submissions.
 6. **The `subq` ledger is the gate** (since 2026-09-05): `subq check --venue <host> --product saas-startup`
-   (add `--allow-name` and use `owner/repo` for GitHub lists) before acting, `subq record …` in the same run.
+   (pass the plain repo URL for GitHub lists — `--allow-name` is obsolete since 2026-09-06) before
+   acting, `subq record …` in the same run.
    This doc is the narrative; the ledger is the index.
+
+### Researched 2026-09-06 (run 09:51 UTC, agentq run 158) — 2 external PRs (topic sweep); 1 email refused (exit 6); 3 new free manual rows
+
+**Reconciliation.** All **15 previously pending PRs re-checked on GitHub: OPEN and `MERGEABLE`** — `pingcap/ossinsight` #3121 (its
+single comment and two red checks are Vercel's "authorize this fork" step for `ossinsight-docs` / `ossinsight-web`, exactly like
+`shadverse` #3 — not our change), `OSSDrop/OSSDrop` #27 (0 comments, mergeable still UNKNOWN), `spekulatius/awesome-saas-starter-kits`
+#1 (0 comments) and the 12 awesome-list PRs (the 1-comment counts on `ridloabelian` #4, `brillout` #632, `iAmCorey` #158, … are our own
+08-27 → 09-04 bump comments; no maintainer replies). The 3 LIVE listings stand. Fleet-wide `gh search prs --author bucabay` (20 newest)
+shows only this lane's run PRs, the template-provider lane (casdoor closed, notify, swoosh, nodemailer-homepage closed) and our own
+09-05/09-06 PRs — nothing unlogged. Repo still **0★ / 0 forks**. `main` still at `ba126b7`; PR #66 unmerged → this doc is based on
+`origin/submissions/auto-2026-09-06-0017`. Gabe's uncommitted `apps/web/lib/mailkite-auth/*` work was left untouched in the tree.
+
+**Ledger first.** `subq check` before every candidate — `launchfree.io`, `finderlaunch.com`, `awesometailwind.com`, `reactlibraries.com`,
+`buildkits.dev`, `tailwindresources.com`, `windybase.com` (host keys) and `princepal9120/awesome-solo-founder-oss`,
+`yaolifeng0629/Awesome-independent-tools` (`--allow-name`) — all exit 0. Every action and rule-out below was `subq record`ed in the same
+run: rows **#256–#264**.
+
+**What found the PRs: a *topic* sweep, not a keyword sweep.** `gh search repos --topic awesome-list --topic <t>` for `t ∈ {nextjs, saas,
+boilerplate, starter-kit, shadcn, tailwindcss, stripe, indie-hackers, indiehackers, side-project, startup-tools, fullstack, …}` (sorted by
+push, ≥5★) surfaced two lists with an exact-fit section that ~30 prior keyword sweeps never returned, because neither has
+"nextjs" / "saas" / "boilerplate" in its name or description. Repeat with other topics next run (`solo-founder`, `micro-saas`,
+`indie-dev`, `one-person-company`, `build-in-public`, `saas-boilerplate`).
+
+**2 external PRs opened** (both dedupe-checked first — `--search mailkite` 0 hits, `--author bucabay` 0 hits, no existing `bucabay` fork;
+CONTRIBUTING re-read right before acting — no AI-PR clause in either):
+- **Awesome Solo Founder OSS** — `princepal9120/awesome-solo-founder-oss` (63★, MIT, pushed 2026-07-27, awesome-badge). `## Starter kits`
+  ("Start with a product-shaped repo instead of a blank folder"; Open SaaS, ixartz/SaaS-Boilerplate, XcodeBuildMCP iOS Template).
+  CONTRIBUTING wants one best category (`starter-kit`), a short factual "job" description with no hype, a canonical GitHub URL, and
+  README + `data/tools.yml` kept aligned; the PR template asks for name / repo / category / licence / founder use case. Both files
+  edited (entry appended after the iOS template), template filled, maintainer disclosure + "close if you'd rather wait for adoption" →
+  [PR #10](https://github.com/princepal9120/awesome-solo-founder-oss/pull/10). Merges outside PRs (#2 06-01, #5 07-26; #1/#6/#8/#9 open
+  since 05-28 → 09-03) — moderate pace. `subq` #262.
+- **Awesome-independent-tools** — `yaolifeng0629/Awesome-independent-tools` (**2,450★**, AGPL-3.0 list, pushed 2026-07-04; site
+  <https://www.indietools.work>; bi-weekly WeChat digest). 「Web 开发框架或模板」 / "Web Framework" already lists smart-excel-ai (免费),
+  Open SaaS (免费), ShipFast (付费), SupaStarter (付费), ixartz, Vercel subscription-payments, Taxonomy — our exact comparables. Rules:
+  fork / branch / `[工具名称](链接) - 简短描述`, spelling, no trailing spaces, "质量比数量更重要"; no AI-PR clause. Entry added to **both**
+  `README.md` (Chinese, `(免费)` tag) and `README_en.md` after nextjs subscription payments; bilingual PR body with disclosure →
+  [PR #132](https://github.com/yaolifeng0629/Awesome-independent-tools/pull/132). Caveat: outside PRs merged 2026-04-12 → 05-11 (#26–#36),
+  but ~17 outside PRs opened 08-09 → 09-04 are all still open and the README now names the site's `/submit` form as a contribution
+  entry — the same "slow but alive" profile as `pingcap/ossinsight`; one honest PR, then leave it. The site form
+  (`indietools.work/submit?tab=submit`) is the human fallback. `subq` #263.
+
+**1 email drafted, 0 sent — `send-as.sh` exit 6.** LaunchFree.io ("The Runway") founder **Julie James** (`hello@launchfree.io`, the only
+address published; she is named on the site and in third-party write-ups): a short fit question (open-source starter in Dev Tools?
+pricing "Open Source" or "Free"?) before the free form — same shape as the Hugo Berton / Cengiz Yılmaz emails. `send-as.sh` returned
+**exit 6 — "could not check inbound history … (DB unreachable). Refusing rather than risk sending an unreviewed reply"** — three times
+over ~20 min. Per the runtime rules that is a hard, correct NO: **not forced, no `--force`**. The draft lives only in the runner's
+`/tmp/launchfree_email.html`; the Tier 2 row has everything needed to recreate it. **Next run: re-run the send first** (the 30-day gate
+is clean — nothing was sent). `subq` #264 (`manual`).
+
+**3 new free manual rows** (all verified 2026-09-06 by fetching the pages named in each row; none lists us):
+- Tier 2 **LaunchFree.io** (`launchfree.io`: free forever, no login, 3-step JS form, dofollow + weekly newsletter, 24 h human review;
+  open-source explicitly welcome; `subq` #264).
+- Tier 3 **React Libraries** (`reactlibraries.com`: free client-side `/submissions` form, 281-entry Starter Kits category; anonymous,
+  `reactlibraries@gmail.com` is a removal-requests inbox → not emailed; `subq` #260).
+- Tier 3 **WindyBase** (`windybase.com`: weekly Tailwind template directory, Tally `me9X4e` with a **required cover-image upload** →
+  human; SaaS Templates + Next.js filter; X-only contact; `subq` #261).
+
+**Checked and skipped (all `subq record`ed):**
+- `buildkits.dev` (70+ Next.js boilerplates) — "Add your boilerplate — **$99/yr**" (`/submit`); paid → skip (#256).
+- `awesometailwind.com` — a web mirror of `aniftyco/awesome-tailwindcss` (the AI-PR-banned list); no independent submit path (#257).
+- `tailwindresources.com` ("9,107+ Tailwind themes", Next.js / shadcn / React filters) — its submit link is **`builtatlightspeed.com/submit`**,
+  i.e. the same operator as the 429-blocked Built At Lightspeed → `blocked` (#258). One human submission there feeds both directories.
+- `finderlaunch.com` ("988+ open source & self-hosted projects") — anonymous ("a team of makers", virtual SF address), `/submit` 404 →
+  `/dashboard/products/new` behind login, `/pricing` is a templated credits/storage page unrelated to listings, no template category →
+  skip (#259).
+- Not recorded (not venues): `theshubh77/awesome-saas-directories` + `theshubh77/launchdb` (a list of directories / a directory
+  *platform*); `Ibexoft/awesome-startup-tools-list` (1,058★, free *services* by category, no starter section);
+  `chen103226/awesome-one-person-company` (289★, last push 2026-01-13, >7 months); `SimoMay/find-oss` (alternatives);
+  `better-auth/awesome` (standing skip); `shadcn.io/template` ("submit through our contribution form or community channels" — no URL;
+  standing human flag); `DirectorySurf/awesome-launch-platforms`, `avinashvagh/startup-promotion-sites`, `launchdirectories.com`,
+  `launch-directories.nicklaunches.com` (meta-lists — the dev/OSS entries they name are already tabled); `dirstarter.com`,
+  `thefrontkit.com`, `designrevision.com`, `snappify.com`, `uideck.com`, `magicui.design`, `eckthemes.com`, `shadcnstudio.com` (vendor
+  listicles); `tailkits.com/blog/sites-to-launch-your-tailwind-template` (roundup: Tailkits, HTMLrev, BAL, DevHunt, Statichunt, Windy
+  Toolbox, TailAwesome, One Page Love, Landingfolio — all tabled/skipped except the two landing-page *design* galleries, which are not
+  template directories).
+
+**GitHub keyword sweep** (16 angles, sorted by push, ≥5★) was saturated again — every hit already acted-on or a standing skip
+(`XiaomingX/indie-hacker-tools-plus` 1,834★ still 0 merged PRs; `brandonhimpfen/awesome-next.js` is the blocked maintainer;
+`victorocna/awesome-react-starter` is a starter, not a list). The topic sweep above is the new angle.
+
+**Next run:** base the doc on `origin/submissions/auto-2026-09-06-0951` unless a run PR merged. **First: retry the LaunchFree email**
+(`hello@launchfree.io`, fit question — exit 6 was a DB outage, nothing was sent). Re-check `princepal9120` #10, `yaolifeng0629` #132,
+`pingcap/ossinsight` #3121, OSSDrop #27, spekulatius #1. Repeat the `--topic awesome-list` sweep with the topics listed above. If
+Cengiz (IndieTools) or Alexandre (Indie Dev Tools) reply, the gate queues the draft (exit 7) — Gabe releases it.
 
 ### Researched 2026-09-06 (run 00:17 UTC, agentq run 148) — 1 external PR (OSS Insight collection); 1 maker email; 2 new free manual rows
 
@@ -606,7 +720,7 @@ LIVE listings stand. Fleet-wide `gh search prs --author bucabay` (15 newest) sho
 template-provider lane's PRs (casdoor, notify, swoosh, nodemailer-homepage — other products) and our two 09-05 PRs — nothing
 unlogged. `main` still at `ba126b7`; PR #65 unmerged → this doc is based on `origin/submissions/auto-2026-09-05-2323`.
 
-**Ledger first (per the 09-05 backfill convention).** `subq check` before every candidate (`--allow-name` + `owner/repo`
+**Ledger first.** `subq check` before every candidate (plain repo URL for GitHub; `--allow-name` is obsolete
 for GitHub venues): `pingcap/ossinsight`, `opensourcestartups.com`, `osssoftware.org`, `toolworks-dev/open-source-saas`,
 `madewithnextjs.com`, `indietools.app`, `boilerdev.com`, `changelog.com` — all exit 0 (CLEAR). Every action and rule-out
 below was `subq record`ed in the same run: rows **#178–#190**.
