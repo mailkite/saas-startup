@@ -17,6 +17,9 @@ or the post goes live. Newest first.
 
 | Date | Venue (website) | Submission URL (PR/post) | Listing URL (when live) | Status |
 |------|-----------------|--------------------------|-------------------------|--------|
+| 2026-10-05 | [awesome-starter-templates](https://github.com/kszongic/awesome-starter-templates) | _not submitted_ | — | `[-]` skipped — no verifiable MIT license or contribution evidence |
+| 2026-10-05 | [victorymakes/awesome](https://github.com/victorymakes/awesome) | _not submitted_ | — | `[-]` skipped — no license, only 1★, no qualifying recent activity |
+| 2026-10-05 | [awesome-nextjs-boilerplates](https://github.com/sasikanth513/awesome-nextjs-boilerplates) | _not submitted_ | — | `[-]` skipped — inactive since 2024-06, no license or accepted outside PRs |
 | 2026-07-17 | [awesome-shadcn-ui](https://github.com/birobirobiro/awesome-shadcn-ui) | [PR #554](https://github.com/birobirobiro/awesome-shadcn-ui/pull/554) | _pending merge_ | `[~]` submitted |
 | 2026-07-17 | [awesome-nextjs](https://github.com/unicodeveloper/awesome-nextjs) | [PR #536](https://github.com/unicodeveloper/awesome-nextjs/pull/536) | _pending merge_ | `[~]` submitted |
 
