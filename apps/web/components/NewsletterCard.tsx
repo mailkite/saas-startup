@@ -20,7 +20,7 @@ export function NewsletterCard() {
       </p>
       {sent ? (
         <p className="mt-3 text-sm text-[var(--color-accent)] font-medium">
-          Thanks! We'll be in touch.
+          Thanks! We&apos;ll be in touch.
         </p>
       ) : (
         <form onSubmit={handleSubmit} className="mt-3 flex gap-2">

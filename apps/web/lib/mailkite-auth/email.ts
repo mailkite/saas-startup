@@ -1,4 +1,13 @@
+// Docs: docs/features/branded-transactional-email.md
 import { getAuthConfig, getBaseUrl } from './config';
+import {
+  renderEmail,
+  renderEmailText,
+  escapeHtml,
+  link,
+  getAppName,
+  type EmailDoc,
+} from './email-template';
 
 interface SendEmailParams {
   to: string;
@@ -60,17 +69,55 @@ export async function sendEmail(params: SendEmailParams): Promise<{ ok: boolean;
 }
 
 /**
+ * Greeting name for the welcome email. At signup the email local-part is the best we have
+ * (no display name yet): "ada@example.com" -> "ada".
+ */
+export function greetingName(email: string): string {
+  return email.split('@')[0] || 'there';
+}
+
+/**
+ * The welcome email's content, in the shared template's block format. Rendered to HTML and
+ * plaintext by lib/mailkite-auth/email-template.ts, so it carries the app's branding
+ * instead of bare <p> tags. Edit the copy here; edit the look there.
+ */
+function welcomeDoc(to: string): EmailDoc {
+  const base = getBaseUrl();
+  return {
+    eyebrow: 'Welcome aboard',
+    heading: `Welcome to ${getAppName()} \u{1F44B}`,
+    preview: 'Your account is ready — here are the first three things worth doing.',
+    blocks: [
+      {
+        p: `Hi ${escapeHtml(greetingName(to))}, thanks for signing up. Your account is ready and you are signed in — here is what is worth doing first.`,
+      },
+      {
+        list: [
+          `${link(`${base}/dashboard/general`, 'Finish your profile')} — set your name and account details.`,
+          `${link(`${base}/dashboard/security`, 'Secure your account')} — add a password and review active sessions.`,
+          `${link(`${base}/pricing`, 'Choose a plan')} — upgrade whenever you are ready.`,
+        ],
+      },
+      { button: { label: 'Open your dashboard', href: `${base}/dashboard` } },
+      { muted: 'Questions? Just reply to this email — it reaches a real person.' },
+    ],
+  };
+}
+
+/**
  * Greet a newly created account. Sending is skipped (not an error) when MailKite isn't
  * configured, so the template still works end-to-end without an API key.
  */
 export async function sendWelcomeEmail(to: string): Promise<{ ok: boolean; error?: string }> {
   if (!isMailkiteEmailConfigured()) return { ok: true };
 
+  const doc = welcomeDoc(to);
+
   return sendEmail({
     to,
-    subject: 'Welcome to SaaS Starter',
-    html: `<p>Welcome aboard.</p><p>Your account is ready — <a href="${getBaseUrl()}/dashboard">open your dashboard</a> to get started.</p>`,
-    text: `Welcome aboard.\n\nYour account is ready. Open your dashboard: ${getBaseUrl()}/dashboard`,
+    subject: `Welcome to ${getAppName()}`,
+    html: renderEmail(doc),
+    text: renderEmailText(doc),
   });
 }
 

@@ -4,7 +4,15 @@
   "private": true,
   "license": "MIT",
   "description": "Next.js SaaS Starter — production-ready template to launch your SaaS with authentication, payments, and team management.",
-  "keywords": ["saas", "starter", "template", "nextjs", "vercel", "stripe", "tailwindcss"],
+  "keywords": [
+    "saas",
+    "starter",
+    "template",
+    "nextjs",
+    "vercel",
+    "stripe",
+    "tailwindcss"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/mailkite/saas-startup.git",
@@ -48,11 +56,13 @@
     "zod": "^3.24.4"
   },
   "devDependencies": {
-    "drizzle-kit": "^0.31.1",
-    "sharp": "^0.34.5",
     "@types/node": "^22.15.18",
     "@types/react": "19.1.4",
     "@types/react-dom": "19.1.5",
+    "drizzle-kit": "^0.31.1",
+    "eslint": "8.57.1",
+    "eslint-config-next": "15.5.23",
+    "sharp": "^0.34.5",
     "typescript": "^5.8.3"
   }
 }

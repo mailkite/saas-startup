@@ -12,7 +12,15 @@ export {
   signSession,
   verifySession,
 } from './session';
-export { sendEmail, sendWelcomeEmail, isMailkiteEmailConfigured } from './email';
+export { sendEmail, sendWelcomeEmail, isMailkiteEmailConfigured, greetingName } from './email';
+export {
+  renderEmail,
+  renderEmailText,
+  escapeHtml,
+  link,
+  getAppName,
+} from './email-template';
+export type { EmailDoc, EmailBlock, EmailTheme } from './email-template';
 export type {
   AuthConfig,
   AuthUser,

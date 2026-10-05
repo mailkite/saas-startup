@@ -30,7 +30,7 @@ npx drizzle-kit migrate
 pnpm run dev`}</pre>
 
       <p>
-        Open <code>http://localhost:3000</code>. That's it.
+        Open <code>http://localhost:3000</code>. That&apos;s it.
       </p>
 
       <h2>Guides</h2>

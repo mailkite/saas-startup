@@ -53,7 +53,7 @@ export default function InstallationPage() {
 
       <hr />
 
-      <h2>What's included</h2>
+      <h2>What&apos;s included</h2>
       <p>Your app now has:</p>
       <ul>
         <li><strong>Landing page</strong> with animated background, gradient cards, and theme toggle</li>

@@ -70,7 +70,7 @@ vercel --prod`}</pre>
         <li>Go to Project → Settings → Domains</li>
         <li>Add your domain (e.g. <code>app.example.com</code>)</li>
         <li>Follow the DNS instructions (add a CNAME record)</li>
-        <li>Vercel auto-provisions SSL via Let's Encrypt</li>
+        <li>Vercel auto-provisions SSL via Let&apos;s Encrypt</li>
       </ol>
 
       <div className="docs-callout">

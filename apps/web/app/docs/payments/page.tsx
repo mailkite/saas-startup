@@ -8,7 +8,7 @@ export default function PaymentsPage() {
         customer portal, webhooks, and full subscription lifecycle management.
       </p>
 
-      <h2>What's Included</h2>
+      <h2>What&apos;s Included</h2>
       <ul>
         <li><strong>Checkout</strong> — Stripe Checkout sessions with trial periods and promotion codes</li>
         <li><strong>Customer Portal</strong> — self-serve billing management (upgrade, cancel, update payment method)</li>
