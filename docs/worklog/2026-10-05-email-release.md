@@ -14,3 +14,8 @@ declares the step-count dependency. No rule is suppressed.
 The repository is linked to Vercel project `saas-nextjs-starter`, production
 `https://saas-startup.mailkite.dev`. Commit/push and production verification follow the
 runbook in `docs/DEPLOYMENT.md`. No database migration or secret change is required.
+
+Released as `6302a30` and pushed to `main`. Vercel's Git integration reports successful
+deployment `8nsTMHuLgeS22pR4tcsntKy7CL8U`; the production root, sign-in and updated
+environment documentation all return HTTP 200. The local CLI's authorization failure
+did not block the repository's configured Git deployment.

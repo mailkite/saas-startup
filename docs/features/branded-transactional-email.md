@@ -18,4 +18,9 @@ Do not put credentials in this document or commit actual environment files.
 - [x] Review the email/configuration changes and exported helpers.
 - [x] Next.js production build and TypeScript validation.
 - [x] Non-interactive lint verification (zero warnings/errors).
-- [ ] Commit/push and verify the linked Vercel production deployment.
+- [x] Commit/push and verify the linked Vercel production deployment (`6302a30`).
+
+Vercel Git status reports successful production deployment
+`https://vercel.com/bucabays-projects/saas-nextjs-starter/8nsTMHuLgeS22pR4tcsntKy7CL8U`.
+Production `/`, `/sign-in` and `/docs/env` return HTTP 200; `/docs/env` contains the
+new `EMAIL_THEME` configuration documentation.
