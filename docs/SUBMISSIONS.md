@@ -17,6 +17,8 @@ or the post goes live. Newest first.
 
 | Date | Venue (website) | Submission URL (PR/post) | Listing URL (when live) | Status |
 |------|-----------------|--------------------------|-------------------------|--------|
+| 2026-10-06 | [shadcn-ui-blocks](https://github.com/shadcnblockscom/shadcn-ui-blocks) | _not submitted_ | — | `[-]` skipped — last push 2025-08-08, outside the six-month activity window; no declared repository license. Recorded in subq #501 |
+| 2026-10-06 | [awesome-saas](https://github.com/awesome-saas/awesome-saas) | _not submitted_ | — | `[-]` skipped — README is primarily SaaS tools, with no fitting starter/boilerplate section; last push 2025-06, outside the six-month activity window. Recorded in subq #492 |
 | 2026-07-17 | [awesome-shadcn-ui](https://github.com/birobirobiro/awesome-shadcn-ui) | [PR #554](https://github.com/birobirobiro/awesome-shadcn-ui/pull/554) | _pending merge_ | `[~]` submitted |
 | 2026-07-17 | [awesome-nextjs](https://github.com/unicodeveloper/awesome-nextjs) | [PR #536](https://github.com/unicodeveloper/awesome-nextjs/pull/536) | _pending merge_ | `[~]` submitted |
 
