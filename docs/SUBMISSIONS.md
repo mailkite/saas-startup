@@ -17,6 +17,11 @@ or the post goes live. Newest first.
 
 | Date | Venue (website) | Submission URL (PR/post) | Listing URL (when live) | Status |
 |------|-----------------|--------------------------|-------------------------|--------|
+| 2026-08-03 | [awesome-nextjs (officialrajdeepsingh)](https://github.com/officialrajdeepsingh/awesome-nextjs) | [PR #88](https://github.com/officialrajdeepsingh/awesome-nextjs/pull/88) | _pending merge_ | `[~]` submitted |
+| 2026-07-31 | [awesome-nextjs (bytefer)](https://github.com/bytefer/awesome-nextjs) | [PR #23](https://github.com/bytefer/awesome-nextjs/pull/23) | _pending merge_ | `[~]` submitted |
+| 2026-07-29 | [awesome-saas-boilerplates](https://github.com/xcomptek/awesome-saas-boilerplates) | [PR #222](https://github.com/xcomptek/awesome-saas-boilerplates/pull/222) | _pending merge_ | `[~]` submitted |
+| 2026-07-29 | [awesome-shadcn-ui (bytefer)](https://github.com/bytefer/awesome-shadcn-ui) | [PR #29](https://github.com/bytefer/awesome-shadcn-ui/pull/29) | [LIVE — SaaS table](https://github.com/bytefer/awesome-shadcn-ui#saas) | `[x]` live |
+| 2026-07-29 | [awesome-opensource-boilerplates](https://github.com/EinGuterWaran/awesome-opensource-boilerplates) | [PR #52](https://github.com/EinGuterWaran/awesome-opensource-boilerplates/pull/52) | _pending merge_ | `[~]` submitted |
 | 2026-07-17 | [awesome-shadcn-ui](https://github.com/birobirobiro/awesome-shadcn-ui) | [PR #554](https://github.com/birobirobiro/awesome-shadcn-ui/pull/554) | _pending merge_ | `[~]` submitted |
 | 2026-07-17 | [awesome-nextjs](https://github.com/unicodeveloper/awesome-nextjs) | [PR #536](https://github.com/unicodeveloper/awesome-nextjs/pull/536) | _pending merge_ | `[~]` submitted |
 
@@ -33,7 +38,11 @@ Merge a PR, get listed. No account, no forms, no fees.
 | [-] | [aniftyco/awesome-tailwindcss](https://github.com/aniftyco/awesome-tailwindcss) | ~~PR~~ **hand-submit only** | 15.1k★. CONTRIBUTING.md **bans AI-authored/assisted PRs** — closed on sight, submitter may be banned. Gabe must add it by hand (📁 "Full templates" entry, `UI libraries, components & templates` section) |
 | [-] | [enaqx/awesome-react](https://github.com/enaqx/awesome-react) | — | 74k★, but **no section fits** a full SaaS boilerplate. Skipped to avoid a rejected PR |
 | [~] | [birobirobiro/awesome-shadcn-ui](https://github.com/birobirobiro/awesome-shadcn-ui) | PR to README | 20.1k★. **Submitted 2026-07-17** → [PR #554](https://github.com/birobirobiro/awesome-shadcn-ui/pull/554), awaiting review. Added to `## Boilerplates / Templates` |
-| [ ] | [bytefer/awesome-nextjs](https://github.com/bytefer/awesome-nextjs) | PR to README | 68★ — low reach, but trivial |
+| [~] | [bytefer/awesome-nextjs](https://github.com/bytefer/awesome-nextjs) | PR to README | 71★. **Submitted 2026-07-31** → [PR #23](https://github.com/bytefer/awesome-nextjs/pull/23), awaiting merge. Added to `## SaaS` |
+| [x] | [bytefer/awesome-shadcn-ui](https://github.com/bytefer/awesome-shadcn-ui) | PR to README | 723★. **LIVE 2026-07-29** 🎉 → [PR #29](https://github.com/bytefer/awesome-shadcn-ui/pull/29) merged; entry in the **SaaS** table. **First confirmed live listing.** |
+| [~] | [xcomptek/awesome-saas-boilerplates](https://github.com/xcomptek/awesome-saas-boilerplates) | PR to README | 3.1k★ — **highest-signal SaaS list.** Submitted 2026-07-29 → [PR #222](https://github.com/xcomptek/awesome-saas-boilerplates/pull/222), awaiting merge. Added to `## Next.js` |
+| [~] | [EinGuterWaran/awesome-opensource-boilerplates](https://github.com/EinGuterWaran/awesome-opensource-boilerplates) | PR to README | 1.9k★ — "production-ready, free SaaS boilerplates". Submitted 2026-07-29 → [PR #52](https://github.com/EinGuterWaran/awesome-opensource-boilerplates/pull/52), awaiting merge (maintainer merges slowly) |
+| [~] | [officialrajdeepsingh/awesome-nextjs](https://github.com/officialrajdeepsingh/awesome-nextjs) | PR to README | 707★. Submitted 2026-08-03 → [PR #88](https://github.com/officialrajdeepsingh/awesome-nextjs/pull/88), awaiting merge. Added to Next.js boilerplate section |
 | [ ] | GitHub topics | repo settings | ✅ **done** — `nextjs`, `nextjs15`, `saas-starter`, `saas-boilerplate`, `template`, … |
 
 ## Tier 2 — Launch platforms (one-shot traffic spikes)
@@ -84,6 +93,32 @@ A daily cron researches new venues and appends them here. Rules for anything it 
 3. **Free only.** Paid placements need a human decision — flag, don't add.
 4. **No duplicates** — check the tables above first.
 5. Record `★`, last-pushed date, and the evidence that it accepts submissions.
+
+### Research notes (auto-run 2026-08-07)
+
+The awesome-list / git-PR surface is now **saturated** — every fitting, free,
+actively-merged list with >=700★ already has a `bucabay` PR (all five were found
+unlogged this run via the fleet dedupe check and back-filled into the log + Tier 1
+above). Findings:
+
+- **Checked & rejected — no section fit:** `sindresorhus/awesome-nodejs` (66k★ — a
+  packages/tools list; the only boilerplate entry is `node-module-boilerplate`, no
+  full-app section), `enaqx/awesome-react` (already noted — no boilerplate section),
+  `Correia-jpv/fucking-awesome-nextjs` (auto-mirror of `unicodeveloper/awesome-nextjs`,
+  which we already PR'd — would duplicate).
+- **Checked & rejected — wrong shape:** `PaulleDemon/awesome-landing-pages` (1.0k★) is
+  a repo of *downloadable* landing-page templates (add via a template-issue request,
+  not external links) and its maintainer is not actively merging PRs (an open PR from
+  2026-05 is still unmerged) — not a fit for a full SaaS app.
+- **No venue for our differentiators:** no dedicated `awesome-turborepo` /
+  `awesome-drizzle` list exists with meaningful reach; `vercel/turbo` `examples/` and
+  `vercel/examples` remain the same human-decision path already noted in Tier 1.
+- **No emails sent this run** — emailing list maintainers purely to nudge merges of
+  open PRs reads as spammy and is deliberately avoided; no new (b) contact-email
+  venue surfaced.
+
+Next runs: prioritize Tier-2 launch platforms and Tier-3 directory forms (manual),
+and look for (b) template-directory curators with a public contact email.
 
 ## Assets for any submission
 
