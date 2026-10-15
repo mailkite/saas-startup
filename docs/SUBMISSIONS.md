@@ -17,6 +17,11 @@ or the post goes live. Newest first.
 
 | Date | Venue (website) | Submission URL (PR/post) | Listing URL (when live) | Status |
 |------|-----------------|--------------------------|-------------------------|--------|
+| 2026-08-01 | [awesome-javascript](https://github.com/sorrycc/awesome-javascript) | [PR #1133](https://github.com/sorrycc/awesome-javascript/pull/1133) | — | `[-]` rejected (closed w/o merge, no comment) |
+| 2026-07-31 | [awesome-typescript](https://github.com/semlinker/awesome-typescript) | [PR #177](https://github.com/semlinker/awesome-typescript/pull/177) | _pending merge_ | `[~]` submitted |
+| 2026-07-31 | [bytefer/awesome-nextjs](https://github.com/bytefer/awesome-nextjs) | [PR #23](https://github.com/bytefer/awesome-nextjs/pull/23) | _pending merge_ | `[~]` submitted |
+| 2026-07-29 | [awesome-saas-boilerplates](https://github.com/xcomptek/awesome-saas-boilerplates) | [PR #222](https://github.com/xcomptek/awesome-saas-boilerplates/pull/222) | _pending merge_ | `[~]` submitted |
+| 2026-07-29 | [bytefer/awesome-shadcn-ui](https://github.com/bytefer/awesome-shadcn-ui) | [PR #29](https://github.com/bytefer/awesome-shadcn-ui/pull/29) | [README `## Saas`](https://github.com/bytefer/awesome-shadcn-ui#saas) | `[x]` live (merged 07-30) |
 | 2026-07-17 | [awesome-shadcn-ui](https://github.com/birobirobiro/awesome-shadcn-ui) | [PR #554](https://github.com/birobirobiro/awesome-shadcn-ui/pull/554) | _pending merge_ | `[~]` submitted |
 | 2026-07-17 | [awesome-nextjs](https://github.com/unicodeveloper/awesome-nextjs) | [PR #536](https://github.com/unicodeveloper/awesome-nextjs/pull/536) | _pending merge_ | `[~]` submitted |
 
@@ -32,8 +37,12 @@ Merge a PR, get listed. No account, no forms, no fees.
 | [~] | [unicodeveloper/awesome-nextjs](https://github.com/unicodeveloper/awesome-nextjs) | PR to README | 11.1k★. **Submitted 2026-07-17** → [PR #536](https://github.com/unicodeveloper/awesome-nextjs/pull/536), awaiting review. Added to `## Boilerplates` |
 | [-] | [aniftyco/awesome-tailwindcss](https://github.com/aniftyco/awesome-tailwindcss) | ~~PR~~ **hand-submit only** | 15.1k★. CONTRIBUTING.md **bans AI-authored/assisted PRs** — closed on sight, submitter may be banned. Gabe must add it by hand (📁 "Full templates" entry, `UI libraries, components & templates` section) |
 | [-] | [enaqx/awesome-react](https://github.com/enaqx/awesome-react) | — | 74k★, but **no section fits** a full SaaS boilerplate. Skipped to avoid a rejected PR |
-| [~] | [birobirobiro/awesome-shadcn-ui](https://github.com/birobirobiro/awesome-shadcn-ui) | PR to README | 20.1k★. **Submitted 2026-07-17** → [PR #554](https://github.com/birobirobiro/awesome-shadcn-ui/pull/554), awaiting review. Added to `## Boilerplates / Templates` |
-| [ ] | [bytefer/awesome-nextjs](https://github.com/bytefer/awesome-nextjs) | PR to README | 68★ — low reach, but trivial |
+| [~] | [birobirobiro/awesome-shadcn-ui](https://github.com/birobirobiro/awesome-shadcn-ui) | PR to README | 20.2k★. **Submitted 2026-07-17** → [PR #554](https://github.com/birobirobiro/awesome-shadcn-ui/pull/554), awaiting review. Added to `## Boilerplates / Templates` |
+| [x] | [bytefer/awesome-shadcn-ui](https://github.com/bytefer/awesome-shadcn-ui) | PR to README | 721★. **MERGED 2026-07-30** → [PR #29](https://github.com/bytefer/awesome-shadcn-ui/pull/29). Live in `## Saas` ✅ **first live listing** |
+| [~] | [xcomptek/awesome-saas-boilerplates](https://github.com/xcomptek/awesome-saas-boilerplates) | PR to README | 3.1k★. **Best topical fit** (a SaaS-boilerplates list). **Submitted 2026-07-29** → [PR #222](https://github.com/xcomptek/awesome-saas-boilerplates/pull/222), awaiting review |
+| [~] | [semlinker/awesome-typescript](https://github.com/semlinker/awesome-typescript) | PR to README | 4.0k★. **Submitted 2026-07-31** → [PR #177](https://github.com/semlinker/awesome-typescript/pull/177), awaiting review. Added to Starters/Boilerplates |
+| [-] | [sorrycc/awesome-javascript](https://github.com/sorrycc/awesome-javascript) | PR to README | 35.0k★. **Rejected 2026-08-01** → [PR #1133](https://github.com/sorrycc/awesome-javascript/pull/1133) closed w/o merge, no comment. Re-approach only with a different angle |
+| [~] | [bytefer/awesome-nextjs](https://github.com/bytefer/awesome-nextjs) | PR to README | 71★. **Submitted 2026-07-31** → [PR #23](https://github.com/bytefer/awesome-nextjs/pull/23), awaiting review. Added to `## SaaS` |
 | [ ] | GitHub topics | repo settings | ✅ **done** — `nextjs`, `nextjs15`, `saas-starter`, `saas-boilerplate`, `template`, … |
 
 ## Tier 2 — Launch platforms (one-shot traffic spikes)
