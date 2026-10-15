@@ -17,6 +17,7 @@ or the post goes live. Newest first.
 
 | Date | Venue (website) | Submission URL (PR/post) | Listing URL (when live) | Status |
 |------|-----------------|--------------------------|-------------------------|--------|
+| 2026-07-26 | [Shadcntemplates](https://shadcntemplates.com) | [PR #14](https://github.com/shadcnblocks/shadcntemplates/pull/14) | _pending merge_ | `[~]` submitted |
 | 2026-07-17 | [awesome-shadcn-ui](https://github.com/birobirobiro/awesome-shadcn-ui) | [PR #554](https://github.com/birobirobiro/awesome-shadcn-ui/pull/554) | _pending merge_ | `[~]` submitted |
 | 2026-07-17 | [awesome-nextjs](https://github.com/unicodeveloper/awesome-nextjs) | [PR #536](https://github.com/unicodeveloper/awesome-nextjs/pull/536) | _pending merge_ | `[~]` submitted |
 
@@ -56,6 +57,7 @@ Sequence these; don't burn them all at once. Product Hunt is worth preparing pro
 | ✓ | Place | How | Notes |
 |---|-------|-----|-------|
 | [ ] | [HTMLrev](https://htmlrev.com/free-nextjs-templates.html) | Submit form | Free-only, curated, has a Next.js category. ⚠️ refused connection from our network — verify manually |
+| [~] | [Shadcntemplates](https://shadcntemplates.com) | PR — add `content/mailkite-saas-startup.md` | Free open-source listings accepted; submitted 2026-07-26 → [PR #14](https://github.com/shadcnblocks/shadcntemplates/pull/14), awaiting review |
 | [ ] | [Tailkits](https://tailkits.com/submit-product/) | Submit | Verified reachable. Pricing unstated — check it's free before submitting |
 | [-] | [Vercel Templates](https://vercel.com/templates) | — | **CLOSED.** Vercel staff (Amy Egan), 2026-06-10: "We're not taking new templates at the moment", no timeline. `/templates/submit` is dead. Use vercel/examples instead |
 
