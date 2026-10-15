@@ -49,14 +49,14 @@ Sequence these; don't burn them all at once. Product Hunt is worth preparing pro
 | [ ] | [Fazier](https://fazier.com/submit) | Submit | Verified reachable |
 | [ ] | [MicroLaunch](https://microlaunch.net/submit) | Submit | Verified reachable |
 | [ ] | [Peerlist](https://peerlist.io) | Project | Probe blocked (403) — check manually |
-| [ ] | [Uneed](https://uneed.best) | Submit | Guessed URL 404'd — find the real one |
+| [ ] | [Uneed](https://www.uneed.best/submit-a-tool) | Submit form | Real submit URL is `/submit-a-tool` (bare `/submit` 404s). Free tier exists alongside paid boosts; free submit is OK |
 
 ## Tier 3 — Template directories
 
 | ✓ | Place | How | Notes |
 |---|-------|-----|-------|
 | [ ] | [HTMLrev](https://htmlrev.com/free-nextjs-templates.html) | Submit form | Free-only, curated, has a Next.js category. ⚠️ refused connection from our network — verify manually |
-| [ ] | [Tailkits](https://tailkits.com/submit-product/) | Submit | Verified reachable. Pricing unstated — check it's free before submitting |
+| [-] | [Tailkits](https://tailkits.com/submit-product/) | ~~Submit~~ **paid placement** | Verified reachable but it is a **paid** marketplace — promotion tiers $29–$499. Not free → flag for human; don't auto-submit |
 | [-] | [Vercel Templates](https://vercel.com/templates) | — | **CLOSED.** Vercel staff (Amy Egan), 2026-06-10: "We're not taking new templates at the moment", no timeline. `/templates/submit` is dead. Use vercel/examples instead |
 
 ## Tier 4 — Communities (read each one's self-promo rules first)
@@ -84,6 +84,30 @@ A daily cron researches new venues and appends them here. Rules for anything it 
 3. **Free only.** Paid placements need a human decision — flag, don't add.
 4. **No duplicates** — check the tables above first.
 5. Record `★`, last-pushed date, and the evidence that it accepts submissions.
+
+### Research notes (auto-run 2026-08-07 17:17 UTC)
+
+Corroborates the 13:17 run's saturation call and probes the Tier-2/Tier-3 paths
+it flagged. **No external PR or email this run** (caps untouched) — the only
+changes are two verified Tier-2/Tier-3 corrections (Uneed URL, Tailkits = paid,
+both applied above). Findings:
+
+- **Rejected — platform-specific:** `Alchemyst-ai/awesome-saas` (421★, MIT,
+  pushed today) has a tempting "Community Templates" section, but CONTRIBUTING.md
+  restricts it to "templates/projects built using the **Alchemyst AI Platform**".
+  Our starter isn't → off-topic. Skipped.
+- **Rejected — SaaS-product lists, not boilerplates:** `LlamaGenAI/awesome-free-saas`
+  (333★) and `georgezouq/awesome-saas` (54★) categorize free SaaS *products*, not
+  starter kits. No section fits.
+- **Rejected — stale / wrong stack:** `2-fly-4-ai/awesome-shadcnui` (555★, last
+  push 2025-06) and `re50urces/Awesome-NextJs` (114★, 2024-06) stale; the rest of
+  the `awesome-shadcn*` variants are Svelte-specific or <20★.
+- **Dedupe clean:** `mailkite/saas-startup` appears only in our own repos + the
+  already-LIVE `bytefer/awesome-shadcn-ui` row. No unlogged listing to back-fill.
+- **No (b) email venue** surfaced again; nudging open-PR merges is spammy → none sent.
+
+Next runs: same guidance — Tier-2 launches (HN/PH/dev.to) and Tier-3 forms are the
+remaining high-signal moves, all human-timed manual posts.
 
 ## Assets for any submission
 
