@@ -17,8 +17,10 @@ or the post goes live. Newest first.
 
 | Date | Venue (website) | Submission URL (PR/post) | Listing URL (when live) | Status |
 |------|-----------------|--------------------------|-------------------------|--------|
-| 2026-07-17 | [awesome-shadcn-ui](https://github.com/birobirobiro/awesome-shadcn-ui) | [PR #554](https://github.com/birobirobiro/awesome-shadcn-ui/pull/554) | _pending merge_ | `[~]` submitted |
-| 2026-07-17 | [awesome-nextjs](https://github.com/unicodeveloper/awesome-nextjs) | [PR #536](https://github.com/unicodeveloper/awesome-nextjs/pull/536) | _pending merge_ | `[~]` submitted |
+| 2026-10-06 | [shadcn-ui-blocks](https://github.com/shadcnblockscom/shadcn-ui-blocks) | _not submitted_ | — | `[-]` skipped — last push 2025-08-08, outside the six-month activity window; no declared repository license. Recorded in subq #501 |
+| 2026-10-06 | [awesome-saas](https://github.com/awesome-saas/awesome-saas) | _not submitted_ | — | `[-]` skipped — README is primarily SaaS tools, with no fitting starter/boilerplate section; last push 2025-06, outside the six-month activity window. Recorded in subq #492 |
+| 2026-09-19 | [awesome-shadcn-ui](https://github.com/birobirobiro/awesome-shadcn-ui) | [PR #554](https://github.com/birobirobiro/awesome-shadcn-ui/pull/554) | — | `[-]` **closed, not merged.** Maintainer: "The app under `apps/web` is Vercel's `nextjs/saas-starter` with some additions" — correct, and the repo did not say so. See the attribution fix below. Do not resubmit the same entry |
+| 2026-07-17 | [awesome-nextjs](https://github.com/unicodeveloper/awesome-nextjs) | [PR #536](https://github.com/unicodeveloper/awesome-nextjs/pull/536) | _pending merge_ | `[~]` submitted · bumped once, no maintainer response (last activity 2026-08-03) |
 
 ---
 
@@ -85,10 +87,21 @@ A daily cron researches new venues and appends them here. Rules for anything it 
 4. **No duplicates** — check the tables above first.
 5. Record `★`, last-pushed date, and the evidence that it accepts submissions.
 
+## Attribution — read before submitting anywhere
+
+`apps/web` **is Vercel's Next.js SaaS Starter with additions**, and the first reviewer to look
+closely said so ([#554](https://github.com/birobirobiro/awesome-shadcn-ui/pull/554), closed
+2026-09-19). Any submission that presents it as new work will be rejected, correctly.
+
+The repo now says what it is: a `> Built on Vercel's … (MIT)` line in the README, the upstream
+copyright retained in `LICENSE`, and a `NOTICE` file listing the changes. Keep it that way.
+
 ## Assets for any submission
 
-- **Repo**: <https://github.com/mailkite/saas-startup> (public, MIT)
+- **Repo**: <https://github.com/mailkite/saas-startup> (public, MIT, upstream notice retained)
 - **Demo**: <https://saas-startup.mailkite.dev>
-- **One-liner**: Production-ready Next.js 15 SaaS starter — self-contained auth (Google/GitHub OAuth + email/password, no auth vendor), Stripe subscriptions, teams, Postgres/Drizzle, dark-first UI.
-- **Why it's different**: auth runs in your app, not a hosted service. No Clerk/Auth0/Supabase account needed — clone, add your own OAuth app, ship.
+- **One-liner**: Vercel's Next.js SaaS Starter, restructured into a pnpm monorepo — shared auth
+  package, second dashboard app, SQLite alongside Postgres, optional MailKite email.
+- **Why it's different**: it is the starter plus an opinionated monorepo and a self-hosted email
+  path. Say that first; a reviewer who discovers the upstream unaided closes the PR.
 - **Social preview**: `apps/web/app/opengraph-image.png` (1200×630)

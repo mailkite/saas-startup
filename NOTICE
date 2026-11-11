@@ -1,0 +1,16 @@
+MailKite SaaS Starter
+Copyright (c) 2026 MailKite
+
+This product includes software developed at Vercel, Inc.
+
+  apps/web began as Vercel's Next.js SaaS Starter
+  https://github.com/vercel/nextjs-subscription-payments
+  Copyright (c) 2024 Vercel, Inc.
+  Licensed under the MIT License (see LICENSE)
+
+Changes made here: pnpm monorepo layout (apps/web + apps/dashboard), a shared auth
+package under packages/, SQLite support alongside Postgres, a second dashboard app,
+and an optional MailKite email integration.
+
+The MIT License permits reuse and modification; it requires this notice and the
+copyright line above to be retained in copies and substantial portions of the work.

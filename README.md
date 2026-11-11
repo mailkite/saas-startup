@@ -8,6 +8,12 @@ The **Next.js SaaS Starter** is a production-ready template to launch your SaaS.
 
 **Auth runs entirely in your app.** There is no external auth service to sign up for: the OAuth code exchange, password hashing and session signing all happen in your own Next.js server, against your own database. The only outbound dependency is [MailKite](https://mailkite.dev) for sending email — and that's optional; without an API key the app simply skips the welcome mail.
 
+> **Built on Vercel's [Next.js SaaS Starter](https://github.com/vercel/nextjs-subscription-payments) (MIT).**
+> The auth, Stripe and team scaffolding started there. This repo restructures it into a pnpm
+> monorepo (`apps/web` + `apps/dashboard`), moves the shared auth into `packages/`, adds SQLite
+> alongside Postgres, and wires the optional MailKite email integration. The upstream copyright
+> notice is preserved in [`LICENSE`](LICENSE) and [`NOTICE`](NOTICE).
+
 - **Auth** — Email/password + Google and GitHub OAuth, self-contained. PBKDF2 hashing via WebCrypto (no native module), JWT sessions via `jose`
 - **Payments** — Stripe Checkout, Customer Portal, webhooks, and subscription lifecycle
 - **Team** — Invite members, manage permissions, shared workspace
